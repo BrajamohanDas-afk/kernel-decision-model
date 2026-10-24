@@ -1,0 +1,66 @@
+<!DOCTYPE html><html><head><meta charset='utf-8'><title>Evaluation v3-pplx</title>
+<style>body{font-family:Segoe UI,Arial;margin:32px auto;max-width:1000px;background:#0f1420;color:#e8ecf3}
+.card{background:#171e2e;border-radius:12px;padding:18px 22px;margin-bottom:16px}
+table{border-collapse:collapse;width:100%}th,td{border:1px solid #2a3550;padding:6px 9px;text-align:left;font-size:14px}
+th{background:#1d2740}img{max-width:100%;border-radius:8px;border:1px solid #2a3550;margin:6px 0}
+.muted{color:#9aa7bd}.ok{color:#69d98c}.bad{color:#ff7b7b}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:800px){.grid{grid-template-columns:1fr}}</style></head><body>
+<h1>Evaluation report &middot; v3-pplx</h1>
+<div class='card'><h2>Headline</h2><p>accuracy <b class='ok'>87.3%</b> &middot; macro-F1 <b>0.4014</b> &middot; balanced accuracy <b>0.4462</b> &middot; n=1640 </p></div>
+<div class='card'><h2>Per-class metrics</h2><table><tr><th>class</th><th>support</th><th>predicted</th><th>precision</th><th>recall</th><th>F1</th></tr>
+<tr><td>alert_operator</td><td>20</td><td>33</td><td>0.455</td><td class='ok'>0.75</td><td>0.566</td></tr>
+<tr><td>decrease_cpu</td><td>18</td><td>0</td><td>0.0</td><td class='bad'>0.0</td><td>0.0</td></tr>
+<tr><td>decrease_memory</td><td>25</td><td>0</td><td>0.0</td><td class='bad'>0.0</td><td>0.0</td></tr>
+<tr><td>do_nothing</td><td>1054</td><td>1083</td><td>0.915</td><td class='ok'>0.94</td><td>0.927</td></tr>
+<tr><td>increase_cpu</td><td>180</td><td>209</td><td>0.818</td><td class='ok'>0.95</td><td>0.879</td></tr>
+<tr><td>increase_memory</td><td>266</td><td>269</td><td>0.903</td><td class='ok'>0.914</td><td>0.908</td></tr>
+<tr><td>protect_service</td><td>31</td><td>0</td><td>0.0</td><td class='bad'>0.0</td><td>0.0</td></tr>
+<tr><td>restrict_process_count</td><td>26</td><td>46</td><td>0.261</td><td class='ok'>0.462</td><td>0.333</td></tr>
+<tr><td>throttle_io</td><td>20</td><td>0</td><td>0.0</td><td class='bad'>0.0</td><td>0.0</td></tr>
+</table></div>
+<div class='card'><h2>Calibration bands</h2><table><tr><th>band</th><th>n</th><th>mean conf</th><th>accuracy</th></tr>
+<tr><td>0.50-0.60</td><td>91</td><td>0.563</td><td>0.758</td></tr>
+<tr><td>0.60-0.70</td><td>426</td><td>0.629</td><td>0.908</td></tr>
+<tr><td>0.70-0.80</td><td>579</td><td>0.731</td><td>0.893</td></tr>
+<tr><td>0.80-0.90</td><td>455</td><td>0.835</td><td>0.908</td></tr>
+<tr><td>0.90-0.95</td><td>2</td><td>0.914</td><td>1.0</td></tr>
+</table></div>
+<div class='card'><h2>Graphs</h2><div class='grid'>
+<div><img src='graphs-v3-pplx/confusion_matrix.png'></div>
+<div><img src='graphs-v3-pplx/calibration.png'></div>
+<div><img src='graphs-v3-pplx/selective.png'></div>
+<div><img src='graphs-v3-pplx/per_class.png'></div>
+<div><img src='graphs-v3-pplx/distribution.png'></div>
+</div></div>
+<div class='card'><h2>Top mistakes</h2><table><tr><th>row</th><th>true</th><th>predicted</th><th>confidence</th></tr>
+<tr><td>2031-10</td><td>do_nothing</td><td>increase_cpu</td><td>0.8732</td></tr>
+<tr><td>2043-22</td><td>decrease_memory</td><td>increase_memory</td><td>0.8551</td></tr>
+<tr><td>2035-42</td><td>increase_memory</td><td>increase_cpu</td><td>0.8532</td></tr>
+<tr><td>2027-61</td><td>decrease_memory</td><td>increase_cpu</td><td>0.8527</td></tr>
+<tr><td>2027-94</td><td>throttle_io</td><td>increase_cpu</td><td>0.8516</td></tr>
+<tr><td>2039-126</td><td>do_nothing</td><td>alert_operator</td><td>0.8511</td></tr>
+<tr><td>2027-112</td><td>protect_service</td><td>increase_cpu</td><td>0.8509</td></tr>
+<tr><td>2031-18</td><td>increase_memory</td><td>increase_cpu</td><td>0.8499</td></tr>
+<tr><td>2019-125</td><td>do_nothing</td><td>alert_operator</td><td>0.8495</td></tr>
+<tr><td>2027-105</td><td>increase_memory</td><td>increase_cpu</td><td>0.8486</td></tr>
+<tr><td>2027-59</td><td>decrease_cpu</td><td>increase_cpu</td><td>0.8485</td></tr>
+<tr><td>2027-76</td><td>increase_memory</td><td>increase_cpu</td><td>0.846</td></tr>
+<tr><td>2003-23</td><td>decrease_memory</td><td>increase_cpu</td><td>0.845</td></tr>
+<tr><td>2039-21</td><td>decrease_memory</td><td>increase_memory</td><td>0.8439</td></tr>
+<tr><td>2055-33</td><td>decrease_cpu</td><td>increase_cpu</td><td>0.8425</td></tr>
+<tr><td>2003-19</td><td>increase_memory</td><td>increase_cpu</td><td>0.8424</td></tr>
+<tr><td>2055-120</td><td>do_nothing</td><td>alert_operator</td><td>0.8422</td></tr>
+<tr><td>2055-41</td><td>increase_memory</td><td>increase_cpu</td><td>0.8415</td></tr>
+<tr><td>2055-38</td><td>protect_service</td><td>increase_cpu</td><td>0.8398</td></tr>
+<tr><td>2027-70</td><td>protect_service</td><td>increase_cpu</td><td>0.8394</td></tr>
+<tr><td>2043-12</td><td>restrict_process_count</td><td>increase_memory</td><td>0.8363</td></tr>
+<tr><td>2007-72</td><td>protect_service</td><td>increase_memory</td><td>0.8355</td></tr>
+<tr><td>2039-33</td><td>decrease_cpu</td><td>increase_memory</td><td>0.8355</td></tr>
+<tr><td>2039-11</td><td>restrict_process_count</td><td>increase_memory</td><td>0.8354</td></tr>
+<tr><td>2043-25</td><td>throttle_io</td><td>increase_memory</td><td>0.8266</td></tr>
+<tr><td>2039-7</td><td>protect_service</td><td>increase_memory</td><td>0.8255</td></tr>
+<tr><td>2003-15</td><td>do_nothing</td><td>increase_cpu</td><td>0.8252</td></tr>
+<tr><td>2003-72</td><td>protect_service</td><td>increase_memory</td><td>0.8209</td></tr>
+<tr><td>2043-8</td><td>protect_service</td><td>increase_memory</td><td>0.8207</td></tr>
+<tr><td>2035-83</td><td>alert_operator</td><td>increase_memory</td><td>0.8194</td></tr>
+</table></div></body></html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html><html><head><meta charset='utf-8'><title>Evaluation pilot</title>
+<style>body{font-family:Segoe UI,Arial;margin:32px auto;max-width:1000px;background:#0f1420;color:#e8ecf3}
+.card{background:#171e2e;border-radius:12px;padding:18px 22px;margin-bottom:16px}
+table{border-collapse:collapse;width:100%}th,td{border:1px solid #2a3550;padding:6px 9px;text-align:left;font-size:14px}
+th{background:#1d2740}img{max-width:100%;border-radius:8px;border:1px solid #2a3550;margin:6px 0}
+.muted{color:#9aa7bd}.ok{color:#69d98c}.bad{color:#ff7b7b}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:800px){.grid{grid-template-columns:1fr}}</style></head><body>
+<h1>Evaluation report &middot; pilot</h1>
+<div class='card'><h2>Headline</h2><p>accuracy <b class='ok'>90.0%</b> &middot; macro-F1 <b>0.6033</b> &middot; balanced accuracy <b>0.645</b> &middot; n=80 </p></div>
+<div class='card'><h2>Per-class metrics</h2><table><tr><th>class</th><th>support</th><th>predicted</th><th>precision</th><th>recall</th><th>F1</th></tr>
+<tr><td>alert_operator</td><td>4</td><td>0</td><td>0.0</td><td class='bad'>0.0</td><td>0.0</td></tr>
+<tr><td>do_nothing</td><td>62</td><td>62</td><td>0.935</td><td class='ok'>0.935</td><td>0.935</td></tr>
+<tr><td>throttle_io</td><td>14</td><td>18</td><td>0.778</td><td class='ok'>1.0</td><td>0.875</td></tr>
+</table></div>
+<div class='card'><h2>Calibration bands</h2><table><tr><th>band</th><th>n</th><th>mean conf</th><th>accuracy</th></tr>
+<tr><td>0.80-0.90</td><td>3</td><td>0.821</td><td>1.0</td></tr>
+<tr><td>0.90-0.95</td><td>1</td><td>0.947</td><td>0.0</td></tr>
+<tr><td>0.95-1.00</td><td>76</td><td>0.995</td><td>0.908</td></tr>
+</table></div>
+<div class='card'><h2>Graphs</h2><div class='grid'>
+<div><img src='graphs/confusion_matrix.png'></div>
+<div><img src='graphs/calibration.png'></div>
+<div><img src='graphs/selective.png'></div>
+<div><img src='graphs/per_class.png'></div>
+<div><img src='graphs/distribution.png'></div>
+</div></div>
+<div class='card'><h2>Top mistakes</h2><table><tr><th>row</th><th>true</th><th>predicted</th><th>confidence</th></tr>
+<tr><td>2026-10-14T19:53:42.295Z-172</td><td>alert_operator</td><td>do_nothing</td><td>0.9994</td></tr>
+<tr><td>2026-10-14T19:54:42.330Z-202</td><td>alert_operator</td><td>do_nothing</td><td>0.9992</td></tr>
+<tr><td>2026-10-14T19:43:47.407Z-202</td><td>alert_operator</td><td>do_nothing</td><td>0.9991</td></tr>
+<tr><td>2026-10-14T19:42:47.373Z-172</td><td>alert_operator</td><td>do_nothing</td><td>0.9986</td></tr>
+<tr><td>2026-10-14T19:42:41.371Z-169</td><td>do_nothing</td><td>throttle_io</td><td>0.9731</td></tr>
+<tr><td>2026-10-14T19:42:43.372Z-170</td><td>do_nothing</td><td>throttle_io</td><td>0.9731</td></tr>
+<tr><td>2026-10-14T19:42:39.370Z-168</td><td>do_nothing</td><td>throttle_io</td><td>0.9717</td></tr>
+<tr><td>2026-10-14T19:42:45.373Z-171</td><td>do_nothing</td><td>throttle_io</td><td>0.9475</td></tr>
+</table></div></body></html>

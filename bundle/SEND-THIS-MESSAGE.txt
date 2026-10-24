@@ -1,0 +1,32 @@
+I have a self-contained data-collection kit (~2 hours, unattended, safe to run): it plays short scripted
+CPU/memory/disk scenarios on a Linux box and logs cgroup telemetry. I'd love traces from a machine
+that isn't my laptop — different hardware/kernel/workloads makes the dataset much more real.
+
+What you'd do (3 commands):
+
+    tar -xzf wlp-lab-bundle-v2.tar.gz
+    cd wlp-lab-bundle
+    sudo bash check_machine.sh     # 10-second preflight — should say ALL GOOD
+    sudo bash collect.sh           # runs ~2 h, prints progress, Ctrl-C anytime
+
+Then send me back the newest `wlp-results-YYYYMMDD-HHMM.tar.gz` — it's timestamped, so an older archive is
+never overwritten (there may be several over time; send the latest).
+
+Notes:
+- Needs: Linux with cgroup v2 + PSI + systemd + python3.10+ + sudo (the check script tells you instantly
+  if the machine qualifies — no PSI means no dice, for example).
+- Please NOT on a production server — it generates short CPU/memory/disk stress bursts for ~2 h.
+  A staging box / dev VM / spare machine is ideal. If it's a VM: 6 GB+ RAM and 4 vCPUs recommended —
+  on smaller machines the kit auto-scales its memory targets down (it prints the scale at the start).
+- If a single run fails, no big deal: it's marked `failed:*` in the log, the kit waits 60 s for the machine
+  to settle, and then continues. Partial results are still useful, so just let it run to the end.
+- **Keep using the machine normally while it runs** — ordinary background activity (browsing, builds,
+  other services) actually makes the data more realistic, so please don't idle it for my sake.
+  Just don't deliberately hammer it with heavy benchmarks during the run.
+  Everything is quota-capped (max ~a few CPU cores, ~1 GB RAM, modest disk), so it stays polite.
+- Everything is local: pure Python standard library, zero network calls, no data of yours involved
+  (the scripts generate their own tiny workloads). Uses units named wlp-* and cleans up after itself.
+- You can change the length: `RUNS=40 sudo bash collect.sh` (each run ≈ 3.5 min; 24 ≈ 2 h). On a weak
+  machine, `RUNS=12 sudo bash collect.sh` works — a shorter batch beats a machine that is struggling.
+
+If it says ALL GOOD and you run it, I'll owe you one. Thanks!

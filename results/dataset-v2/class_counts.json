@@ -1,0 +1,24 @@
+{
+ "train": {
+  "alert_operator": 45,
+  "decrease_cpu": 44,
+  "decrease_memory": 52,
+  "do_nothing": 3414,
+  "increase_cpu": 554,
+  "increase_memory": 583,
+  "protect_service": 73,
+  "restrict_process_count": 66,
+  "throttle_io": 57
+ },
+ "heldout": {
+  "alert_operator": 20,
+  "decrease_cpu": 18,
+  "decrease_memory": 25,
+  "do_nothing": 1054,
+  "increase_cpu": 180,
+  "increase_memory": 266,
+  "protect_service": 31,
+  "restrict_process_count": 26,
+  "throttle_io": 20
+ }
+}

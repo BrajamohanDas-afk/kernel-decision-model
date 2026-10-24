@@ -1,0 +1,51 @@
+# Raw data — reproducible, not source
+*.jsonl
+*.log
+
+# Third-party benchmark clone + assembled bundle staging
+jevbench/repo/
+bundle/wlp-lab-bundle/
+
+# Raw data from another machine (kept out of the public repo)
+results/friend-20261018/
+
+# Runtime artifacts
+m2-pilot/live*/
+**/__pycache__/
+*.pyc
+*.tmp
+
+# Private notes and platform-SDK scripts (not part of the public repo)
+platform-feedback-private.md
+jevbench/scripts/finalize_scores.py
+jevbench/scripts/probe.py
+jevbench/scripts/run_jevbench.py
+m2-pilot/audit_ft.py
+m2-pilot/audit_v2.py
+m2-pilot/check_api.py
+m2-pilot/check_recipe.py
+m2-pilot/check_run.py
+m2-pilot/check_usage.py
+m2-pilot/check_weights.py
+m2-pilot/cl_correction_test.py
+m2-pilot/cl_model_name_test.py
+m2-pilot/cl_probe.py
+m2-pilot/cl_versions.py
+m2-pilot/cleanup_wrong_model.py
+m2-pilot/create_cl.py
+m2-pilot/delete_old_models.py
+m2-pilot/demo_serve.py
+m2-pilot/eval_bases.py
+m2-pilot/eval_cl_preview.py
+m2-pilot/eval_jev.py
+m2-pilot/eval_v3b.py
+m2-pilot/fresh_evals.py
+m2-pilot/key_probe.py
+m2-pilot/list_bases.py
+m2-pilot/list_models.py
+m2-pilot/pilot_train.py
+m2-pilot/predict_check.py
+m2-pilot/runs_probe.py
+m2-pilot/seed_cl.py
+m2-pilot/train_v2.py
+m2-pilot/upload_dsv3.py

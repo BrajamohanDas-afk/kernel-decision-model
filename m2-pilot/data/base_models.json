@@ -1,0 +1,584 @@
+[
+  {
+    "id": "pplx-decider-v1.1-27b",
+    "description": null,
+    "release_date": null,
+    "params": "27B",
+    "provider": "Perplexity",
+    "leaderboard_rank": 1,
+    "max_options": 255,
+    "max_question_tokens": 16384,
+    "trainable": true,
+    "default_rank": 16,
+    "max_rank": 64,
+    "lora_targets": [
+      "attn",
+      "mlp",
+      "deltanet"
+    ],
+    "modalities": [
+      "text",
+      "image"
+    ],
+    "contract": "pplx-readout-255",
+    "contract_version": 2,
+    "hf_repo": "perplexity-ai/pplx-decider-v1.1-27b",
+    "hf_revision": "3b45dead91dfa6d95aad6b95764a606fab2bf7a6",
+    "trainer_gpu": null,
+    "price_per_mtok_decide": 0.02,
+    "price_per_mtok_decide_continuous_learning": 0.03,
+    "price_per_gpu_hour": 7.0
+  },
+  {
+    "id": "gev-26b",
+    "description": null,
+    "release_date": null,
+    "params": "26B (4B active)",
+    "provider": "AutoTrust",
+    "leaderboard_rank": 14,
+    "max_options": 16,
+    "max_question_tokens": 16384,
+    "trainable": true,
+    "default_rank": 16,
+    "max_rank": 64,
+    "lora_targets": [
+      "attn",
+      "mlp"
+    ],
+    "modalities": [
+      "text",
+      "image"
+    ],
+    "contract": "autotrust-bare-v1",
+    "contract_version": 1,
+    "hf_repo": "autotrust/GEV-26B-Decide",
+    "hf_revision": "7c89590ead085bf77630b4bf68264ea30b6ddc78",
+    "trainer_gpu": null,
+    "price_per_mtok_decide": 0.042,
+    "price_per_mtok_decide_continuous_learning": 0.063,
+    "price_per_gpu_hour": 7.0
+  },
+  {
+    "id": "jev-27b",
+    "description": null,
+    "release_date": null,
+    "params": "27B",
+    "provider": "AutoTrust",
+    "leaderboard_rank": 14,
+    "max_options": 16,
+    "max_question_tokens": 16384,
+    "trainable": true,
+    "default_rank": 16,
+    "max_rank": 64,
+    "lora_targets": [
+      "attn",
+      "mlp",
+      "deltanet"
+    ],
+    "modalities": [
+      "text"
+    ],
+    "contract": "autotrust-bare-v1",
+    "contract_version": 1,
+    "hf_repo": "autotrust/JEV-27B",
+    "hf_revision": "51740a8891c2a8baefd969237fd44187b3e3a115",
+    "trainer_gpu": null,
+    "price_per_mtok_decide": 0.042,
+    "price_per_mtok_decide_continuous_learning": 0.063,
+    "price_per_gpu_hour": 7.0
+  },
+  {
+    "id": "clef-27b",
+    "description": null,
+    "release_date": null,
+    "params": "27B",
+    "provider": "Cloudflare",
+    "leaderboard_rank": 22,
+    "max_options": 255,
+    "max_question_tokens": 16384,
+    "trainable": true,
+    "default_rank": 16,
+    "max_rank": 64,
+    "lora_targets": [
+      "attn",
+      "mlp",
+      "deltanet"
+    ],
+    "modalities": [
+      "text",
+      "image"
+    ],
+    "contract": "clef-joint",
+    "contract_version": 1,
+    "hf_repo": "Cloudflare/clef",
+    "hf_revision": "ed3eed331870db2eff4b0db01237128ede8a00ce",
+    "trainer_gpu": null,
+    "price_per_mtok_decide": 0.042,
+    "price_per_mtok_decide_continuous_learning": 0.063,
+    "price_per_gpu_hour": 7.0
+  },
+  {
+    "id": "simple-jev-27b",
+    "description": null,
+    "release_date": null,
+    "params": "27B",
+    "provider": "Featherless AI",
+    "leaderboard_rank": 23,
+    "max_options": 255,
+    "max_question_tokens": 16384,
+    "trainable": true,
+    "default_rank": 16,
+    "max_rank": 64,
+    "lora_targets": [
+      "attn",
+      "mlp",
+      "deltanet"
+    ],
+    "modalities": [
+      "text"
+    ],
+    "contract": "simple-jev",
+    "contract_version": 1,
+    "hf_repo": "Qwen/Qwen3.8-27B",
+    "hf_revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+    "trainer_gpu": null,
+    "price_per_mtok_decide": 0.042,
+    "price_per_mtok_decide_continuous_learning": 0.063,
+    "price_per_gpu_hour": 7.0
+  },
+  {
+    "id": "reflex-27b",
+    "description": null,
+    "release_date": null,
+    "params": "27B",
+    "provider": "kshetrajna12",
+    "leaderboard_rank": 23,
+    "max_options": 255,
+    "max_question_tokens": 16384,
+    "trainable": true,
+    "default_rank": 16,
+    "max_rank": 64,
+    "lora_targets": [
+      "attn",
+      "mlp",
+      "deltanet"
+    ],
+    "modalities": [
+      "text"
+    ],
+    "contract": "reflex",
+    "contract_version": 1,
+    "hf_repo": "Qwen/Qwen3.8-27B",
+    "hf_revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+    "trainer_gpu": null,
+    "price_per_mtok_decide": 0.042,
+    "price_per_mtok_decide_continuous_learning": 0.063,
+    "price_per_gpu_hour": 7.0
+  },
+  {
+    "id": "winnow-12b",
+    "description": null,
+    "release_date": null,
+    "params": "12B",
+    "provider": "EldanRing",
+    "leaderboard_rank": 30,
+    "max_options": 64,
+    "max_question_tokens": 16384,
+    "trainable": true,
+    "default_rank": 16,
+    "max_rank": 256,
+    "lora_targets": [
+      "attn",
+      "mlp",
+      "deltanet"
+    ],
+    "modalities": [
+      "text"
+    ],
+    "contract": "winnow",
+    "contract_version": 1,
+    "hf_repo": "EldanRing/Winnow-12B",
+    "hf_revision": "859a2cb24921d8b579badce6caa469f9290f3bc1",
+    "trainer_gpu": null,
+    "price_per_mtok_decide": 0.02,
+    "price_per_mtok_decide_continuous_learning": 0.03,
+    "price_per_gpu_hour": 7.0
+  },
+  {
+    "id": "clef-flash-9b",
+    "description": null,
+    "release_date": null,
+    "params": "9B",
+    "provider": "Cloudflare",
+    "leaderboard_rank": 33,
+    "max_options": 255,
+    "max_question_tokens": 16384,
+    "trainable": true,
+    "default_rank": 16,
+    "max_rank": 256,
+    "lora_targets": [
+      "attn",
+      "mlp",
+      "deltanet"
+    ],
+    "modalities": [
+      "text",
+      "image"
+    ],
+    "contract": "clef-joint",
+    "contract_version": 1,
+    "hf_repo": "Cloudflare/clef-flash",
+    "hf_revision": "fde727a287004204b7518dcc983fe64379776712",
+    "trainer_gpu": null,
+    "price_per_mtok_decide": 0.021,
+    "price_per_mtok_decide_continuous_learning": 0.0315,
+    "price_per_gpu_hour": 7.0
+  },
+  {
+    "id": "jevk5-9b",
+    "description": null,
+    "release_date": null,
+    "params": "9B",
+    "provider": "alibiserikbay",
+    "leaderboard_rank": 33,
+    "max_options": 16,
+    "max_question_tokens": 16384,
+    "trainable": true,
+    "default_rank": 16,
+    "max_rank": 256,
+    "lora_targets": [
+      "attn",
+      "mlp",
+      "deltanet"
+    ],
+    "modalities": [
+      "text"
+    ],
+    "contract": "jevk5",
+    "contract_version": 1,
+    "hf_repo": "alibiserikbay/JevK5-9B",
+    "hf_revision": "d6521a18a86999190e9d775c915af3d6d6772fc4",
+    "trainer_gpu": null,
+    "price_per_mtok_decide": 0.02,
+    "price_per_mtok_decide_continuous_learning": 0.03,
+    "price_per_gpu_hour": 7.0
+  },
+  {
+    "id": "decision-2.0-lux-9b",
+    "description": null,
+    "release_date": null,
+    "params": "9B",
+    "provider": "vLLM Semantic Router",
+    "leaderboard_rank": 33,
+    "max_options": 255,
+    "max_question_tokens": 16384,
+    "trainable": true,
+    "default_rank": 16,
+    "max_rank": 256,
+    "lora_targets": [
+      "attn",
+      "mlp",
+      "deltanet"
+    ],
+    "modalities": [
+      "text"
+    ],
+    "contract": "decision2",
+    "contract_version": 1,
+    "hf_repo": "vllm-sr/Decision-2.0-Lux-9B",
+    "hf_revision": "78bf3c03d9147aeb30b641edfe0e30ed04887ca5",
+    "trainer_gpu": null,
+    "price_per_mtok_decide": 0.02,
+    "price_per_mtok_decide_continuous_learning": 0.03,
+    "price_per_gpu_hour": 7.0
+  },
+  {
+    "id": "jev-9b",
+    "description": null,
+    "release_date": null,
+    "params": "9B",
+    "provider": "AutoTrust",
+    "leaderboard_rank": 41,
+    "max_options": 16,
+    "max_question_tokens": 16384,
+    "trainable": true,
+    "default_rank": 16,
+    "max_rank": 256,
+    "lora_targets": [
+      "attn",
+      "mlp",
+      "deltanet"
+    ],
+    "modalities": [
+      "text"
+    ],
+    "contract": "autotrust-bare-v1",
+    "contract_version": 1,
+    "hf_repo": "autotrust/JEV-9B",
+    "hf_revision": "b63f651ce8ed64481d3f5e73ecdb05f740042f01",
+    "trainer_gpu": null,
+    "price_per_mtok_decide": 0.02,
+    "price_per_mtok_decide_continuous_learning": 0.03,
+    "price_per_gpu_hour": 7.0
+  },
+  {
+    "id": "jevfire-27b",
+    "description": null,
+    "release_date": null,
+    "params": "27B",
+    "provider": "kikoncuo",
+    "leaderboard_rank": 41,
+    "max_options": 255,
+    "max_question_tokens": 16384,
+    "trainable": true,
+    "default_rank": 16,
+    "max_rank": 64,
+    "lora_targets": [
+      "attn",
+      "mlp",
+      "deltanet"
+    ],
+    "modalities": [
+      "text"
+    ],
+    "contract": "jevfire",
+    "contract_version": 1,
+    "hf_repo": "Qwen/Qwen3.8-27B",
+    "hf_revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+    "trainer_gpu": null,
+    "price_per_mtok_decide": 0.042,
+    "price_per_mtok_decide_continuous_learning": 0.063,
+    "price_per_gpu_hour": 7.0
+  },
+  {
+    "id": "decision-2.0-nox-4b",
+    "description": null,
+    "release_date": null,
+    "params": "4B",
+    "provider": "vLLM Semantic Router",
+    "leaderboard_rank": 41,
+    "max_options": 255,
+    "max_question_tokens": 16384,
+    "trainable": true,
+    "default_rank": 16,
+    "max_rank": 256,
+    "lora_targets": [
+      "attn",
+      "mlp",
+      "deltanet"
+    ],
+    "modalities": [
+      "text"
+    ],
+    "contract": "decision2",
+    "contract_version": 1,
+    "hf_repo": "vllm-sr/Decision-2.0-Nox-4B",
+    "hf_revision": "25e8f67d1b486c647222df3aac640d2d5d736bbe",
+    "trainer_gpu": null,
+    "price_per_mtok_decide": 0.01,
+    "price_per_mtok_decide_continuous_learning": 0.015,
+    "price_per_gpu_hour": 7.0
+  },
+  {
+    "id": "kev-9b",
+    "description": null,
+    "release_date": null,
+    "params": "9B",
+    "provider": "jaredpalmer",
+    "leaderboard_rank": 46,
+    "max_options": 255,
+    "max_question_tokens": 16384,
+    "trainable": true,
+    "default_rank": 16,
+    "max_rank": 256,
+    "lora_targets": [
+      "attn",
+      "mlp",
+      "deltanet"
+    ],
+    "modalities": [
+      "text"
+    ],
+    "contract": "kev",
+    "contract_version": 1,
+    "hf_repo": "jaredpalmer/kev-9b",
+    "hf_revision": "db029f08b290afd9fee4aa4bbcd9ae48602d1eb0",
+    "trainer_gpu": null,
+    "price_per_mtok_decide": 0.04,
+    "price_per_mtok_decide_continuous_learning": 0.06,
+    "price_per_gpu_hour": 7.0
+  },
+  {
+    "id": "jevk5-4b",
+    "description": null,
+    "release_date": null,
+    "params": "4B",
+    "provider": "alibiserikbay",
+    "leaderboard_rank": 49,
+    "max_options": 16,
+    "max_question_tokens": 16384,
+    "trainable": true,
+    "default_rank": 16,
+    "max_rank": 256,
+    "lora_targets": [
+      "attn",
+      "mlp",
+      "deltanet"
+    ],
+    "modalities": [
+      "text"
+    ],
+    "contract": "jevk5",
+    "contract_version": 1,
+    "hf_repo": "alibiserikbay/JevK5",
+    "hf_revision": "c4f7fdb3aeab5582336406e78d3bef11bf98833d",
+    "trainer_gpu": null,
+    "price_per_mtok_decide": 0.01,
+    "price_per_mtok_decide_continuous_learning": 0.015,
+    "price_per_gpu_hour": 7.0
+  },
+  {
+    "id": "jev-omni-12b",
+    "description": null,
+    "release_date": null,
+    "params": "12B",
+    "provider": "akhilaaa3",
+    "leaderboard_rank": 49,
+    "max_options": 255,
+    "max_question_tokens": 16384,
+    "trainable": true,
+    "default_rank": 16,
+    "max_rank": 256,
+    "lora_targets": [
+      "attn",
+      "mlp",
+      "deltanet"
+    ],
+    "modalities": [
+      "text"
+    ],
+    "contract": "jev-omni",
+    "contract_version": 1,
+    "hf_repo": "akhilaaa3/Jev-Omni",
+    "hf_revision": "5addda86ddee081a68fb067477ea100c221b8917",
+    "trainer_gpu": null,
+    "price_per_mtok_decide": 0.02,
+    "price_per_mtok_decide_continuous_learning": 0.03,
+    "price_per_gpu_hour": 7.0
+  },
+  {
+    "id": "decider-4b",
+    "description": null,
+    "release_date": null,
+    "params": "4.7B",
+    "provider": "Mapika",
+    "leaderboard_rank": 53,
+    "max_options": 255,
+    "max_question_tokens": 16384,
+    "trainable": true,
+    "default_rank": 16,
+    "max_rank": 256,
+    "lora_targets": [
+      "attn",
+      "mlp",
+      "deltanet"
+    ],
+    "modalities": [
+      "text"
+    ],
+    "contract": "decider-letters-255",
+    "contract_version": 1,
+    "hf_repo": "Mapika/decider-4b",
+    "hf_revision": "eb5fbdfc9448473ec25e399882912863afbdb70e",
+    "trainer_gpu": null,
+    "price_per_mtok_decide": 0.01,
+    "price_per_mtok_decide_continuous_learning": 0.015,
+    "price_per_gpu_hour": 7.0
+  },
+  {
+    "id": "nimble-9b-v2",
+    "description": null,
+    "release_date": null,
+    "params": "9B",
+    "provider": "Bespoke Labs",
+    "leaderboard_rank": 53,
+    "max_options": 255,
+    "max_question_tokens": 8192,
+    "trainable": true,
+    "default_rank": 16,
+    "max_rank": 256,
+    "lora_targets": [
+      "attn",
+      "mlp",
+      "deltanet"
+    ],
+    "modalities": [
+      "text"
+    ],
+    "contract": "nimble",
+    "contract_version": 1,
+    "hf_repo": "bespokelabs/Bespoke-Nimble-9B-v2",
+    "hf_revision": "4b8c04d1ac2cea3e41e5e3c4d2130bcead2c0abe",
+    "trainer_gpu": null,
+    "price_per_mtok_decide": 0.02,
+    "price_per_mtok_decide_continuous_learning": 0.03,
+    "price_per_gpu_hour": 7.0
+  },
+  {
+    "id": "decider-2b",
+    "description": null,
+    "release_date": null,
+    "params": "1.9B",
+    "provider": "Mapika",
+    "leaderboard_rank": 81,
+    "max_options": 255,
+    "max_question_tokens": 16384,
+    "trainable": true,
+    "default_rank": 16,
+    "max_rank": 256,
+    "lora_targets": [
+      "attn",
+      "mlp",
+      "deltanet"
+    ],
+    "modalities": [
+      "text"
+    ],
+    "contract": "decider-letters-255",
+    "contract_version": 1,
+    "hf_repo": "Mapika/decider-2b",
+    "hf_revision": "533964dae8be954c5b5e19fa4948e48408094c1e",
+    "trainer_gpu": null,
+    "price_per_mtok_decide": 0.007,
+    "price_per_mtok_decide_continuous_learning": 0.0105,
+    "price_per_gpu_hour": 7.0
+  },
+  {
+    "id": "gliner2.5-decide",
+    "description": null,
+    "release_date": null,
+    "params": "0.5B",
+    "provider": "Fastino",
+    "leaderboard_rank": 102,
+    "max_options": 64,
+    "max_question_tokens": 512,
+    "trainable": true,
+    "default_rank": 16,
+    "max_rank": 256,
+    "lora_targets": [
+      "attn",
+      "mlp"
+    ],
+    "modalities": [
+      "text"
+    ],
+    "contract": "gliner2-classify",
+    "contract_version": 1,
+    "hf_repo": "fastino/GLiNER2.5-Decide",
+    "hf_revision": "5a7adf72a23b4d311abae6ce050d7f0012bb3416",
+    "trainer_gpu": null,
+    "price_per_mtok_decide": 0.005,
+    "price_per_mtok_decide_continuous_learning": 0.0075,
+    "price_per_gpu_hour": 7.0
+  }
+]

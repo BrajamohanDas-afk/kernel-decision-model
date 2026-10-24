@@ -1,0 +1,86 @@
+{
+  "n": 80,
+  "by_type": {
+    "choice": {
+      "n": 80,
+      "ece": 0.10108774527907378,
+      "nll": 0.6927752869453384,
+      "brier": 0.19606358555895745,
+      "accuracy": 0.9,
+      "selective": {
+        "0.5": {
+          "accuracy": 0.9,
+          "coverage": 1.0
+        },
+        "0.7": {
+          "accuracy": 0.9,
+          "coverage": 1.0
+        },
+        "0.9": {
+          "accuracy": 0.8961038961038961,
+          "coverage": 0.9625
+        },
+        "0.95": {
+          "accuracy": 0.8961038961038961,
+          "coverage": 0.9625
+        }
+      },
+      "mean_confidence": 0.98877257630229
+    }
+  },
+  "overall": {
+    "n": 80,
+    "ece": 0.10108774527907378,
+    "nll": 0.6927752869453384,
+    "brier": 0.19606358555895745,
+    "accuracy": 0.9,
+    "selective": {
+      "0.5": {
+        "accuracy": 0.9,
+        "coverage": 1.0
+      },
+      "0.7": {
+        "accuracy": 0.9,
+        "coverage": 1.0
+      },
+      "0.9": {
+        "accuracy": 0.8961038961038961,
+        "coverage": 0.9625
+      },
+      "0.95": {
+        "accuracy": 0.8961038961038961,
+        "coverage": 0.9625
+      }
+    },
+    "mean_confidence": 0.98877257630229
+  },
+  "by_question": {
+    "action": {
+      "n": 80,
+      "ece": 0.10108774527907378,
+      "nll": 0.6927752869453384,
+      "brier": 0.19606358555895745,
+      "accuracy": 0.9,
+      "selective": {
+        "0.5": {
+          "accuracy": 0.9,
+          "coverage": 1.0
+        },
+        "0.7": {
+          "accuracy": 0.9,
+          "coverage": 1.0
+        },
+        "0.9": {
+          "accuracy": 0.8961038961038961,
+          "coverage": 0.9625
+        },
+        "0.95": {
+          "accuracy": 0.8961038961038961,
+          "coverage": 0.9625
+        }
+      },
+      "mean_confidence": 0.98877257630229
+    }
+  },
+  "rows_url": "(link removed)"
+}

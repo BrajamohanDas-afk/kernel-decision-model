@@ -1,0 +1,1418 @@
+{
+  "name": "v3-pplx",
+  "n": 1640,
+  "accuracy": 0.8732,
+  "macro_f1": 0.4014,
+  "balanced_accuracy": 0.4462,
+  "per_class": {
+    "alert_operator": {
+      "precision": 0.455,
+      "recall": 0.75,
+      "f1": 0.566,
+      "support": 20,
+      "predicted": 33,
+      "correct": 15
+    },
+    "decrease_cpu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 18,
+      "predicted": 0,
+      "correct": 0
+    },
+    "decrease_memory": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 25,
+      "predicted": 0,
+      "correct": 0
+    },
+    "do_nothing": {
+      "precision": 0.915,
+      "recall": 0.94,
+      "f1": 0.927,
+      "support": 1054,
+      "predicted": 1083,
+      "correct": 991
+    },
+    "increase_cpu": {
+      "precision": 0.818,
+      "recall": 0.95,
+      "f1": 0.879,
+      "support": 180,
+      "predicted": 209,
+      "correct": 171
+    },
+    "increase_memory": {
+      "precision": 0.903,
+      "recall": 0.914,
+      "f1": 0.908,
+      "support": 266,
+      "predicted": 269,
+      "correct": 243
+    },
+    "protect_service": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 31,
+      "predicted": 0,
+      "correct": 0
+    },
+    "restrict_process_count": {
+      "precision": 0.261,
+      "recall": 0.462,
+      "f1": 0.333,
+      "support": 26,
+      "predicted": 46,
+      "correct": 12
+    },
+    "throttle_io": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 20,
+      "predicted": 0,
+      "correct": 0
+    }
+  },
+  "true_distribution": {
+    "do_nothing": 1054,
+    "protect_service": 31,
+    "restrict_process_count": 26,
+    "increase_cpu": 180,
+    "increase_memory": 266,
+    "decrease_memory": 25,
+    "throttle_io": 20,
+    "decrease_cpu": 18,
+    "alert_operator": 20
+  },
+  "pred_distribution": {
+    "do_nothing": 1083,
+    "increase_cpu": 209,
+    "increase_memory": 269,
+    "restrict_process_count": 46,
+    "alert_operator": 33
+  },
+  "calibration_bands": [
+    {
+      "lo": 0.5,
+      "hi": 0.6,
+      "n": 91,
+      "mean_conf": 0.563,
+      "accuracy": 0.758
+    },
+    {
+      "lo": 0.6,
+      "hi": 0.7,
+      "n": 426,
+      "mean_conf": 0.629,
+      "accuracy": 0.908
+    },
+    {
+      "lo": 0.7,
+      "hi": 0.8,
+      "n": 579,
+      "mean_conf": 0.731,
+      "accuracy": 0.893
+    },
+    {
+      "lo": 0.8,
+      "hi": 0.9,
+      "n": 455,
+      "mean_conf": 0.835,
+      "accuracy": 0.908
+    },
+    {
+      "lo": 0.9,
+      "hi": 0.95,
+      "n": 2,
+      "mean_conf": 0.914,
+      "accuracy": 1.0
+    }
+  ],
+  "selective": [
+    {
+      "threshold": 0.5,
+      "coverage": 0.947,
+      "accuracy": 0.8938
+    },
+    {
+      "threshold": 0.6,
+      "coverage": 0.8915,
+      "accuracy": 0.9022
+    },
+    {
+      "threshold": 0.7,
+      "coverage": 0.6317,
+      "accuracy": 0.8996
+    },
+    {
+      "threshold": 0.8,
+      "coverage": 0.2787,
+      "accuracy": 0.9081
+    },
+    {
+      "threshold": 0.85,
+      "coverage": 0.0652,
+      "accuracy": 0.9346
+    },
+    {
+      "threshold": 0.9,
+      "coverage": 0.0012,
+      "accuracy": 1.0
+    }
+  ],
+  "mistakes": [
+    {
+      "row": "2031-10",
+      "label": "do_nothing",
+      "predicted": "increase_cpu",
+      "confidence": 0.8732200752605092
+    },
+    {
+      "row": "2043-22",
+      "label": "decrease_memory",
+      "predicted": "increase_memory",
+      "confidence": 0.855146733197299
+    },
+    {
+      "row": "2035-42",
+      "label": "increase_memory",
+      "predicted": "increase_cpu",
+      "confidence": 0.8531770489432595
+    },
+    {
+      "row": "2027-61",
+      "label": "decrease_memory",
+      "predicted": "increase_cpu",
+      "confidence": 0.8526530916040593
+    },
+    {
+      "row": "2027-94",
+      "label": "throttle_io",
+      "predicted": "increase_cpu",
+      "confidence": 0.8516383387825706
+    },
+    {
+      "row": "2039-126",
+      "label": "do_nothing",
+      "predicted": "alert_operator",
+      "confidence": 0.8511219241402366
+    },
+    {
+      "row": "2027-112",
+      "label": "protect_service",
+      "predicted": "increase_cpu",
+      "confidence": 0.8509044213728472
+    },
+    {
+      "row": "2031-18",
+      "label": "increase_memory",
+      "predicted": "increase_cpu",
+      "confidence": 0.8498996821316805
+    },
+    {
+      "row": "2019-125",
+      "label": "do_nothing",
+      "predicted": "alert_operator",
+      "confidence": 0.8495371775193648
+    },
+    {
+      "row": "2027-105",
+      "label": "increase_memory",
+      "predicted": "increase_cpu",
+      "confidence": 0.8486035086891868
+    },
+    {
+      "row": "2027-59",
+      "label": "decrease_cpu",
+      "predicted": "increase_cpu",
+      "confidence": 0.8484858816320245
+    },
+    {
+      "row": "2027-76",
+      "label": "increase_memory",
+      "predicted": "increase_cpu",
+      "confidence": 0.845958102833141
+    },
+    {
+      "row": "2003-23",
+      "label": "decrease_memory",
+      "predicted": "increase_cpu",
+      "confidence": 0.8450330170718107
+    },
+    {
+      "row": "2039-21",
+      "label": "decrease_memory",
+      "predicted": "increase_memory",
+      "confidence": 0.8439488194205544
+    },
+    {
+      "row": "2055-33",
+      "label": "decrease_cpu",
+      "predicted": "increase_cpu",
+      "confidence": 0.842539830641313
+    },
+    {
+      "row": "2003-19",
+      "label": "increase_memory",
+      "predicted": "increase_cpu",
+      "confidence": 0.84243520823392
+    },
+    {
+      "row": "2055-120",
+      "label": "do_nothing",
+      "predicted": "alert_operator",
+      "confidence": 0.8421958576549183
+    },
+    {
+      "row": "2055-41",
+      "label": "increase_memory",
+      "predicted": "increase_cpu",
+      "confidence": 0.8415447148409757
+    },
+    {
+      "row": "2055-38",
+      "label": "protect_service",
+      "predicted": "increase_cpu",
+      "confidence": 0.8398258252577349
+    },
+    {
+      "row": "2027-70",
+      "label": "protect_service",
+      "predicted": "increase_cpu",
+      "confidence": 0.8394231362776323
+    },
+    {
+      "row": "2043-12",
+      "label": "restrict_process_count",
+      "predicted": "increase_memory",
+      "confidence": 0.8362517573616721
+    },
+    {
+      "row": "2007-72",
+      "label": "protect_service",
+      "predicted": "increase_memory",
+      "confidence": 0.8355003486980092
+    },
+    {
+      "row": "2039-33",
+      "label": "decrease_cpu",
+      "predicted": "increase_memory",
+      "confidence": 0.8354617899114435
+    },
+    {
+      "row": "2039-11",
+      "label": "restrict_process_count",
+      "predicted": "increase_memory",
+      "confidence": 0.8353803157806396
+    },
+    {
+      "row": "2043-25",
+      "label": "throttle_io",
+      "predicted": "increase_memory",
+      "confidence": 0.8266272111372515
+    },
+    {
+      "row": "2039-7",
+      "label": "protect_service",
+      "predicted": "increase_memory",
+      "confidence": 0.8254538015885786
+    },
+    {
+      "row": "2003-15",
+      "label": "do_nothing",
+      "predicted": "increase_cpu",
+      "confidence": 0.8251753070137717
+    },
+    {
+      "row": "2003-72",
+      "label": "protect_service",
+      "predicted": "increase_memory",
+      "confidence": 0.8209277283061635
+    },
+    {
+      "row": "2043-8",
+      "label": "protect_service",
+      "predicted": "increase_memory",
+      "confidence": 0.8206701061942361
+    },
+    {
+      "row": "2035-83",
+      "label": "alert_operator",
+      "predicted": "increase_memory",
+      "confidence": 0.819423870606856
+    },
+    {
+      "row": "2055-70",
+      "label": "protect_service",
+      "predicted": "increase_memory",
+      "confidence": 0.8149169791828502
+    },
+    {
+      "row": "2043-30",
+      "label": "protect_service",
+      "predicted": "increase_memory",
+      "confidence": 0.8136016238819469
+    },
+    {
+      "row": "2043-34",
+      "label": "decrease_cpu",
+      "predicted": "increase_memory",
+      "confidence": 0.8128473541953347
+    },
+    {
+      "row": "2007-91",
+      "label": "do_nothing",
+      "predicted": "alert_operator",
+      "confidence": 0.8117884505878795
+    },
+    {
+      "row": "2035-81",
+      "label": "alert_operator",
+      "predicted": "increase_memory",
+      "confidence": 0.8109382065859708
+    },
+    {
+      "row": "2035-79",
+      "label": "alert_operator",
+      "predicted": "increase_memory",
+      "confidence": 0.8102283477783203
+    },
+    {
+      "row": "2035-82",
+      "label": "alert_operator",
+      "predicted": "increase_memory",
+      "confidence": 0.8080401854081587
+    },
+    {
+      "row": "2007-61",
+      "label": "decrease_cpu",
+      "predicted": "increase_memory",
+      "confidence": 0.8074782544916326
+    },
+    {
+      "row": "2007-63",
+      "label": "decrease_memory",
+      "predicted": "increase_memory",
+      "confidence": 0.8049881891770796
+    },
+    {
+      "row": "2035-80",
+      "label": "alert_operator",
+      "predicted": "increase_memory",
+      "confidence": 0.8041924996809526
+    },
+    {
+      "row": "2055-59",
+      "label": "decrease_cpu",
+      "predicted": "increase_memory",
+      "confidence": 0.801115794615312
+    },
+    {
+      "row": "2055-61",
+      "label": "decrease_memory",
+      "predicted": "increase_memory",
+      "confidence": 0.8008542711084539
+    },
+    {
+      "row": "2011-108",
+      "label": "do_nothing",
+      "predicted": "alert_operator",
+      "confidence": 0.7981867573478005
+    },
+    {
+      "row": "2059-128",
+      "label": "do_nothing",
+      "predicted": "alert_operator",
+      "confidence": 0.790843356739391
+    },
+    {
+      "row": "2003-40",
+      "label": "protect_service",
+      "predicted": "increase_memory",
+      "confidence": 0.7863497950813987
+    },
+    {
+      "row": "2003-35",
+      "label": "decrease_cpu",
+      "predicted": "increase_memory",
+      "confidence": 0.7651946761391379
+    },
+    {
+      "row": "2027-121",
+      "label": "do_nothing",
+      "predicted": "alert_operator",
+      "confidence": 0.7645907402038574
+    },
+    {
+      "row": "2035-84",
+      "label": "decrease_memory",
+      "predicted": "do_nothing",
+      "confidence": 0.7614434849132191
+    },
+    {
+      "row": "2015-38",
+      "label": "throttle_io",
+      "predicted": "increase_memory",
+      "confidence": 0.7519526264884255
+    },
+    {
+      "row": "2015-35",
+      "label": "decrease_cpu",
+      "predicted": "increase_memory",
+      "confidence": 0.747899597341364
+    },
+    {
+      "row": "2003-104",
+      "label": "do_nothing",
+      "predicted": "alert_operator",
+      "confidence": 0.742718674919822
+    },
+    {
+      "row": "2015-91",
+      "label": "do_nothing",
+      "predicted": "alert_operator",
+      "confidence": 0.7423362731933594
+    },
+    {
+      "row": "2051-81",
+      "label": "do_nothing",
+      "predicted": "restrict_process_count",
+      "confidence": 0.741290504282171
+    },
+    {
+      "row": "2051-82",
+      "label": "do_nothing",
+      "predicted": "restrict_process_count",
+      "confidence": 0.7408118031241677
+    },
+    {
+      "row": "2031-62",
+      "label": "decrease_memory",
+      "predicted": "restrict_process_count",
+      "confidence": 0.7399993376298384
+    },
+    {
+      "row": "2031-64",
+      "label": "do_nothing",
+      "predicted": "restrict_process_count",
+      "confidence": 0.7398430217396129
+    },
+    {
+      "row": "2051-80",
+      "label": "do_nothing",
+      "predicted": "restrict_process_count",
+      "confidence": 0.7395456704226407
+    },
+    {
+      "row": "2023-52",
+      "label": "restrict_process_count",
+      "predicted": "do_nothing",
+      "confidence": 0.7392676960338246
+    },
+    {
+      "row": "2051-98",
+      "label": "do_nothing",
+      "predicted": "alert_operator",
+      "confidence": 0.738233891400424
+    },
+    {
+      "row": "2031-65",
+      "label": "do_nothing",
+      "predicted": "restrict_process_count",
+      "confidence": 0.7382295348427512
+    },
+    {
+      "row": "2047-97",
+      "label": "do_nothing",
+      "predicted": "alert_operator",
+      "confidence": 0.7367973327636719
+    },
+    {
+      "row": "2035-93",
+      "label": "do_nothing",
+      "predicted": "alert_operator",
+      "confidence": 0.7341109622608532
+    },
+    {
+      "row": "2055-24",
+      "label": "throttle_io",
+      "predicted": "do_nothing",
+      "confidence": 0.7328107573769309
+    },
+    {
+      "row": "2007-9",
+      "label": "protect_service",
+      "predicted": "do_nothing",
+      "confidence": 0.7326121763749556
+    },
+    {
+      "row": "2055-21",
+      "label": "decrease_memory",
+      "predicted": "do_nothing",
+      "confidence": 0.7325294017791748
+    },
+    {
+      "row": "2007-40",
+      "label": "protect_service",
+      "predicted": "do_nothing",
+      "confidence": 0.7322113080458208
+    },
+    {
+      "row": "2047-98",
+      "label": "do_nothing",
+      "predicted": "alert_operator",
+      "confidence": 0.7310692397030917
+    },
+    {
+      "row": "2039-59",
+      "label": "decrease_cpu",
+      "predicted": "do_nothing",
+      "confidence": 0.7302806377410889
+    },
+    {
+      "row": "2007-23",
+      "label": "decrease_memory",
+      "predicted": "do_nothing",
+      "confidence": 0.730030363256281
+    },
+    {
+      "row": "2043-113",
+      "label": "protect_service",
+      "predicted": "do_nothing",
+      "confidence": 0.729087461124767
+    },
+    {
+      "row": "2051-97",
+      "label": "do_nothing",
+      "predicted": "alert_operator",
+      "confidence": 0.7288823127746582
+    },
+    {
+      "row": "2007-13",
+      "label": "restrict_process_count",
+      "predicted": "do_nothing",
+      "confidence": 0.7286083048040216
+    },
+    {
+      "row": "2043-107",
+      "label": "restrict_process_count",
+      "predicted": "do_nothing",
+      "confidence": 0.7283580303192139
+    },
+    {
+      "row": "2043-110",
+      "label": "increase_memory",
+      "predicted": "do_nothing",
+      "confidence": 0.7280783003026788
+    },
+    {
+      "row": "2007-26",
+      "label": "throttle_io",
+      "predicted": "do_nothing",
+      "confidence": 0.7278939593922008
+    },
+    {
+      "row": "2007-19",
+      "label": "increase_memory",
+      "predicted": "do_nothing",
+      "confidence": 0.7269546335393732
+    },
+    {
+      "row": "2055-17",
+      "label": "increase_memory",
+      "predicted": "do_nothing",
+      "confidence": 0.7242620208046653
+    },
+    {
+      "row": "2031-77",
+      "label": "increase_memory",
+      "predicted": "do_nothing",
+      "confidence": 0.7242076613686301
+    },
+    {
+      "row": "2031-60",
+      "label": "decrease_cpu",
+      "predicted": "do_nothing",
+      "confidence": 0.7224157506769353
+    },
+    {
+      "row": "2015-23",
+      "label": "decrease_memory",
+      "predicted": "restrict_process_count",
+      "confidence": 0.7219431617043235
+    },
+    {
+      "row": "2031-83",
+      "label": "do_nothing",
+      "predicted": "restrict_process_count",
+      "confidence": 0.7198149507695978
+    },
+    {
+      "row": "2003-9",
+      "label": "protect_service",
+      "predicted": "do_nothing",
+      "confidence": 0.7192894978956743
+    },
+    {
+      "row": "2019-45",
+      "label": "do_nothing",
+      "predicted": "restrict_process_count",
+      "confidence": 0.7188331647352739
+    },
+    {
+      "row": "2047-7",
+      "label": "do_nothing",
+      "predicted": "restrict_process_count",
+      "confidence": 0.718475731936368
+    },
+    {
+      "row": "2023-55",
+      "label": "do_nothing",
+      "predicted": "restrict_process_count",
+      "confidence": 0.7182193452661687
+    },
+    {
+      "row": "2031-84",
+      "label": "do_nothing",
+      "predicted": "restrict_process_count",
+      "confidence": 0.7171001000837847
+    },
+    {
+      "row": "2031-71",
+      "label": "protect_service",
+      "predicted": "do_nothing",
+      "confidence": 0.7170915820381858
+    },
+    {
+      "row": "2023-36",
+      "label": "do_nothing",
+      "predicted": "restrict_process_count",
+      "confidence": 0.7170895012942228
+    },
+    {
+      "row": "2047-8",
+      "label": "do_nothing",
+      "predicted": "restrict_process_count",
+      "confidence": 0.7164239233190363
+    },
+    {
+      "row": "2007-35",
+      "label": "decrease_cpu",
+      "predicted": "do_nothing",
+      "confidence": 0.7162141583182595
+    },
+    {
+      "row": "2019-44",
+      "label": "do_nothing",
+      "predicted": "restrict_process_count",
+      "confidence": 0.7160786498676647
+    },
+    {
+      "row": "2031-27",
+      "label": "do_nothing",
+      "predicted": "restrict_process_count",
+      "confidence": 0.7154498100280762
+    },
+    {
+      "row": "2031-94",
+      "label": "do_nothing",
+      "predicted": "alert_operator",
+      "confidence": 0.7133383100683038
+    },
+    {
+      "row": "2035-77",
+      "label": "increase_memory",
+      "predicted": "do_nothing",
+      "confidence": 0.7119844610040837
+    },
+    {
+      "row": "2003-13",
+      "label": "restrict_process_count",
+      "predicted": "do_nothing",
+      "confidence": 0.7118524638089266
+    },
+    {
+      "row": "2031-39",
+      "label": "protect_service",
+      "predicted": "do_nothing",
+      "confidence": 0.7113073088906028
+    },
+    {
+      "row": "2043-95",
+      "label": "throttle_io",
+      "predicted": "do_nothing",
+      "confidence": 0.710558761249889
+    },
+    {
+      "row": "2043-88",
+      "label": "do_nothing",
+      "predicted": "restrict_process_count",
+      "confidence": 0.7104718901894309
+    },
+    {
+      "row": "2031-28",
+      "label": "do_nothing",
+      "predicted": "restrict_process_count",
+      "confidence": 0.7100559364665638
+    },
+    {
+      "row": "2031-42",
+      "label": "increase_memory",
+      "predicted": "do_nothing",
+      "confidence": 0.7087371349334717
+    },
+    {
+      "row": "2031-34",
+      "label": "decrease_cpu",
+      "predicted": "do_nothing",
+      "confidence": 0.7067677107724276
+    },
+    {
+      "row": "2035-71",
+      "label": "protect_service",
+      "predicted": "do_nothing",
+      "confidence": 0.7059152559800581
+    },
+    {
+      "row": "2055-112",
+      "label": "protect_service",
+      "predicted": "do_nothing",
+      "confidence": 0.7022074352611195
+    },
+    {
+      "row": "2043-87",
+      "label": "do_nothing",
+      "predicted": "restrict_process_count",
+      "confidence": 0.7010015791112726
+    },
+    {
+      "row": "2039-38",
+      "label": "protect_service",
+      "predicted": "do_nothing",
+      "confidence": 0.695249622518366
+    },
+    {
+      "row": "2023-96",
+      "label": "do_nothing",
+      "predicted": "alert_operator",
+      "confidence": 0.6943758401003751
+    },
+    {
+      "row": "2003-96",
+      "label": "throttle_io",
+      "predicted": "do_nothing",
+      "confidence": 0.6941253055225719
+    },
+    {
+      "row": "2039-60",
+      "label": "increase_memory",
+      "predicted": "do_nothing",
+      "confidence": 0.6755070036107843
+    },
+    {
+      "row": "2043-118",
+      "label": "do_nothing",
+      "predicted": "alert_operator",
+      "confidence": 0.6726492318240079
+    },
+    {
+      "row": "2043-117",
+      "label": "do_nothing",
+      "predicted": "alert_operator",
+      "confidence": 0.6682817502455278
+    },
+    {
+      "row": "2043-86",
+      "label": "do_nothing",
+      "predicted": "restrict_process_count",
+      "confidence": 0.6648651686581698
+    },
+    {
+      "row": "2055-105",
+      "label": "increase_memory",
+      "predicted": "do_nothing",
+      "confidence": 0.655330549586903
+    },
+    {
+      "row": "2055-94",
+      "label": "throttle_io",
+      "predicted": "do_nothing",
+      "confidence": 0.6473984284834429
+    },
+    {
+      "row": "2043-84",
+      "label": "increase_memory",
+      "predicted": "restrict_process_count",
+      "confidence": 0.6420405127785422
+    },
+    {
+      "row": "2003-63",
+      "label": "decrease_memory",
+      "predicted": "do_nothing",
+      "confidence": 0.6338588974692605
+    },
+    {
+      "row": "2043-71",
+      "label": "protect_service",
+      "predicted": "do_nothing",
+      "confidence": 0.6213317784396085
+    },
+    {
+      "row": "2035-62",
+      "label": "decrease_memory",
+      "predicted": "do_nothing",
+      "confidence": 0.6206871379505504
+    },
+    {
+      "row": "2039-109",
+      "label": "increase_memory",
+      "predicted": "do_nothing",
+      "confidence": 0.6185251799496737
+    },
+    {
+      "row": "2027-33",
+      "label": "decrease_cpu",
+      "predicted": "do_nothing",
+      "confidence": 0.6185143860903654
+    },
+    {
+      "row": "2027-17",
+      "label": "increase_memory",
+      "predicted": "do_nothing",
+      "confidence": 0.6183603460138494
+    },
+    {
+      "row": "2039-83",
+      "label": "increase_memory",
+      "predicted": "do_nothing",
+      "confidence": 0.617769024588845
+    },
+    {
+      "row": "2027-38",
+      "label": "protect_service",
+      "predicted": "do_nothing",
+      "confidence": 0.6171275052157316
+    },
+    {
+      "row": "2039-112",
+      "label": "protect_service",
+      "predicted": "do_nothing",
+      "confidence": 0.6169858195564963
+    },
+    {
+      "row": "2027-41",
+      "label": "increase_memory",
+      "predicted": "do_nothing",
+      "confidence": 0.6168164990165017
+    },
+    {
+      "row": "2043-60",
+      "label": "decrease_cpu",
+      "predicted": "do_nothing",
+      "confidence": 0.614136435768821
+    },
+    {
+      "row": "2055-11",
+      "label": "restrict_process_count",
+      "predicted": "do_nothing",
+      "confidence": 0.6136197610334916
+    },
+    {
+      "row": "2035-34",
+      "label": "decrease_cpu",
+      "predicted": "do_nothing",
+      "confidence": 0.6126885630867698
+    },
+    {
+      "row": "2039-94",
+      "label": "throttle_io",
+      "predicted": "do_nothing",
+      "confidence": 0.6124706701798872
+    },
+    {
+      "row": "2027-36",
+      "label": "throttle_io",
+      "predicted": "do_nothing",
+      "confidence": 0.612376646562056
+    },
+    {
+      "row": "2027-21",
+      "label": "decrease_memory",
+      "predicted": "do_nothing",
+      "confidence": 0.6117460510947488
+    },
+    {
+      "row": "2039-106",
+      "label": "restrict_process_count",
+      "predicted": "do_nothing",
+      "confidence": 0.6110896413976495
+    },
+    {
+      "row": "2015-72",
+      "label": "protect_service",
+      "predicted": "do_nothing",
+      "confidence": 0.6109936020591042
+    },
+    {
+      "row": "2039-70",
+      "label": "protect_service",
+      "predicted": "do_nothing",
+      "confidence": 0.6104371330954812
+    },
+    {
+      "row": "2011-7",
+      "label": "do_nothing",
+      "predicted": "restrict_process_count",
+      "confidence": 0.6101488850333474
+    },
+    {
+      "row": "2015-13",
+      "label": "restrict_process_count",
+      "predicted": "do_nothing",
+      "confidence": 0.6100943955508146
+    },
+    {
+      "row": "2035-18",
+      "label": "increase_memory",
+      "predicted": "do_nothing",
+      "confidence": 0.609123403375799
+    },
+    {
+      "row": "2039-78",
+      "label": "decrease_memory",
+      "predicted": "do_nothing",
+      "confidence": 0.6085572459480979
+    },
+    {
+      "row": "2035-12",
+      "label": "restrict_process_count",
+      "predicted": "do_nothing",
+      "confidence": 0.6085060076280073
+    },
+    {
+      "row": "2035-37",
+      "label": "throttle_io",
+      "predicted": "restrict_process_count",
+      "confidence": 0.6074861179698597
+    },
+    {
+      "row": "2035-22",
+      "label": "decrease_memory",
+      "predicted": "do_nothing",
+      "confidence": 0.6025364832444624
+    },
+    {
+      "row": "2015-61",
+      "label": "decrease_cpu",
+      "predicted": "do_nothing",
+      "confidence": 0.6023631312630393
+    },
+    {
+      "row": "2011-8",
+      "label": "do_nothing",
+      "predicted": "restrict_process_count",
+      "confidence": 0.6008227955211293
+    },
+    {
+      "row": "2015-19",
+      "label": "increase_memory",
+      "predicted": "do_nothing",
+      "confidence": 0.6004325259815563
+    },
+    {
+      "row": "2019-65",
+      "label": "throttle_io",
+      "predicted": "do_nothing",
+      "confidence": 0.5990945425900546
+    },
+    {
+      "row": "2055-29",
+      "label": "increase_cpu",
+      "predicted": "restrict_process_count",
+      "confidence": 0.5922842025756836
+    },
+    {
+      "row": "2031-63",
+      "label": "do_nothing",
+      "predicted": "restrict_process_count",
+      "confidence": 0.5907229943708939
+    },
+    {
+      "row": "2015-8",
+      "label": "throttle_io",
+      "predicted": "do_nothing",
+      "confidence": 0.589272910898382
+    },
+    {
+      "row": "2035-39",
+      "label": "protect_service",
+      "predicted": "restrict_process_count",
+      "confidence": 0.5761572664434259
+    },
+    {
+      "row": "2027-11",
+      "label": "restrict_process_count",
+      "predicted": "do_nothing",
+      "confidence": 0.5747660940343683
+    },
+    {
+      "row": "2055-7",
+      "label": "protect_service",
+      "predicted": "do_nothing",
+      "confidence": 0.5707464868372136
+    },
+    {
+      "row": "2035-7",
+      "label": "throttle_io",
+      "predicted": "do_nothing",
+      "confidence": 0.5683616291392933
+    },
+    {
+      "row": "2051-54",
+      "label": "throttle_io",
+      "predicted": "do_nothing",
+      "confidence": 0.5680467865683816
+    },
+    {
+      "row": "2035-60",
+      "label": "decrease_cpu",
+      "predicted": "do_nothing",
+      "confidence": 0.5632775263352827
+    },
+    {
+      "row": "2031-25",
+      "label": "throttle_io",
+      "predicted": "do_nothing",
+      "confidence": 0.5627732710404829
+    },
+    {
+      "row": "2015-9",
+      "label": "protect_service",
+      "predicted": "do_nothing",
+      "confidence": 0.5569622733376243
+    },
+    {
+      "row": "2023-33",
+      "label": "restrict_process_count",
+      "predicted": "do_nothing",
+      "confidence": 0.5540118434212424
+    },
+    {
+      "row": "2055-56",
+      "label": "restrict_process_count",
+      "predicted": "do_nothing",
+      "confidence": 0.5430577018044213
+    },
+    {
+      "row": "2043-40",
+      "label": "decrease_memory",
+      "predicted": "do_nothing",
+      "confidence": 0.5430399504574863
+    },
+    {
+      "row": "2051-27",
+      "label": "do_nothing",
+      "predicted": "increase_cpu",
+      "confidence": 0.5315662730823864
+    },
+    {
+      "row": "2015-85",
+      "label": "decrease_memory",
+      "predicted": "do_nothing",
+      "confidence": 0.5298732627521862
+    },
+    {
+      "row": "2039-22",
+      "label": "throttle_io",
+      "predicted": "do_nothing",
+      "confidence": 0.5227719436992299
+    },
+    {
+      "row": "2043-61",
+      "label": "increase_memory",
+      "predicted": "do_nothing",
+      "confidence": 0.5216668735850941
+    },
+    {
+      "row": "2035-8",
+      "label": "protect_service",
+      "predicted": "do_nothing",
+      "confidence": 0.5196006298065186
+    },
+    {
+      "row": "2015-80",
+      "label": "decrease_memory",
+      "predicted": "do_nothing",
+      "confidence": 0.5157111341303046
+    },
+    {
+      "row": "2011-13",
+      "label": "do_nothing",
+      "predicted": "increase_cpu",
+      "confidence": 0.5057235631075773
+    },
+    {
+      "row": "2011-9",
+      "label": "increase_cpu",
+      "predicted": "do_nothing",
+      "confidence": 0.49164921587163757
+    },
+    {
+      "row": "2027-6",
+      "label": "throttle_io",
+      "predicted": "do_nothing",
+      "confidence": 0.4889647310430354
+    },
+    {
+      "row": "2039-35",
+      "label": "decrease_memory",
+      "predicted": "do_nothing",
+      "confidence": 0.4870620857585561
+    },
+    {
+      "row": "2015-76",
+      "label": "decrease_memory",
+      "predicted": "do_nothing",
+      "confidence": 0.4858577901666815
+    },
+    {
+      "row": "2003-26",
+      "label": "throttle_io",
+      "predicted": "increase_cpu",
+      "confidence": 0.4737132029099898
+    },
+    {
+      "row": "2059-14",
+      "label": "do_nothing",
+      "predicted": "increase_cpu",
+      "confidence": 0.4707206379283559
+    },
+    {
+      "row": "2051-7",
+      "label": "increase_cpu",
+      "predicted": "do_nothing",
+      "confidence": 0.46993931857022375
+    },
+    {
+      "row": "2055-13",
+      "label": "do_nothing",
+      "predicted": "increase_cpu",
+      "confidence": 0.4655565565282649
+    },
+    {
+      "row": "2055-107",
+      "label": "do_nothing",
+      "predicted": "increase_cpu",
+      "confidence": 0.4575449770147151
+    },
+    {
+      "row": "2035-59",
+      "label": "do_nothing",
+      "predicted": "increase_cpu",
+      "confidence": 0.45723332058299676
+    },
+    {
+      "row": "2035-38",
+      "label": "do_nothing",
+      "predicted": "increase_cpu",
+      "confidence": 0.43682284788651904
+    },
+    {
+      "row": "2059-8",
+      "label": "increase_cpu",
+      "predicted": "do_nothing",
+      "confidence": 0.4327556436712092
+    },
+    {
+      "row": "2027-79",
+      "label": "do_nothing",
+      "predicted": "increase_cpu",
+      "confidence": 0.4247755028984764
+    },
+    {
+      "row": "2031-22",
+      "label": "decrease_memory",
+      "predicted": "increase_cpu",
+      "confidence": 0.4210468422282826
+    },
+    {
+      "row": "2043-62",
+      "label": "decrease_memory",
+      "predicted": "do_nothing",
+      "confidence": 0.4151403253728694
+    },
+    {
+      "row": "2031-82",
+      "label": "do_nothing",
+      "predicted": "restrict_process_count",
+      "confidence": 0.4131795493039218
+    },
+    {
+      "row": "2031-8",
+      "label": "protect_service",
+      "predicted": "increase_cpu",
+      "confidence": 0.40473985671997076
+    },
+    {
+      "row": "2023-53",
+      "label": "do_nothing",
+      "predicted": "increase_cpu",
+      "confidence": 0.3923351439562711
+    },
+    {
+      "row": "2055-106",
+      "label": "restrict_process_count",
+      "predicted": "do_nothing",
+      "confidence": 0.3910441398620606
+    },
+    {
+      "row": "2031-26",
+      "label": "do_nothing",
+      "predicted": "restrict_process_count",
+      "confidence": 0.38780747760425915
+    },
+    {
+      "row": "2051-79",
+      "label": "do_nothing",
+      "predicted": "restrict_process_count",
+      "confidence": 0.38088051839308307
+    },
+    {
+      "row": "2011-6",
+      "label": "do_nothing",
+      "predicted": "increase_cpu",
+      "confidence": 0.37933185967532074
+    },
+    {
+      "row": "2027-85",
+      "label": "increase_cpu",
+      "predicted": "restrict_process_count",
+      "confidence": 0.37239410660483624
+    },
+    {
+      "row": "2055-28",
+      "label": "do_nothing",
+      "predicted": "increase_cpu",
+      "confidence": 0.3723198825662787
+    },
+    {
+      "row": "2027-7",
+      "label": "protect_service",
+      "predicted": "do_nothing",
+      "confidence": 0.3719931407408281
+    },
+    {
+      "row": "2019-43",
+      "label": "do_nothing",
+      "predicted": "restrict_process_count",
+      "confidence": 0.3650572408329357
+    },
+    {
+      "row": "2031-15",
+      "label": "increase_cpu",
+      "predicted": "do_nothing",
+      "confidence": 0.36347724090922967
+    },
+    {
+      "row": "2003-16",
+      "label": "increase_cpu",
+      "predicted": "do_nothing",
+      "confidence": 0.36343117193742236
+    },
+    {
+      "row": "2003-61",
+      "label": "decrease_cpu",
+      "predicted": "do_nothing",
+      "confidence": 0.36336969245563855
+    },
+    {
+      "row": "2043-108",
+      "label": "do_nothing",
+      "predicted": "increase_cpu",
+      "confidence": 0.3546383380889893
+    },
+    {
+      "row": "2039-29",
+      "label": "increase_memory",
+      "predicted": "do_nothing",
+      "confidence": 0.351081598888744
+    },
+    {
+      "row": "2055-53",
+      "label": "do_nothing",
+      "predicted": "increase_cpu",
+      "confidence": 0.34815906394611706
+    },
+    {
+      "row": "2047-6",
+      "label": "do_nothing",
+      "predicted": "restrict_process_count",
+      "confidence": 0.34793366085399285
+    },
+    {
+      "row": "2047-66",
+      "label": "do_nothing",
+      "predicted": "increase_cpu",
+      "confidence": 0.34370250051671813
+    },
+    {
+      "row": "2039-107",
+      "label": "do_nothing",
+      "predicted": "increase_cpu",
+      "confidence": 0.3372634757648815
+    },
+    {
+      "row": "2023-32",
+      "label": "throttle_io",
+      "predicted": "do_nothing",
+      "confidence": 0.3259210803292015
+    },
+    {
+      "row": "2055-80",
+      "label": "do_nothing",
+      "predicted": "increase_cpu",
+      "confidence": 0.29881018942052673
+    },
+    {
+      "row": "2051-52",
+      "label": "do_nothing",
+      "predicted": "increase_cpu",
+      "confidence": 0.29722043600949377
+    },
+    {
+      "row": "2051-33",
+      "label": "increase_cpu",
+      "predicted": "restrict_process_count",
+      "confidence": 0.2967832847075029
+    },
+    {
+      "row": "2015-40",
+      "label": "protect_service",
+      "predicted": "increase_cpu",
+      "confidence": 0.2829422083767978
+    },
+    {
+      "row": "2039-46",
+      "label": "decrease_memory",
+      "predicted": "increase_cpu",
+      "confidence": 0.25652761892838916
+    },
+    {
+      "row": "2015-57",
+      "label": "decrease_memory",
+      "predicted": "do_nothing",
+      "confidence": 0.23735629428516739
+    },
+    {
+      "row": "2007-88",
+      "label": "increase_cpu",
+      "predicted": "do_nothing",
+      "confidence": 0.20920646190643313
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "name": "pilot",
+  "n": 80,
+  "accuracy": 0.9,
+  "macro_f1": 0.6033,
+  "balanced_accuracy": 0.645,
+  "per_class": {
+    "alert_operator": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4,
+      "predicted": 0,
+      "correct": 0
+    },
+    "do_nothing": {
+      "precision": 0.935,
+      "recall": 0.935,
+      "f1": 0.935,
+      "support": 62,
+      "predicted": 62,
+      "correct": 58
+    },
+    "throttle_io": {
+      "precision": 0.778,
+      "recall": 1.0,
+      "f1": 0.875,
+      "support": 14,
+      "predicted": 18,
+      "correct": 14
+    }
+  },
+  "true_distribution": {
+    "throttle_io": 14,
+    "do_nothing": 62,
+    "alert_operator": 4
+  },
+  "pred_distribution": {
+    "throttle_io": 18,
+    "do_nothing": 62
+  },
+  "calibration_bands": [
+    {
+      "lo": 0.8,
+      "hi": 0.9,
+      "n": 3,
+      "mean_conf": 0.821,
+      "accuracy": 1.0
+    },
+    {
+      "lo": 0.9,
+      "hi": 0.95,
+      "n": 1,
+      "mean_conf": 0.947,
+      "accuracy": 0.0
+    },
+    {
+      "lo": 0.95,
+      "hi": 1.0001,
+      "n": 76,
+      "mean_conf": 0.995,
+      "accuracy": 0.908
+    }
+  ],
+  "selective": [
+    {
+      "threshold": 0.5,
+      "coverage": 1.0,
+      "accuracy": 0.9
+    },
+    {
+      "threshold": 0.6,
+      "coverage": 1.0,
+      "accuracy": 0.9
+    },
+    {
+      "threshold": 0.7,
+      "coverage": 1.0,
+      "accuracy": 0.9
+    },
+    {
+      "threshold": 0.8,
+      "coverage": 1.0,
+      "accuracy": 0.9
+    },
+    {
+      "threshold": 0.85,
+      "coverage": 0.9625,
+      "accuracy": 0.8961
+    },
+    {
+      "threshold": 0.9,
+      "coverage": 0.9625,
+      "accuracy": 0.8961
+    },
+    {
+      "threshold": 0.93,
+      "coverage": 0.9625,
+      "accuracy": 0.8961
+    },
+    {
+      "threshold": 0.95,
+      "coverage": 0.95,
+      "accuracy": 0.9079
+    },
+    {
+      "threshold": 0.97,
+      "coverage": 0.9125,
+      "accuracy": 0.9041
+    },
+    {
+      "threshold": 0.99,
+      "coverage": 0.775,
+      "accuracy": 0.9355
+    }
+  ],
+  "mistakes": [
+    {
+      "row": "2026-10-14T19:53:42.295Z-172",
+      "label": "alert_operator",
+      "predicted": "do_nothing",
+      "confidence": 0.9993894316933372
+    },
+    {
+      "row": "2026-10-14T19:54:42.330Z-202",
+      "label": "alert_operator",
+      "predicted": "do_nothing",
+      "confidence": 0.9991522268815474
+    },
+    {
+      "row": "2026-10-14T19:43:47.407Z-202",
+      "label": "alert_operator",
+      "predicted": "do_nothing",
+      "confidence": 0.9990925355391069
+    },
+    {
+      "row": "2026-10-14T19:42:47.373Z-172",
+      "label": "alert_operator",
+      "predicted": "do_nothing",
+      "confidence": 0.998569293455644
+    },
+    {
+      "row": "2026-10-14T19:42:41.371Z-169",
+      "label": "do_nothing",
+      "predicted": "throttle_io",
+      "confidence": 0.9730944199995561
+    },
+    {
+      "row": "2026-10-14T19:42:43.372Z-170",
+      "label": "do_nothing",
+      "predicted": "throttle_io",
+      "confidence": 0.9730810902335427
+    },
+    {
+      "row": "2026-10-14T19:42:39.370Z-168",
+      "label": "do_nothing",
+      "predicted": "throttle_io",
+      "confidence": 0.9716555855490945
+    },
+    {
+      "row": "2026-10-14T19:42:45.373Z-171",
+      "label": "do_nothing",
+      "predicted": "throttle_io",
+      "confidence": 0.9474559480493719
+    }
+  ]
+}

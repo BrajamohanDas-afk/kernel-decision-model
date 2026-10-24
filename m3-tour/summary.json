@@ -1,0 +1,893 @@
+{
+ "runs": [
+  {
+   "dir": "/root/workloadpilot/m3/tour/run-4010-mem",
+   "seed": 4010,
+   "victim_type": "throughput",
+   "model": "workloadpilot/v2-2b",
+   "telemetry_rows": 127,
+   "peak": {
+    "psi_cpu_max": 0.0,
+    "throttle_us_per_s_max": 2087.0,
+    "mem_events_high_max": 269,
+    "mem_head_min_mb": 0.20000000000004547
+   },
+   "decisions": 126,
+   "tokens": 76311,
+   "errors": 0,
+   "actions": {
+    "do_nothing": 104,
+    "increase_cpu": 0,
+    "decrease_cpu": 0,
+    "increase_memory": 17,
+    "decrease_memory": 1,
+    "throttle_io": 0,
+    "restrict_process_count": 2,
+    "protect_service": 0,
+    "isolate_workload": 0,
+    "restart_service": 0,
+    "kill_process": 0,
+    "alert_operator": 2
+   },
+   "gate": {
+    "pass_no_write": 106,
+    "applied": 3,
+    "rejected": 17
+   },
+   "rejections": {
+    "cooldown": 17
+   },
+   "applied": [
+    {
+     "ts": "2026-10-16T21:47:38.863Z",
+     "action": "restrict_process_count",
+     "target": "wlp-neighbor",
+     "params": "wlp-neighbor pids.max 238->119",
+     "detail": "wlp-neighbor: pids.max 238->119 (pids.current 5)",
+     "next_samples": [
+      {
+       "ts": "2026-10-16T21:47:40.864Z",
+       "mem_high_mb": 948.0,
+       "pids": 5,
+       "cpu_psi": 0.0,
+       "io_psi": 0.0
+      },
+      {
+       "ts": "2026-10-16T21:47:42.865Z",
+       "mem_high_mb": 948.0,
+       "pids": 5,
+       "cpu_psi": 0.0,
+       "io_psi": 0.0
+      },
+      {
+       "ts": "2026-10-16T21:47:44.866Z",
+       "mem_high_mb": 948.0,
+       "pids": 5,
+       "cpu_psi": 0.0,
+       "io_psi": 0.0
+      }
+     ],
+     "before": {
+      "n_samples": 2,
+      "cpu_throttled_us_per_s": 0.0,
+      "mem_events_high_per_s": 0.0,
+      "io_psi_avg10": 0.0,
+      "cpu_psi_avg10": 0.0,
+      "victim": 1.01,
+      "victim_n": 6
+     },
+     "after": {
+      "n_samples": 3,
+      "cpu_throttled_us_per_s": 0.0,
+      "mem_events_high_per_s": 0.0,
+      "io_psi_avg10": 0.0,
+      "cpu_psi_avg10": 0.0,
+      "victim": 1.0133333333333334,
+      "victim_n": 6
+     }
+    },
+    {
+     "ts": "2026-10-16T21:48:44.899Z",
+     "action": "increase_memory",
+     "target": "wlp-neighbor",
+     "params": "wlp-neighbor memory.high 994050048->1046478848",
+     "detail": "wlp-neighbor: memory.high 948M->998M (was 994050048 bytes)",
+     "next_samples": [
+      {
+       "ts": "2026-10-16T21:48:46.900Z",
+       "mem_high_mb": 998.0,
+       "pids": 2,
+       "cpu_psi": 0.0,
+       "io_psi": 0.36
+      },
+      {
+       "ts": "2026-10-16T21:48:48.901Z",
+       "mem_high_mb": 998.0,
+       "pids": 2,
+       "cpu_psi": 0.0,
+       "io_psi": 0.65
+      },
+      {
+       "ts": "2026-10-16T21:48:50.902Z",
+       "mem_high_mb": 998.0,
+       "pids": 2,
+       "cpu_psi": 0.0,
+       "io_psi": 0.53
+      }
+     ],
+     "before": {
+      "n_samples": 2,
+      "cpu_throttled_us_per_s": 0.0,
+      "mem_events_high_per_s": 0.0,
+      "io_psi_avg10": 0.0,
+      "cpu_psi_avg10": 0.0,
+      "victim": 1.01,
+      "victim_n": 6
+     },
+     "after": {
+      "n_samples": 3,
+      "cpu_throttled_us_per_s": 0.0,
+      "mem_events_high_per_s": 32.48375736233517,
+      "io_psi_avg10": 0.33666666666666667,
+      "cpu_psi_avg10": 0.0,
+      "victim": 1.01,
+      "victim_n": 6
+     }
+    },
+    {
+     "ts": "2026-10-16T21:49:18.920Z",
+     "action": "decrease_memory",
+     "target": "wlp-neighbor",
+     "params": "wlp-neighbor memory.high 1046478848->994050048",
+     "detail": "wlp-neighbor: memory.high 998M->948M (was 1046478848 bytes)",
+     "next_samples": [
+      {
+       "ts": "2026-10-16T21:49:20.921Z",
+       "mem_high_mb": 998.0,
+       "pids": 2,
+       "cpu_psi": 0.0,
+       "io_psi": 0.17
+      },
+      {
+       "ts": "2026-10-16T21:49:22.921Z",
+       "mem_high_mb": 948.0,
+       "pids": 2,
+       "cpu_psi": 0.0,
+       "io_psi": 0.14
+      },
+      {
+       "ts": "2026-10-16T21:49:24.923Z",
+       "mem_high_mb": 948.0,
+       "pids": 2,
+       "cpu_psi": 0.0,
+       "io_psi": 0.11
+      }
+     ],
+     "before": {
+      "n_samples": 2,
+      "cpu_throttled_us_per_s": 0.0,
+      "mem_events_high_per_s": 0.0,
+      "io_psi_avg10": 0.035,
+      "cpu_psi_avg10": 0.0,
+      "victim": 1.01,
+      "victim_n": 6
+     },
+     "after": {
+      "n_samples": 3,
+      "cpu_throttled_us_per_s": 0.0,
+      "mem_events_high_per_s": 0.0,
+      "io_psi_avg10": 0.17333333333333334,
+      "cpu_psi_avg10": 0.0,
+      "victim": 1.0133333333333334,
+      "victim_n": 6
+     }
+    }
+   ],
+   "decisions_per_min": 30.2,
+   "span_s": 250.1,
+   "max_decisions_per_ts": 1
+  },
+  {
+   "dir": "/root/workloadpilot/m3/tour/run-4011-mixed",
+   "seed": 4011,
+   "victim_type": "latency",
+   "model": "workloadpilot/v2-2b",
+   "telemetry_rows": 140,
+   "peak": {
+    "psi_cpu_max": 52.3,
+    "throttle_us_per_s_max": 2703845.5,
+    "mem_events_high_max": 284,
+    "mem_head_min_mb": 0.11000000000001364
+   },
+   "decisions": 139,
+   "tokens": 91641,
+   "errors": 0,
+   "actions": {
+    "do_nothing": 70,
+    "increase_cpu": 0,
+    "decrease_cpu": 0,
+    "increase_memory": 64,
+    "decrease_memory": 0,
+    "throttle_io": 0,
+    "restrict_process_count": 3,
+    "protect_service": 0,
+    "isolate_workload": 0,
+    "restart_service": 0,
+    "kill_process": 0,
+    "alert_operator": 2
+   },
+   "gate": {
+    "pass_no_write": 72,
+    "applied": 5,
+    "rejected": 62
+   },
+   "rejections": {
+    "cooldown": 62
+   },
+   "applied": [
+    {
+     "ts": "2026-10-16T21:51:08.074Z",
+     "action": "restrict_process_count",
+     "target": "wlp-neighbor",
+     "params": "wlp-neighbor pids.max 54->27",
+     "detail": "wlp-neighbor: pids.max 54->27 (pids.current 13)",
+     "next_samples": [
+      {
+       "ts": "2026-10-16T21:51:10.074Z",
+       "mem_high_mb": 716.0,
+       "pids": 13,
+       "cpu_psi": 0.0,
+       "io_psi": 0.0
+      },
+      {
+       "ts": "2026-10-16T21:51:12.075Z",
+       "mem_high_mb": 716.0,
+       "pids": 13,
+       "cpu_psi": 0.0,
+       "io_psi": 0.0
+      },
+      {
+       "ts": "2026-10-16T21:51:14.076Z",
+       "mem_high_mb": 716.0,
+       "pids": 13,
+       "cpu_psi": 0.0,
+       "io_psi": 0.0
+      }
+     ],
+     "before": {
+      "n_samples": 2,
+      "cpu_throttled_us_per_s": null,
+      "mem_events_high_per_s": null,
+      "io_psi_avg10": 0.0,
+      "cpu_psi_avg10": 0.0,
+      "victim": 0.549,
+      "victim_n": 295
+     },
+     "after": {
+      "n_samples": 3,
+      "cpu_throttled_us_per_s": 0.0,
+      "mem_events_high_per_s": 0.0,
+      "io_psi_avg10": 0.0,
+      "cpu_psi_avg10": 0.0,
+      "victim": 0.5978,
+      "victim_n": 295
+     }
+    },
+    {
+     "ts": "2026-10-16T21:53:02.132Z",
+     "action": "restrict_process_count",
+     "target": "wlp-neighbor",
+     "params": "wlp-neighbor pids.max 27->16",
+     "detail": "wlp-neighbor: pids.max 27->16 (pids.current 6); clamped to 16..100000",
+     "next_samples": [],
+     "before": {
+      "n_samples": 2,
+      "cpu_throttled_us_per_s": 0.0,
+      "mem_events_high_per_s": 0.0,
+      "io_psi_avg10": 0.0,
+      "cpu_psi_avg10": 0.0,
+      "victim": 0.7259,
+      "victim_n": 292
+     },
+     "after": {
+      "n_samples": 3,
+      "cpu_throttled_us_per_s": 2679943.3127318863,
+      "mem_events_high_per_s": 68.9827555610643,
+      "io_psi_avg10": 2.7300000000000004,
+      "cpu_psi_avg10": 14.866666666666667,
+      "victim": 0.5824,
+      "victim_n": 295
+     }
+    },
+    {
+     "ts": "2026-10-16T21:53:04.133Z",
+     "action": "increase_memory",
+     "target": "wlp-neighbor",
+     "params": "wlp-neighbor memory.high 750780416->803209216",
+     "detail": "wlp-neighbor: memory.high 716M->766M (was 750780416 bytes)",
+     "next_samples": [
+      {
+       "ts": "2026-10-16T21:53:06.133Z",
+       "mem_high_mb": 716.0,
+       "pids": 6,
+       "cpu_psi": 23.75,
+       "io_psi": 5.48
+      },
+      {
+       "ts": "2026-10-16T21:53:08.134Z",
+       "mem_high_mb": 766.0,
+       "pids": 6,
+       "cpu_psi": 28.69,
+       "io_psi": 7.57
+      },
+      {
+       "ts": "2026-10-16T21:53:10.135Z",
+       "mem_high_mb": 766.0,
+       "pids": 6,
+       "cpu_psi": 32.91,
+       "io_psi": 11.27
+      }
+     ],
+     "before": {
+      "n_samples": 2,
+      "cpu_throttled_us_per_s": 1258339.375913789,
+      "mem_events_high_per_s": 0.0,
+      "io_psi_avg10": 0.0,
+      "cpu_psi_avg10": 2.445,
+      "victim": 0.7019999999999998,
+      "victim_n": 293
+     },
+     "after": {
+      "n_samples": 3,
+      "cpu_throttled_us_per_s": 2304751.4665211407,
+      "mem_events_high_per_s": 49.98750105101413,
+      "io_psi_avg10": 5.253333333333334,
+      "cpu_psi_avg10": 22.8,
+      "victim": 0.4979,
+      "victim_n": 295
+     }
+    },
+    {
+     "ts": "2026-10-16T21:53:50.155Z",
+     "action": "increase_memory",
+     "target": "wlp-neighbor",
+     "params": "wlp-neighbor memory.high 803209216->829423616",
+     "detail": "wlp-neighbor: memory.high 766M->791M (was 803209216 bytes); capped at memory.max 791M",
+     "next_samples": [
+      {
+       "ts": "2026-10-16T21:53:52.156Z",
+       "mem_high_mb": 766.0,
+       "pids": 6,
+       "cpu_psi": 49.55,
+       "io_psi": 28.16
+      },
+      {
+       "ts": "2026-10-16T21:53:54.159Z",
+       "mem_high_mb": 791.0,
+       "pids": 6,
+       "cpu_psi": 49.81,
+       "io_psi": 27.22
+      },
+      {
+       "ts": "2026-10-16T21:53:56.161Z",
+       "mem_high_mb": 791.0,
+       "pids": 6,
+       "cpu_psi": 49.66,
+       "io_psi": 27.36
+      }
+     ],
+     "before": {
+      "n_samples": 2,
+      "cpu_throttled_us_per_s": 1530758.176385908,
+      "mem_events_high_per_s": 0.0,
+      "io_psi_avg10": 27.965,
+      "cpu_psi_avg10": 49.555,
+      "victim": 0.7773999999999994,
+      "victim_n": 293
+     },
+     "after": {
+      "n_samples": 3,
+      "cpu_throttled_us_per_s": 1516328.690831299,
+      "mem_events_high_per_s": 0.0,
+      "io_psi_avg10": 27.786666666666665,
+      "cpu_psi_avg10": 49.67666666666667,
+      "victim": 0.7760499999999999,
+      "victim_n": 294
+     }
+    },
+    {
+     "ts": "2026-10-16T21:54:34.183Z",
+     "action": "increase_memory",
+     "target": "wlp-neighbor",
+     "params": "wlp-neighbor memory.high 829423616->829423616",
+     "detail": "wlp-neighbor: memory.high 791M->791M (was 829423616 bytes); capped at memory.max 791M",
+     "next_samples": [
+      {
+       "ts": "2026-10-16T21:54:36.184Z",
+       "mem_high_mb": 791.0,
+       "pids": 6,
+       "cpu_psi": 51.3,
+       "io_psi": 27.02
+      },
+      {
+       "ts": "2026-10-16T21:54:38.185Z",
+       "mem_high_mb": 791.0,
+       "pids": 6,
+       "cpu_psi": 51.24,
+       "io_psi": 27.2
+      },
+      {
+       "ts": "2026-10-16T21:54:40.185Z",
+       "mem_high_mb": 791.0,
+       "pids": 6,
+       "cpu_psi": 51.38,
+       "io_psi": 27.16
+      }
+     ],
+     "before": {
+      "n_samples": 2,
+      "cpu_throttled_us_per_s": 1608303.9063311634,
+      "mem_events_high_per_s": 0.0,
+      "io_psi_avg10": 27.375,
+      "cpu_psi_avg10": 50.865,
+      "victim": 0.6447999999999998,
+      "victim_n": 294
+     },
+     "after": {
+      "n_samples": 3,
+      "cpu_throttled_us_per_s": 1562186.213506288,
+      "mem_events_high_per_s": 0.0,
+      "io_psi_avg10": 27.083333333333332,
+      "cpu_psi_avg10": 51.300000000000004,
+      "victim": 0.5847000000000001,
+      "victim_n": 295
+     }
+    }
+   ],
+   "decisions_per_min": 30.2,
+   "span_s": 276.1,
+   "max_decisions_per_ts": 1
+  },
+  {
+   "dir": "/root/workloadpilot/m3/tour/run-4011-mixed-4b",
+   "seed": 4011,
+   "victim_type": "latency",
+   "model": "workloadpilot/v2-4b-r2",
+   "telemetry_rows": 140,
+   "peak": {
+    "psi_cpu_max": 52.12,
+    "throttle_us_per_s_max": 2643659.0,
+    "mem_events_high_max": 216,
+    "mem_head_min_mb": -0.09000000000003183
+   },
+   "decisions": 139,
+   "tokens": 91513,
+   "errors": 0,
+   "actions": {
+    "do_nothing": 69,
+    "increase_cpu": 0,
+    "decrease_cpu": 0,
+    "increase_memory": 64,
+    "decrease_memory": 0,
+    "throttle_io": 1,
+    "restrict_process_count": 3,
+    "protect_service": 0,
+    "isolate_workload": 0,
+    "restart_service": 0,
+    "kill_process": 0,
+    "alert_operator": 2
+   },
+   "gate": {
+    "pass_no_write": 71,
+    "applied": 5,
+    "rejected": 63
+   },
+   "rejections": {
+    "cooldown": 62,
+    "unsafe/unsatisfiable: wlp-neighbor: io.weight missing (FileNotFoundError: [Errno 2] No such file or directory: '/sys/fs/cgroup/wlp.slice/wlp-neighbor.service/io.weight'); io.stat unreadable (FileNotFoundError: [Errno 2] No such file or directory: '/sys/fs/cgroup/wlp.slice/wlp-neighbor.service/io.stat')": 1
+   },
+   "applied": [
+    {
+     "ts": "2026-10-17T08:16:42.172Z",
+     "action": "restrict_process_count",
+     "target": "wlp-neighbor",
+     "params": "wlp-neighbor pids.max 54->27",
+     "detail": "wlp-neighbor: pids.max 54->27 (pids.current 13)",
+     "next_samples": [
+      {
+       "ts": "2026-10-17T08:16:44.173Z",
+       "mem_high_mb": 716.0,
+       "pids": 13,
+       "cpu_psi": 0.0,
+       "io_psi": 0.18
+      },
+      {
+       "ts": "2026-10-17T08:16:46.174Z",
+       "mem_high_mb": 716.0,
+       "pids": 13,
+       "cpu_psi": 0.0,
+       "io_psi": 0.14
+      },
+      {
+       "ts": "2026-10-17T08:16:48.175Z",
+       "mem_high_mb": 716.0,
+       "pids": 13,
+       "cpu_psi": 0.0,
+       "io_psi": 0.12
+      }
+     ],
+     "before": {
+      "n_samples": 2,
+      "cpu_throttled_us_per_s": null,
+      "mem_events_high_per_s": null,
+      "io_psi_avg10": 0.30000000000000004,
+      "cpu_psi_avg10": 0.0,
+      "victim": 0.73925,
+      "victim_n": 292
+     },
+     "after": {
+      "n_samples": 3,
+      "cpu_throttled_us_per_s": 0.0,
+      "mem_events_high_per_s": 0.0,
+      "io_psi_avg10": 0.18000000000000002,
+      "cpu_psi_avg10": 0.0,
+      "victim": 0.6943999999999999,
+      "victim_n": 293
+     }
+    },
+    {
+     "ts": "2026-10-17T08:18:36.230Z",
+     "action": "restrict_process_count",
+     "target": "wlp-neighbor",
+     "params": "wlp-neighbor pids.max 27->16",
+     "detail": "wlp-neighbor: pids.max 27->16 (pids.current 6); clamped to 16..100000",
+     "next_samples": [],
+     "before": {
+      "n_samples": 2,
+      "cpu_throttled_us_per_s": 0.0,
+      "mem_events_high_per_s": 0.0,
+      "io_psi_avg10": 0.0,
+      "cpu_psi_avg10": 0.0,
+      "victim": 0.5653499999999999,
+      "victim_n": 294
+     },
+     "after": {
+      "n_samples": 3,
+      "cpu_throttled_us_per_s": 2597893.492553888,
+      "mem_events_high_per_s": 41.47925940113568,
+      "io_psi_avg10": 3.7099999999999995,
+      "cpu_psi_avg10": 14.573333333333332,
+      "victim": 0.5746,
+      "victim_n": 295
+     }
+    },
+    {
+     "ts": "2026-10-17T08:18:38.231Z",
+     "action": "increase_memory",
+     "target": "wlp-neighbor",
+     "params": "wlp-neighbor memory.high 750780416->803209216",
+     "detail": "wlp-neighbor: memory.high 716M->766M (was 750780416 bytes)",
+     "next_samples": [
+      {
+       "ts": "2026-10-17T08:18:40.232Z",
+       "mem_high_mb": 716.0,
+       "pids": 6,
+       "cpu_psi": 23.94,
+       "io_psi": 6.16
+      },
+      {
+       "ts": "2026-10-17T08:18:42.233Z",
+       "mem_high_mb": 766.0,
+       "pids": 6,
+       "cpu_psi": 29.21,
+       "io_psi": 8.3
+      },
+      {
+       "ts": "2026-10-17T08:18:44.234Z",
+       "mem_high_mb": 766.0,
+       "pids": 6,
+       "cpu_psi": 31.7,
+       "io_psi": 11.69
+      }
+     ],
+     "before": {
+      "n_samples": 2,
+      "cpu_throttled_us_per_s": 1259416.3374720386,
+      "mem_events_high_per_s": 0.0,
+      "io_psi_avg10": 0.27,
+      "cpu_psi_avg10": 2.35,
+      "victim": 0.55735,
+      "victim_n": 294
+     },
+     "after": {
+      "n_samples": 3,
+      "cpu_throttled_us_per_s": 2367094.6473691,
+      "mem_events_high_per_s": 53.97301223280305,
+      "io_psi_avg10": 6.296666666666667,
+      "cpu_psi_avg10": 22.743333333333336,
+      "victim": 0.5771000000000001,
+      "victim_n": 295
+     }
+    },
+    {
+     "ts": "2026-10-17T08:19:26.258Z",
+     "action": "increase_memory",
+     "target": "wlp-neighbor",
+     "params": "wlp-neighbor memory.high 803209216->829423616",
+     "detail": "wlp-neighbor: memory.high 766M->791M (was 803209216 bytes); capped at memory.max 791M",
+     "next_samples": [
+      {
+       "ts": "2026-10-17T08:19:28.260Z",
+       "mem_high_mb": 791.0,
+       "pids": 6,
+       "cpu_psi": 51.93,
+       "io_psi": 26.43
+      },
+      {
+       "ts": "2026-10-17T08:19:30.261Z",
+       "mem_high_mb": 791.0,
+       "pids": 6,
+       "cpu_psi": 52.12,
+       "io_psi": 25.99
+      },
+      {
+       "ts": "2026-10-17T08:19:32.262Z",
+       "mem_high_mb": 791.0,
+       "pids": 6,
+       "cpu_psi": 49.92,
+       "io_psi": 26.35
+      }
+     ],
+     "before": {
+      "n_samples": 2,
+      "cpu_throttled_us_per_s": 1568666.447248516,
+      "mem_events_high_per_s": 0.0,
+      "io_psi_avg10": 26.38,
+      "cpu_psi_avg10": 51.28,
+      "victim": 0.7418,
+      "victim_n": 292
+     },
+     "after": {
+      "n_samples": 3,
+      "cpu_throttled_us_per_s": 1550663.2444331227,
+      "mem_events_high_per_s": 0.0,
+      "io_psi_avg10": 26.166666666666668,
+      "cpu_psi_avg10": 51.839999999999996,
+      "victim": 0.6597999999999997,
+      "victim_n": 294
+     }
+    },
+    {
+     "ts": "2026-10-17T08:20:12.282Z",
+     "action": "increase_memory",
+     "target": "wlp-neighbor",
+     "params": "wlp-neighbor memory.high 829423616->829423616",
+     "detail": "wlp-neighbor: memory.high 791M->791M (was 829423616 bytes); capped at memory.max 791M",
+     "next_samples": [
+      {
+       "ts": "2026-10-17T08:20:14.283Z",
+       "mem_high_mb": 791.0,
+       "pids": 6,
+       "cpu_psi": 49.67,
+       "io_psi": 28.33
+      },
+      {
+       "ts": "2026-10-17T08:20:16.284Z",
+       "mem_high_mb": 791.0,
+       "pids": 6,
+       "cpu_psi": 49.73,
+       "io_psi": 28.27
+      },
+      {
+       "ts": "2026-10-17T08:20:18.285Z",
+       "mem_high_mb": 791.0,
+       "pids": 6,
+       "cpu_psi": 48.33,
+       "io_psi": 28.22
+      }
+     ],
+     "before": {
+      "n_samples": 2,
+      "cpu_throttled_us_per_s": 1552624.2441444467,
+      "mem_events_high_per_s": 0.0,
+      "io_psi_avg10": 28.299999999999997,
+      "cpu_psi_avg10": 49.02,
+      "victim": 0.6580999999999998,
+      "victim_n": 294
+     },
+     "after": {
+      "n_samples": 3,
+      "cpu_throttled_us_per_s": 1554049.0318022515,
+      "mem_events_high_per_s": 0.0,
+      "io_psi_avg10": 28.333333333333332,
+      "cpu_psi_avg10": 49.589999999999996,
+      "victim": 0.6552499999999988,
+      "victim_n": 294
+     }
+    }
+   ],
+   "decisions_per_min": 30.2,
+   "span_s": 276.1,
+   "max_decisions_per_ts": 1
+  },
+  {
+   "dir": "/root/workloadpilot/m3/tour/run-4029-cpu",
+   "seed": 4029,
+   "victim_type": "throughput",
+   "model": "workloadpilot/v2-2b",
+   "telemetry_rows": 136,
+   "peak": {
+    "psi_cpu_max": 0.0,
+    "throttle_us_per_s_max": 0.0,
+    "mem_events_high_max": 0,
+    "mem_head_min_mb": 344.64
+   },
+   "decisions": 135,
+   "tokens": 80739,
+   "errors": 0,
+   "actions": {
+    "do_nothing": 133,
+    "increase_cpu": 0,
+    "decrease_cpu": 0,
+    "increase_memory": 0,
+    "decrease_memory": 0,
+    "throttle_io": 0,
+    "restrict_process_count": 0,
+    "protect_service": 0,
+    "isolate_workload": 0,
+    "restart_service": 0,
+    "kill_process": 0,
+    "alert_operator": 2
+   },
+   "gate": {
+    "pass_no_write": 135,
+    "applied": 0,
+    "rejected": 0
+   },
+   "rejections": {},
+   "applied": [],
+   "decisions_per_min": 30.2,
+   "span_s": 268.1,
+   "max_decisions_per_ts": 1
+  },
+  {
+   "dir": "/root/workloadpilot/m3/tour/run-4035-io",
+   "seed": 4035,
+   "victim_type": "latency",
+   "model": "workloadpilot/v2-2b",
+   "telemetry_rows": 111,
+   "peak": {
+    "psi_cpu_max": 3.87,
+    "throttle_us_per_s_max": 475488.0,
+    "mem_events_high_max": 711,
+    "mem_head_min_mb": 0.22999999999998977
+   },
+   "decisions": 110,
+   "tokens": 71591,
+   "errors": 0,
+   "actions": {
+    "do_nothing": 106,
+    "increase_cpu": 0,
+    "decrease_cpu": 0,
+    "increase_memory": 1,
+    "decrease_memory": 0,
+    "throttle_io": 0,
+    "restrict_process_count": 1,
+    "protect_service": 0,
+    "isolate_workload": 0,
+    "restart_service": 0,
+    "kill_process": 0,
+    "alert_operator": 2
+   },
+   "gate": {
+    "pass_no_write": 108,
+    "applied": 2,
+    "rejected": 0
+   },
+   "rejections": {},
+   "applied": [
+    {
+     "ts": "2026-10-16T21:43:45.518Z",
+     "action": "increase_memory",
+     "target": "wlp-neighbor",
+     "params": "wlp-neighbor memory.high 218103808->270532608",
+     "detail": "wlp-neighbor: memory.high 208M->258M (was 218103808 bytes)",
+     "next_samples": [],
+     "before": {
+      "n_samples": 2,
+      "cpu_throttled_us_per_s": 0.0,
+      "mem_events_high_per_s": 0.0,
+      "io_psi_avg10": 0.15500000000000003,
+      "cpu_psi_avg10": 0.0,
+      "victim": 0.7902,
+      "victim_n": 293
+     },
+     "after": {
+      "n_samples": 3,
+      "cpu_throttled_us_per_s": 55340.07866764409,
+      "mem_events_high_per_s": 152.92353465960863,
+      "io_psi_avg10": 2.2866666666666666,
+      "cpu_psi_avg10": 3.5533333333333332,
+      "victim": 0.6873999999999999,
+      "victim_n": 294
+     }
+    },
+    {
+     "ts": "2026-10-16T21:43:49.520Z",
+     "action": "restrict_process_count",
+     "target": "wlp-neighbor",
+     "params": "wlp-neighbor pids.max 230->115",
+     "detail": "wlp-neighbor: pids.max 230->115 (pids.current 4)",
+     "next_samples": [
+      {
+       "ts": "2026-10-16T21:43:51.521Z",
+       "mem_high_mb": 258.0,
+       "pids": 4,
+       "cpu_psi": 2.59,
+       "io_psi": 2.49
+      },
+      {
+       "ts": "2026-10-16T21:43:53.523Z",
+       "mem_high_mb": 258.0,
+       "pids": 4,
+       "cpu_psi": 2.12,
+       "io_psi": 2.04
+      },
+      {
+       "ts": "2026-10-16T21:43:55.524Z",
+       "mem_high_mb": 258.0,
+       "pids": 4,
+       "cpu_psi": 1.74,
+       "io_psi": 2.04
+      }
+     ],
+     "before": {
+      "n_samples": 2,
+      "cpu_throttled_us_per_s": 110680.15074153415,
+      "mem_events_high_per_s": 305.84705109842326,
+      "io_psi_avg10": 1.91,
+      "cpu_psi_avg10": 3.745,
+      "victim": 0.7715999999999998,
+      "victim_n": 293
+     },
+     "after": {
+      "n_samples": 3,
+      "cpu_throttled_us_per_s": 0.0,
+      "mem_events_high_per_s": 0.0,
+      "io_psi_avg10": 2.5233333333333334,
+      "cpu_psi_avg10": 2.6266666666666665,
+      "victim": 0.7063999999999998,
+      "victim_n": 294
+     }
+    }
+   ],
+   "decisions_per_min": 30.3,
+   "span_s": 218.1,
+   "max_decisions_per_ts": 1
+  }
+ ],
+ "aggregate": {
+  "runs": 5,
+  "decisions": 649,
+  "tokens": 411795,
+  "cost_usd": 0.003203,
+  "actions": {
+   "do_nothing": 482,
+   "increase_cpu": 0,
+   "decrease_cpu": 0,
+   "increase_memory": 146,
+   "decrease_memory": 1,
+   "throttle_io": 1,
+   "restrict_process_count": 9,
+   "protect_service": 0,
+   "isolate_workload": 0,
+   "restart_service": 0,
+   "kill_process": 0,
+   "alert_operator": 10
+  },
+  "rejections": {
+   "cooldown": 141,
+   "unsafe/unsatisfiable: wlp-neighbor: io.weight missing (FileNotFoundError: [Errno 2] No such file or directory: '/sys/fs/cgroup/wlp.slice/wlp-neighbor.service/io.weight'); io.stat unreadable (FileNotFoundError: [Errno 2] No such file or directory: '/sys/fs/cgroup/wlp.slice/wlp-neighbor.service/io.stat')": 1
+  }
+ }
+}

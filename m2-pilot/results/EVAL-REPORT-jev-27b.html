@@ -1,0 +1,67 @@
+<!DOCTYPE html><html><head><meta charset='utf-8'><title>Evaluation jev-27b</title>
+<style>body{font-family:Segoe UI,Arial;margin:32px auto;max-width:1000px;background:#0f1420;color:#e8ecf3}
+.card{background:#171e2e;border-radius:12px;padding:18px 22px;margin-bottom:16px}
+table{border-collapse:collapse;width:100%}th,td{border:1px solid #2a3550;padding:6px 9px;text-align:left;font-size:14px}
+th{background:#1d2740}img{max-width:100%;border-radius:8px;border:1px solid #2a3550;margin:6px 0}
+.muted{color:#9aa7bd}.ok{color:#69d98c}.bad{color:#ff7b7b}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:800px){.grid{grid-template-columns:1fr}}</style></head><body>
+<h1>Evaluation report &middot; jev-27b</h1>
+<div class='card'><h2>Headline</h2><p>accuracy <b class='ok'>37.5%</b> &middot; macro-F1 <b>0.1474</b> &middot; balanced accuracy <b>0.253</b> &middot; n=2640 </p></div>
+<div class='card'><h2>Per-class metrics</h2><table><tr><th>class</th><th>support</th><th>predicted</th><th>precision</th><th>recall</th><th>F1</th></tr>
+<tr><td>alert_operator</td><td>28</td><td>0</td><td>0.0</td><td class='bad'>0.0</td><td>0.0</td></tr>
+<tr><td>decrease_cpu</td><td>41</td><td>0</td><td>0.0</td><td class='bad'>0.0</td><td>0.0</td></tr>
+<tr><td>decrease_memory</td><td>59</td><td>0</td><td>0.0</td><td class='bad'>0.0</td><td>0.0</td></tr>
+<tr><td>do_nothing</td><td>1595</td><td>779</td><td>0.81</td><td class='ok'>0.396</td><td>0.532</td></tr>
+<tr><td>increase_cpu</td><td>226</td><td>845</td><td>0.247</td><td class='ok'>0.925</td><td>0.39</td></tr>
+<tr><td>increase_memory</td><td>371</td><td>67</td><td>0.701</td><td class='ok'>0.127</td><td>0.215</td></tr>
+<tr><td>protect_service</td><td>165</td><td>0</td><td>0.0</td><td class='bad'>0.0</td><td>0.0</td></tr>
+<tr><td>restrict_process_count</td><td>32</td><td>0</td><td>0.0</td><td class='bad'>0.0</td><td>0.0</td></tr>
+<tr><td>throttle_io</td><td>123</td><td>949</td><td>0.107</td><td class='ok'>0.829</td><td>0.19</td></tr>
+</table></div>
+<div class='card'><h2>Calibration bands</h2><table><tr><th>band</th><th>n</th><th>mean conf</th><th>accuracy</th></tr>
+<tr><td>0.50-0.60</td><td>265</td><td>0.55</td><td>0.374</td></tr>
+<tr><td>0.60-0.70</td><td>426</td><td>0.658</td><td>0.362</td></tr>
+<tr><td>0.70-0.80</td><td>680</td><td>0.751</td><td>0.376</td></tr>
+<tr><td>0.80-0.90</td><td>726</td><td>0.842</td><td>0.293</td></tr>
+<tr><td>0.90-0.95</td><td>151</td><td>0.923</td><td>0.848</td></tr>
+<tr><td>0.95-1.00</td><td>20</td><td>0.954</td><td>0.9</td></tr>
+</table></div>
+<div class='card'><h2>Graphs</h2><div class='grid'>
+<div><img src='graphs-jev-27b/confusion_matrix.png'></div>
+<div><img src='graphs-jev-27b/calibration.png'></div>
+<div><img src='graphs-jev-27b/selective.png'></div>
+<div><img src='graphs-jev-27b/per_class.png'></div>
+<div><img src='graphs-jev-27b/distribution.png'></div>
+</div></div>
+<div class='card'><h2>Top mistakes</h2><table><tr><th>row</th><th>true</th><th>predicted</th><th>confidence</th></tr>
+<tr><td>2043-115</td><td>alert_operator</td><td>do_nothing</td><td>0.9529</td></tr>
+<tr><td>2031-92</td><td>alert_operator</td><td>do_nothing</td><td>0.9521</td></tr>
+<tr><td>2007-26</td><td>throttle_io</td><td>do_nothing</td><td>0.9482</td></tr>
+<tr><td>3031-108</td><td>do_nothing</td><td>throttle_io</td><td>0.9474</td></tr>
+<tr><td>2039-107</td><td>do_nothing</td><td>throttle_io</td><td>0.9464</td></tr>
+<tr><td>3023-12</td><td>restrict_process_count</td><td>do_nothing</td><td>0.9455</td></tr>
+<tr><td>2015-14</td><td>increase_cpu</td><td>throttle_io</td><td>0.9438</td></tr>
+<tr><td>2027-12</td><td>increase_cpu</td><td>throttle_io</td><td>0.9391</td></tr>
+<tr><td>2007-35</td><td>decrease_cpu</td><td>do_nothing</td><td>0.9374</td></tr>
+<tr><td>3023-25</td><td>throttle_io</td><td>do_nothing</td><td>0.9365</td></tr>
+<tr><td>2007-23</td><td>decrease_memory</td><td>do_nothing</td><td>0.933</td></tr>
+<tr><td>2047-47</td><td>increase_memory</td><td>increase_cpu</td><td>0.93</td></tr>
+<tr><td>2047-51</td><td>increase_memory</td><td>increase_cpu</td><td>0.9278</td></tr>
+<tr><td>2047-53</td><td>increase_memory</td><td>increase_cpu</td><td>0.9249</td></tr>
+<tr><td>2047-50</td><td>increase_memory</td><td>increase_cpu</td><td>0.9234</td></tr>
+<tr><td>2047-49</td><td>increase_memory</td><td>increase_cpu</td><td>0.9224</td></tr>
+<tr><td>2047-46</td><td>increase_memory</td><td>increase_cpu</td><td>0.9196</td></tr>
+<tr><td>3027-13</td><td>increase_cpu</td><td>throttle_io</td><td>0.9191</td></tr>
+<tr><td>2047-48</td><td>increase_memory</td><td>increase_cpu</td><td>0.919</td></tr>
+<tr><td>2047-52</td><td>increase_memory</td><td>increase_cpu</td><td>0.9189</td></tr>
+<tr><td>2035-13</td><td>increase_cpu</td><td>throttle_io</td><td>0.9134</td></tr>
+<tr><td>2007-19</td><td>increase_memory</td><td>do_nothing</td><td>0.9059</td></tr>
+<tr><td>3003-73</td><td>do_nothing</td><td>throttle_io</td><td>0.904</td></tr>
+<tr><td>3007-69</td><td>do_nothing</td><td>throttle_io</td><td>0.9027</td></tr>
+<tr><td>2007-13</td><td>restrict_process_count</td><td>do_nothing</td><td>0.9017</td></tr>
+<tr><td>2007-85</td><td>increase_memory</td><td>increase_cpu</td><td>0.8984</td></tr>
+<tr><td>2007-80</td><td>increase_memory</td><td>increase_cpu</td><td>0.8973</td></tr>
+<tr><td>2007-81</td><td>increase_memory</td><td>increase_cpu</td><td>0.8965</td></tr>
+<tr><td>2055-66</td><td>increase_memory</td><td>increase_cpu</td><td>0.8935</td></tr>
+<tr><td>2007-84</td><td>increase_memory</td><td>increase_cpu</td><td>0.8918</td></tr>
+</table></div></body></html>

@@ -1,0 +1,1496 @@
+{
+  "edge": [
+    {
+      "model": "tuned",
+      "id": "quiet_idle",
+      "predicted": "do_nothing",
+      "confidence": 0.9554992318153381,
+      "expected": "do_nothing",
+      "rationale": "nothing crosses a threshold",
+      "latency_ms": 1445.4942000011215,
+      "top3": [
+        [
+          "do_nothing",
+          0.9554992318153381
+        ],
+        [
+          "decrease_cpu",
+          0.012045260518789291
+        ],
+        [
+          "increase_memory",
+          0.0086596654728055
+        ]
+      ]
+    },
+    {
+      "model": "tuned",
+      "id": "quiet_after_increase_cpu",
+      "predicted": "do_nothing",
+      "confidence": 0.9903957843780518,
+      "expected": "do_nothing",
+      "rationale": "action-inertia check: quiet state after a raise must still be do_nothing",
+      "latency_ms": 535.8654999981809,
+      "top3": [
+        [
+          "do_nothing",
+          0.9903957843780518
+        ],
+        [
+          "increase_memory",
+          0.0025056195445358753
+        ],
+        [
+          "decrease_cpu",
+          0.0022053029388189316
+        ]
+      ]
+    },
+    {
+      "model": "tuned",
+      "id": "quiet_after_throttle_io",
+      "predicted": "do_nothing",
+      "confidence": 0.9861717820167542,
+      "expected": "do_nothing",
+      "rationale": "action-inertia check: quiet state after an io throttle",
+      "latency_ms": 503.89020000147866,
+      "top3": [
+        [
+          "do_nothing",
+          0.9861717820167542
+        ],
+        [
+          "increase_memory",
+          0.0036442906130105257
+        ],
+        [
+          "decrease_cpu",
+          0.0032859244383871555
+        ]
+      ]
+    },
+    {
+      "model": "tuned",
+      "id": "quiet_after_alert",
+      "predicted": "do_nothing",
+      "confidence": 0.9951469302177429,
+      "expected": "do_nothing",
+      "rationale": "action-inertia check: quiet state after an alert",
+      "latency_ms": 559.4010000022536,
+      "top3": [
+        [
+          "do_nothing",
+          0.9951469302177429
+        ],
+        [
+          "increase_memory",
+          0.0013147045392543077
+        ],
+        [
+          "decrease_cpu",
+          0.001154830097220838
+        ]
+      ]
+    },
+    {
+      "model": "tuned",
+      "id": "neighbor_cpu_pinned_sys_pressure",
+      "predicted": "do_nothing",
+      "confidence": 0.8182559013366699,
+      "expected": "increase_cpu",
+      "rationale": "neighbor throttled 2.5s/s while system cpu.pressure 55",
+      "latency_ms": 541.8953000007605,
+      "top3": [
+        [
+          "do_nothing",
+          0.8182559013366699
+        ],
+        [
+          "increase_cpu",
+          0.1274612694978714
+        ],
+        [
+          "decrease_cpu",
+          0.016793716698884964
+        ]
+      ]
+    },
+    {
+      "model": "tuned",
+      "id": "increase_cpu_in_distribution",
+      "predicted": "increase_cpu",
+      "confidence": 0.8877919316291809,
+      "expected": "increase_cpu",
+      "rationale": "same pressure with the slopes/prev_action seen in real increase_cpu rows",
+      "latency_ms": 540.1538999976765,
+      "top3": [
+        [
+          "increase_cpu",
+          0.8877919316291809
+        ],
+        [
+          "do_nothing",
+          0.053886476904153824
+        ],
+        [
+          "decrease_cpu",
+          0.0275086872279644
+        ]
+      ]
+    },
+    {
+      "model": "tuned",
+      "id": "critical_throttled_alone",
+      "predicted": "do_nothing",
+      "confidence": 0.9478996992111206,
+      "expected": "increase_cpu",
+      "rationale": "critical throttled 2.0s/s, system pressure 30",
+      "latency_ms": 380.3482000002987,
+      "top3": [
+        [
+          "do_nothing",
+          0.9478996992111206
+        ],
+        [
+          "decrease_cpu",
+          0.01397705078125
+        ],
+        [
+          "increase_memory",
+          0.008623700588941574
+        ]
+      ]
+    },
+    {
+      "model": "tuned",
+      "id": "protect_critical_under_noisy_neighbor",
+      "predicted": "protect_service",
+      "confidence": 0.7101467251777649,
+      "expected": "protect_service",
+      "rationale": "critical pressured while neighbor consumes hard",
+      "latency_ms": 410.9251999980188,
+      "top3": [
+        [
+          "protect_service",
+          0.7101467251777649
+        ],
+        [
+          "do_nothing",
+          0.2784328758716583
+        ],
+        [
+          "increase_cpu",
+          0.0037224888801574707
+        ]
+      ]
+    },
+    {
+      "model": "tuned",
+      "id": "both_pinned_is_alert",
+      "predicted": "do_nothing",
+      "confidence": 0.9345569014549255,
+      "expected": "alert_operator",
+      "rationale": "both units pinned at quota; isolation needs a human",
+      "latency_ms": 369.0582999988692,
+      "top3": [
+        [
+          "do_nothing",
+          0.9345569014549255
+        ],
+        [
+          "decrease_cpu",
+          0.014400884509086609
+        ],
+        [
+          "increase_memory",
+          0.011530985124409199
+        ]
+      ]
+    },
+    {
+      "model": "tuned",
+      "id": "neighbor_memory_near_high",
+      "predicted": "increase_memory",
+      "confidence": 0.9698154926300049,
+      "expected": "increase_memory",
+      "rationale": "890/950 MB of memory.high",
+      "latency_ms": 363.49889999837615,
+      "top3": [
+        [
+          "increase_memory",
+          0.9698154926300049
+        ],
+        [
+          "do_nothing",
+          0.011071720160543919
+        ],
+        [
+          "decrease_memory",
+          0.00734541704878211
+        ]
+      ]
+    },
+    {
+      "model": "tuned",
+      "id": "neighbor_memory_events_growth",
+      "predicted": "increase_memory",
+      "confidence": 0.8158299326896667,
+      "expected": "increase_memory",
+      "rationale": "memory.events.high grows at 850/950",
+      "latency_ms": 364.6566999996139,
+      "top3": [
+        [
+          "increase_memory",
+          0.8158299326896667
+        ],
+        [
+          "do_nothing",
+          0.15305195748806
+        ],
+        [
+          "decrease_memory",
+          0.010754503309726715
+        ]
+      ]
+    },
+    {
+      "model": "tuned",
+      "id": "neighbor_io_pressure",
+      "predicted": "do_nothing",
+      "confidence": 0.8166517615318298,
+      "expected": "throttle_io",
+      "rationale": "4 MB/s with unit io.pressure 85",
+      "latency_ms": 364.82669999895734,
+      "top3": [
+        [
+          "do_nothing",
+          0.8166517615318298
+        ],
+        [
+          "throttle_io",
+          0.1557084321975708
+        ],
+        [
+          "decrease_cpu",
+          0.007913525216281414
+        ]
+      ]
+    },
+    {
+      "model": "tuned",
+      "id": "throttle_io_in_distribution",
+      "predicted": "throttle_io",
+      "confidence": 0.8203075528144836,
+      "expected": "throttle_io",
+      "rationale": "same io load with the memory/quota/prev_action seen in real throttle_io rows",
+      "latency_ms": 363.5776999981317,
+      "top3": [
+        [
+          "throttle_io",
+          0.8203075528144836
+        ],
+        [
+          "do_nothing",
+          0.17789117991924286
+        ],
+        [
+          "restrict_process_count",
+          0.0005147031042724848
+        ]
+      ]
+    },
+    {
+      "model": "tuned",
+      "id": "neighbor_pids_spike",
+      "predicted": "do_nothing",
+      "confidence": 0.5997089743614197,
+      "expected": "restrict_process_count",
+      "rationale": "pids +2 per sample",
+      "latency_ms": 361.677700002474,
+      "top3": [
+        [
+          "do_nothing",
+          0.5997089743614197
+        ],
+        [
+          "restrict_process_count",
+          0.38761094212532043
+        ],
+        [
+          "protect_service",
+          0.0028071391861885786
+        ]
+      ]
+    },
+    {
+      "model": "tuned",
+      "id": "cpu_released_decrease",
+      "predicted": "do_nothing",
+      "confidence": 0.9515843391418457,
+      "expected": "decrease_cpu",
+      "rationale": "previous row had neighbor cpu.pressure >=30, now quiet",
+      "latency_ms": 366.68400000053225,
+      "top3": [
+        [
+          "do_nothing",
+          0.9515843391418457
+        ],
+        [
+          "decrease_cpu",
+          0.013031945563852787
+        ],
+        [
+          "increase_memory",
+          0.009288834407925606
+        ]
+      ]
+    },
+    {
+      "model": "tuned",
+      "id": "memory_released_decrease",
+      "predicted": "do_nothing",
+      "confidence": 0.9490749835968018,
+      "expected": "decrease_memory",
+      "rationale": "previous row 97% of high, now 32%",
+      "latency_ms": 360.08139999830746,
+      "top3": [
+        [
+          "do_nothing",
+          0.9490749835968018
+        ],
+        [
+          "decrease_cpu",
+          0.01254132017493248
+        ],
+        [
+          "increase_memory",
+          0.011952081695199013
+        ]
+      ]
+    },
+    {
+      "model": "tuned",
+      "id": "hard_memory_alert_unlearnable",
+      "predicted": "increase_memory",
+      "confidence": 0.9778918027877808,
+      "expected": "alert_operator",
+      "rationale": "near memory.max; features carry no max/oom event, so this is a known blind spot",
+      "latency_ms": 361.0499999995227,
+      "top3": [
+        [
+          "increase_memory",
+          0.9778918027877808
+        ],
+        [
+          "do_nothing",
+          0.00778206018730998
+        ],
+        [
+          "throttle_io",
+          0.005705614574253559
+        ]
+      ]
+    },
+    {
+      "model": "tuned",
+      "id": "null_units_cold_start",
+      "predicted": "do_nothing",
+      "confidence": 0.9999125003814697,
+      "expected": "do_nothing",
+      "rationale": "system block present, both unit blocks null",
+      "latency_ms": 361.1682999980985,
+      "top3": [
+        [
+          "do_nothing",
+          0.9999125003814697
+        ],
+        [
+          "throttle_io",
+          2.5919984182110056e-05
+        ],
+        [
+          "decrease_cpu",
+          1.8643399016582407e-05
+        ]
+      ]
+    },
+    {
+      "model": "tuned",
+      "id": "victim_latency_distractor",
+      "predicted": "do_nothing",
+      "confidence": 0.9583290815353394,
+      "expected": "do_nothing",
+      "rationale": "victim is slow but cgroups are quiet; teacher ignores victim",
+      "latency_ms": 366.19599999903585,
+      "top3": [
+        [
+          "do_nothing",
+          0.9583290815353394
+        ],
+        [
+          "decrease_cpu",
+          0.011384772136807442
+        ],
+        [
+          "increase_memory",
+          0.008027737960219383
+        ]
+      ]
+    },
+    {
+      "model": "tuned",
+      "id": "high_load_without_psi",
+      "predicted": "do_nothing",
+      "confidence": 0.9550139307975769,
+      "expected": "do_nothing",
+      "rationale": "loadavg is not a teacher signal",
+      "latency_ms": 365.93269999866607,
+      "top3": [
+        [
+          "do_nothing",
+          0.9550139307975769
+        ],
+        [
+          "decrease_cpu",
+          0.012265319935977459
+        ],
+        [
+          "increase_memory",
+          0.008770127780735493
+        ]
+      ]
+    },
+    {
+      "model": "tuned",
+      "id": "psi_without_throttle",
+      "predicted": "do_nothing",
+      "confidence": 0.9400618672370911,
+      "expected": "do_nothing",
+      "rationale": "mid cpu.pressure but quota not binding",
+      "latency_ms": 368.1637000008777,
+      "top3": [
+        [
+          "do_nothing",
+          0.9400618672370911
+        ],
+        [
+          "decrease_cpu",
+          0.02036980539560318
+        ],
+        [
+          "increase_cpu",
+          0.008901183493435383
+        ]
+      ]
+    },
+    {
+      "model": "tuned",
+      "id": "io_without_unit_pressure",
+      "predicted": "do_nothing",
+      "confidence": 0.8128613829612732,
+      "expected": "do_nothing",
+      "rationale": "fast writes but unit io.pressure below 0.1; seen in friend runs",
+      "latency_ms": 360.7771999995748,
+      "top3": [
+        [
+          "do_nothing",
+          0.8128613829612732
+        ],
+        [
+          "throttle_io",
+          0.15937265753746033
+        ],
+        [
+          "decrease_cpu",
+          0.007653271779417992
+        ]
+      ]
+    },
+    {
+      "model": "tuned",
+      "id": "garbage_tolerated",
+      "predicted": "do_nothing",
+      "confidence": 0.8103397488594055,
+      "expected": "do_nothing",
+      "rationale": "non-finite features must not change the choice",
+      "latency_ms": 363.670099999581,
+      "top3": [
+        [
+          "do_nothing",
+          0.8103397488594055
+        ],
+        [
+          "alert_operator",
+          0.17034359276294708
+        ],
+        [
+          "throttle_io",
+          0.007776195649057627
+        ]
+      ]
+    },
+    {
+      "model": "base",
+      "id": "quiet_idle",
+      "predicted": "do_nothing",
+      "confidence": 0.8988183736801147,
+      "expected": "do_nothing",
+      "rationale": "nothing crosses a threshold",
+      "latency_ms": 331.40130000174395,
+      "top3": [
+        [
+          "do_nothing",
+          0.8988183736801147
+        ],
+        [
+          "alert_operator",
+          0.03579897806048393
+        ],
+        [
+          "increase_memory",
+          0.017735136672854424
+        ]
+      ]
+    },
+    {
+      "model": "base",
+      "id": "quiet_after_increase_cpu",
+      "predicted": "do_nothing",
+      "confidence": 0.4485390782356262,
+      "expected": "do_nothing",
+      "rationale": "action-inertia check: quiet state after a raise must still be do_nothing",
+      "latency_ms": 327.15900000039255,
+      "top3": [
+        [
+          "do_nothing",
+          0.4485390782356262
+        ],
+        [
+          "increase_cpu",
+          0.2621757686138153
+        ],
+        [
+          "decrease_cpu",
+          0.12861856818199158
+        ]
+      ]
+    },
+    {
+      "model": "base",
+      "id": "quiet_after_throttle_io",
+      "predicted": "throttle_io",
+      "confidence": 0.6466509699821472,
+      "expected": "do_nothing",
+      "rationale": "action-inertia check: quiet state after an io throttle",
+      "latency_ms": 327.7066999980889,
+      "top3": [
+        [
+          "throttle_io",
+          0.6466509699821472
+        ],
+        [
+          "do_nothing",
+          0.21032379567623138
+        ],
+        [
+          "decrease_cpu",
+          0.04361654445528984
+        ]
+      ]
+    },
+    {
+      "model": "base",
+      "id": "quiet_after_alert",
+      "predicted": "do_nothing",
+      "confidence": 0.6170016527175903,
+      "expected": "do_nothing",
+      "rationale": "action-inertia check: quiet state after an alert",
+      "latency_ms": 334.982400003355,
+      "top3": [
+        [
+          "do_nothing",
+          0.6170016527175903
+        ],
+        [
+          "alert_operator",
+          0.22995086014270782
+        ],
+        [
+          "increase_memory",
+          0.03447958827018738
+        ]
+      ]
+    },
+    {
+      "model": "base",
+      "id": "neighbor_cpu_pinned_sys_pressure",
+      "predicted": "do_nothing",
+      "confidence": 0.8642995953559875,
+      "expected": "increase_cpu",
+      "rationale": "neighbor throttled 2.5s/s while system cpu.pressure 55",
+      "latency_ms": 335.6266000009782,
+      "top3": [
+        [
+          "do_nothing",
+          0.8642995953559875
+        ],
+        [
+          "alert_operator",
+          0.03905514255166054
+        ],
+        [
+          "increase_memory",
+          0.021363768726587296
+        ]
+      ]
+    },
+    {
+      "model": "base",
+      "id": "increase_cpu_in_distribution",
+      "predicted": "increase_cpu",
+      "confidence": 0.40265658497810364,
+      "expected": "increase_cpu",
+      "rationale": "same pressure with the slopes/prev_action seen in real increase_cpu rows",
+      "latency_ms": 331.00109999941196,
+      "top3": [
+        [
+          "increase_cpu",
+          0.40265658497810364
+        ],
+        [
+          "do_nothing",
+          0.33137139678001404
+        ],
+        [
+          "decrease_cpu",
+          0.10906166583299637
+        ]
+      ]
+    },
+    {
+      "model": "base",
+      "id": "critical_throttled_alone",
+      "predicted": "do_nothing",
+      "confidence": 0.8126382231712341,
+      "expected": "increase_cpu",
+      "rationale": "critical throttled 2.0s/s, system pressure 30",
+      "latency_ms": 330.55180000155815,
+      "top3": [
+        [
+          "do_nothing",
+          0.8126382231712341
+        ],
+        [
+          "alert_operator",
+          0.05138687416911125
+        ],
+        [
+          "decrease_cpu",
+          0.03458014875650406
+        ]
+      ]
+    },
+    {
+      "model": "base",
+      "id": "protect_critical_under_noisy_neighbor",
+      "predicted": "do_nothing",
+      "confidence": 0.8488041758537292,
+      "expected": "protect_service",
+      "rationale": "critical pressured while neighbor consumes hard",
+      "latency_ms": 329.7464999996009,
+      "top3": [
+        [
+          "do_nothing",
+          0.8488041758537292
+        ],
+        [
+          "alert_operator",
+          0.040539540350437164
+        ],
+        [
+          "decrease_cpu",
+          0.02607896365225315
+        ]
+      ]
+    },
+    {
+      "model": "base",
+      "id": "both_pinned_is_alert",
+      "predicted": "do_nothing",
+      "confidence": 0.8190572261810303,
+      "expected": "alert_operator",
+      "rationale": "both units pinned at quota; isolation needs a human",
+      "latency_ms": 342.0704999989539,
+      "top3": [
+        [
+          "do_nothing",
+          0.8190572261810303
+        ],
+        [
+          "alert_operator",
+          0.05136129632592201
+        ],
+        [
+          "decrease_cpu",
+          0.030565079301595688
+        ]
+      ]
+    },
+    {
+      "model": "base",
+      "id": "neighbor_memory_near_high",
+      "predicted": "do_nothing",
+      "confidence": 0.8871595859527588,
+      "expected": "increase_memory",
+      "rationale": "890/950 MB of memory.high",
+      "latency_ms": 344.0639000000374,
+      "top3": [
+        [
+          "do_nothing",
+          0.8871595859527588
+        ],
+        [
+          "alert_operator",
+          0.03691301867365837
+        ],
+        [
+          "increase_memory",
+          0.024337060749530792
+        ]
+      ]
+    },
+    {
+      "model": "base",
+      "id": "neighbor_memory_events_growth",
+      "predicted": "do_nothing",
+      "confidence": 0.8659260272979736,
+      "expected": "increase_memory",
+      "rationale": "memory.events.high grows at 850/950",
+      "latency_ms": 333.06459999948856,
+      "top3": [
+        [
+          "do_nothing",
+          0.8659260272979736
+        ],
+        [
+          "alert_operator",
+          0.03975642845034599
+        ],
+        [
+          "increase_memory",
+          0.03106408193707466
+        ]
+      ]
+    },
+    {
+      "model": "base",
+      "id": "neighbor_io_pressure",
+      "predicted": "do_nothing",
+      "confidence": 0.8837358355522156,
+      "expected": "throttle_io",
+      "rationale": "4 MB/s with unit io.pressure 85",
+      "latency_ms": 329.33649999904446,
+      "top3": [
+        [
+          "do_nothing",
+          0.8837358355522156
+        ],
+        [
+          "alert_operator",
+          0.036314696073532104
+        ],
+        [
+          "increase_memory",
+          0.02116359956562519
+        ]
+      ]
+    },
+    {
+      "model": "base",
+      "id": "throttle_io_in_distribution",
+      "predicted": "throttle_io",
+      "confidence": 0.6130164265632629,
+      "expected": "throttle_io",
+      "rationale": "same io load with the memory/quota/prev_action seen in real throttle_io rows",
+      "latency_ms": 334.5183999990695,
+      "top3": [
+        [
+          "throttle_io",
+          0.6130164265632629
+        ],
+        [
+          "do_nothing",
+          0.20002059638500214
+        ],
+        [
+          "decrease_cpu",
+          0.06498333066701889
+        ]
+      ]
+    },
+    {
+      "model": "base",
+      "id": "neighbor_pids_spike",
+      "predicted": "do_nothing",
+      "confidence": 0.842567503452301,
+      "expected": "restrict_process_count",
+      "rationale": "pids +2 per sample",
+      "latency_ms": 329.6007999997528,
+      "top3": [
+        [
+          "do_nothing",
+          0.842567503452301
+        ],
+        [
+          "alert_operator",
+          0.04321271926164627
+        ],
+        [
+          "increase_memory",
+          0.0300647784024477
+        ]
+      ]
+    },
+    {
+      "model": "base",
+      "id": "cpu_released_decrease",
+      "predicted": "do_nothing",
+      "confidence": 0.864962637424469,
+      "expected": "decrease_cpu",
+      "rationale": "previous row had neighbor cpu.pressure >=30, now quiet",
+      "latency_ms": 342.8163999997196,
+      "top3": [
+        [
+          "do_nothing",
+          0.864962637424469
+        ],
+        [
+          "alert_operator",
+          0.037870876491069794
+        ],
+        [
+          "decrease_cpu",
+          0.021648813039064407
+        ]
+      ]
+    },
+    {
+      "model": "base",
+      "id": "memory_released_decrease",
+      "predicted": "do_nothing",
+      "confidence": 0.8898649215698242,
+      "expected": "decrease_memory",
+      "rationale": "previous row 97% of high, now 32%",
+      "latency_ms": 330.18900000024587,
+      "top3": [
+        [
+          "do_nothing",
+          0.8898649215698242
+        ],
+        [
+          "alert_operator",
+          0.03608674928545952
+        ],
+        [
+          "increase_memory",
+          0.023977138102054596
+        ]
+      ]
+    },
+    {
+      "model": "base",
+      "id": "hard_memory_alert_unlearnable",
+      "predicted": "do_nothing",
+      "confidence": 0.8779147267341614,
+      "expected": "alert_operator",
+      "rationale": "near memory.max; features carry no max/oom event, so this is a known blind spot",
+      "latency_ms": 332.0579999999609,
+      "top3": [
+        [
+          "do_nothing",
+          0.8779147267341614
+        ],
+        [
+          "alert_operator",
+          0.03717142343521118
+        ],
+        [
+          "increase_memory",
+          0.027224956080317497
+        ]
+      ]
+    },
+    {
+      "model": "base",
+      "id": "null_units_cold_start",
+      "predicted": "do_nothing",
+      "confidence": 0.8634462952613831,
+      "expected": "do_nothing",
+      "rationale": "system block present, both unit blocks null",
+      "latency_ms": 333.95609999934095,
+      "top3": [
+        [
+          "do_nothing",
+          0.8634462952613831
+        ],
+        [
+          "alert_operator",
+          0.05625245347619057
+        ],
+        [
+          "decrease_cpu",
+          0.016419950872659683
+        ]
+      ]
+    },
+    {
+      "model": "base",
+      "id": "victim_latency_distractor",
+      "predicted": "do_nothing",
+      "confidence": 0.8995392918586731,
+      "expected": "do_nothing",
+      "rationale": "victim is slow but cgroups are quiet; teacher ignores victim",
+      "latency_ms": 336.2625999980082,
+      "top3": [
+        [
+          "do_nothing",
+          0.8995392918586731
+        ],
+        [
+          "alert_operator",
+          0.03490324318408966
+        ],
+        [
+          "increase_memory",
+          0.01803753711283207
+        ]
+      ]
+    },
+    {
+      "model": "base",
+      "id": "high_load_without_psi",
+      "predicted": "do_nothing",
+      "confidence": 0.8540903925895691,
+      "expected": "do_nothing",
+      "rationale": "loadavg is not a teacher signal",
+      "latency_ms": 331.3558000008925,
+      "top3": [
+        [
+          "do_nothing",
+          0.8540903925895691
+        ],
+        [
+          "alert_operator",
+          0.04696718230843544
+        ],
+        [
+          "increase_memory",
+          0.024902746081352234
+        ]
+      ]
+    },
+    {
+      "model": "base",
+      "id": "psi_without_throttle",
+      "predicted": "do_nothing",
+      "confidence": 0.8742526769638062,
+      "expected": "do_nothing",
+      "rationale": "mid cpu.pressure but quota not binding",
+      "latency_ms": 331.38400000098045,
+      "top3": [
+        [
+          "do_nothing",
+          0.8742526769638062
+        ],
+        [
+          "alert_operator",
+          0.03685261309146881
+        ],
+        [
+          "increase_memory",
+          0.021784700453281403
+        ]
+      ]
+    },
+    {
+      "model": "base",
+      "id": "io_without_unit_pressure",
+      "predicted": "do_nothing",
+      "confidence": 0.8795406818389893,
+      "expected": "do_nothing",
+      "rationale": "fast writes but unit io.pressure below 0.1; seen in friend runs",
+      "latency_ms": 334.8872999995365,
+      "top3": [
+        [
+          "do_nothing",
+          0.8795406818389893
+        ],
+        [
+          "alert_operator",
+          0.03686489164829254
+        ],
+        [
+          "increase_memory",
+          0.02162119559943676
+        ]
+      ]
+    },
+    {
+      "model": "base",
+      "id": "garbage_tolerated",
+      "predicted": "do_nothing",
+      "confidence": 0.8745323419570923,
+      "expected": "do_nothing",
+      "rationale": "non-finite features must not change the choice",
+      "latency_ms": 332.90929999930086,
+      "top3": [
+        [
+          "do_nothing",
+          0.8745323419570923
+        ],
+        [
+          "alert_operator",
+          0.04008016735315323
+        ],
+        [
+          "increase_memory",
+          0.024751191958785057
+        ]
+      ]
+    }
+  ],
+  "realistic": [
+    {
+      "model": "tuned",
+      "id": "heldout-2035-79",
+      "predicted": "increase_memory",
+      "confidence": 0.9165259599685669,
+      "expected": "alert_operator",
+      "latency_ms": 362.0279999995546
+    },
+    {
+      "model": "tuned",
+      "id": "heldout-3019-127",
+      "predicted": "alert_operator",
+      "confidence": 0.7468277812004089,
+      "expected": "alert_operator",
+      "latency_ms": 359.76620000292314
+    },
+    {
+      "model": "tuned",
+      "id": "heldout-2035-34",
+      "predicted": "do_nothing",
+      "confidence": 0.9795282483100891,
+      "expected": "decrease_cpu",
+      "latency_ms": 358.00550000203657
+    },
+    {
+      "model": "tuned",
+      "id": "heldout-3023-124",
+      "predicted": "do_nothing",
+      "confidence": 0.7121906876564026,
+      "expected": "decrease_cpu",
+      "latency_ms": 365.18639999849256
+    },
+    {
+      "model": "tuned",
+      "id": "heldout-2043-62",
+      "predicted": "do_nothing",
+      "confidence": 0.8780762553215027,
+      "expected": "decrease_memory",
+      "latency_ms": 362.36819999976433
+    },
+    {
+      "model": "tuned",
+      "id": "heldout-2035-84",
+      "predicted": "do_nothing",
+      "confidence": 0.9698419570922852,
+      "expected": "decrease_memory",
+      "latency_ms": 360.04550000143354
+    },
+    {
+      "model": "tuned",
+      "id": "heldout-3007-133",
+      "predicted": "do_nothing",
+      "confidence": 0.9998972415924072,
+      "expected": "do_nothing",
+      "latency_ms": 368.00829999992857
+    },
+    {
+      "model": "tuned",
+      "id": "heldout-2047-3",
+      "predicted": "do_nothing",
+      "confidence": 0.9999160766601562,
+      "expected": "do_nothing",
+      "latency_ms": 367.10630000015954
+    },
+    {
+      "model": "tuned",
+      "id": "heldout-2003-21",
+      "predicted": "increase_cpu",
+      "confidence": 0.9047667384147644,
+      "expected": "increase_cpu",
+      "latency_ms": 370.4219000028388
+    },
+    {
+      "model": "tuned",
+      "id": "heldout-2047-58",
+      "predicted": "increase_cpu",
+      "confidence": 0.9375562071800232,
+      "expected": "increase_cpu",
+      "latency_ms": 367.4116000001959
+    },
+    {
+      "model": "tuned",
+      "id": "heldout-2003-80",
+      "predicted": "increase_memory",
+      "confidence": 0.956919252872467,
+      "expected": "increase_memory",
+      "latency_ms": 364.5999000000302
+    },
+    {
+      "model": "tuned",
+      "id": "heldout-2043-24",
+      "predicted": "increase_memory",
+      "confidence": 0.9298500418663025,
+      "expected": "increase_memory",
+      "latency_ms": 365.21390000052634
+    },
+    {
+      "model": "tuned",
+      "id": "heldout-3007-89",
+      "predicted": "protect_service",
+      "confidence": 0.9951908588409424,
+      "expected": "protect_service",
+      "latency_ms": 363.909199997579
+    },
+    {
+      "model": "tuned",
+      "id": "heldout-3011-90",
+      "predicted": "protect_service",
+      "confidence": 0.9989396929740906,
+      "expected": "protect_service",
+      "latency_ms": 365.64349999753176
+    },
+    {
+      "model": "tuned",
+      "id": "heldout-2055-11",
+      "predicted": "do_nothing",
+      "confidence": 0.994892954826355,
+      "expected": "restrict_process_count",
+      "latency_ms": 357.5396999985969
+    },
+    {
+      "model": "tuned",
+      "id": "heldout-2047-5",
+      "predicted": "do_nothing",
+      "confidence": 0.5954253077507019,
+      "expected": "restrict_process_count",
+      "latency_ms": 364.50089999925694
+    },
+    {
+      "model": "tuned",
+      "id": "heldout-3015-74",
+      "predicted": "do_nothing",
+      "confidence": 0.9006975889205933,
+      "expected": "throttle_io",
+      "latency_ms": 362.4897999980021
+    },
+    {
+      "model": "tuned",
+      "id": "heldout-3007-58",
+      "predicted": "do_nothing",
+      "confidence": 0.8789033889770508,
+      "expected": "throttle_io",
+      "latency_ms": 362.4305999983335
+    },
+    {
+      "model": "tuned",
+      "id": "friend-2018-86",
+      "predicted": "alert_operator",
+      "confidence": 0.9771002531051636,
+      "expected": "alert_operator",
+      "latency_ms": 359.35740000059013
+    },
+    {
+      "model": "tuned",
+      "id": "friend-2010-33",
+      "predicted": "do_nothing",
+      "confidence": 0.9480221271514893,
+      "expected": "decrease_cpu",
+      "latency_ms": 599.2361999997229
+    },
+    {
+      "model": "tuned",
+      "id": "friend-2001-22",
+      "predicted": "do_nothing",
+      "confidence": 0.8656992316246033,
+      "expected": "decrease_memory",
+      "latency_ms": 479.1312999986985
+    },
+    {
+      "model": "tuned",
+      "id": "friend-2019-50",
+      "predicted": "do_nothing",
+      "confidence": 0.9969198703765869,
+      "expected": "do_nothing",
+      "latency_ms": 483.3693999971729
+    },
+    {
+      "model": "tuned",
+      "id": "friend-2012-95",
+      "predicted": "increase_cpu",
+      "confidence": 0.9187943339347839,
+      "expected": "increase_cpu",
+      "latency_ms": 482.2033000018564
+    },
+    {
+      "model": "tuned",
+      "id": "friend-2000-32",
+      "predicted": "increase_memory",
+      "confidence": 0.9501667618751526,
+      "expected": "increase_memory",
+      "latency_ms": 475.68759999921895
+    },
+    {
+      "model": "tuned",
+      "id": "friend-2004-71",
+      "predicted": "do_nothing",
+      "confidence": 0.9218773245811462,
+      "expected": "protect_service",
+      "latency_ms": 475.50779999801307
+    },
+    {
+      "model": "tuned",
+      "id": "friend-2012-82",
+      "predicted": "increase_cpu",
+      "confidence": 0.8392298817634583,
+      "expected": "restrict_process_count",
+      "latency_ms": 367.3964000008709
+    },
+    {
+      "model": "tuned",
+      "id": "friend-2016-92",
+      "predicted": "do_nothing",
+      "confidence": 0.8537409901618958,
+      "expected": "throttle_io",
+      "latency_ms": 437.96819999988656
+    },
+    {
+      "model": "base",
+      "id": "heldout-2035-79",
+      "predicted": "do_nothing",
+      "confidence": 0.5642979145050049,
+      "expected": "alert_operator",
+      "latency_ms": 370.7386999994924
+    },
+    {
+      "model": "base",
+      "id": "heldout-3019-127",
+      "predicted": "do_nothing",
+      "confidence": 0.8242020606994629,
+      "expected": "alert_operator",
+      "latency_ms": 333.68479999990086
+    },
+    {
+      "model": "base",
+      "id": "heldout-2035-34",
+      "predicted": "do_nothing",
+      "confidence": 0.8292638063430786,
+      "expected": "decrease_cpu",
+      "latency_ms": 328.9937000008649
+    },
+    {
+      "model": "base",
+      "id": "heldout-3023-124",
+      "predicted": "decrease_cpu",
+      "confidence": 0.3714286983013153,
+      "expected": "decrease_cpu",
+      "latency_ms": 333.02529999855324
+    },
+    {
+      "model": "base",
+      "id": "heldout-2043-62",
+      "predicted": "do_nothing",
+      "confidence": 0.5045469403266907,
+      "expected": "decrease_memory",
+      "latency_ms": 331.8515999999363
+    },
+    {
+      "model": "base",
+      "id": "heldout-2035-84",
+      "predicted": "do_nothing",
+      "confidence": 0.44246363639831543,
+      "expected": "decrease_memory",
+      "latency_ms": 329.78259999799775
+    },
+    {
+      "model": "base",
+      "id": "heldout-3007-133",
+      "predicted": "do_nothing",
+      "confidence": 0.8278103470802307,
+      "expected": "do_nothing",
+      "latency_ms": 335.78290000150446
+    },
+    {
+      "model": "base",
+      "id": "heldout-2047-3",
+      "predicted": "do_nothing",
+      "confidence": 0.8297345638275146,
+      "expected": "do_nothing",
+      "latency_ms": 329.13790000020526
+    },
+    {
+      "model": "base",
+      "id": "heldout-2003-21",
+      "predicted": "increase_cpu",
+      "confidence": 0.4103318750858307,
+      "expected": "increase_cpu",
+      "latency_ms": 335.38489999773446
+    },
+    {
+      "model": "base",
+      "id": "heldout-2047-58",
+      "predicted": "increase_cpu",
+      "confidence": 0.41533905267715454,
+      "expected": "increase_cpu",
+      "latency_ms": 332.84850000200095
+    },
+    {
+      "model": "base",
+      "id": "heldout-2003-80",
+      "predicted": "do_nothing",
+      "confidence": 0.5226647257804871,
+      "expected": "increase_memory",
+      "latency_ms": 329.27139999810606
+    },
+    {
+      "model": "base",
+      "id": "heldout-2043-24",
+      "predicted": "do_nothing",
+      "confidence": 0.5811213254928589,
+      "expected": "increase_memory",
+      "latency_ms": 332.8366999994614
+    },
+    {
+      "model": "base",
+      "id": "heldout-3007-89",
+      "predicted": "do_nothing",
+      "confidence": 0.42580023407936096,
+      "expected": "protect_service",
+      "latency_ms": 335.33019999958924
+    },
+    {
+      "model": "base",
+      "id": "heldout-3011-90",
+      "predicted": "do_nothing",
+      "confidence": 0.49925529956817627,
+      "expected": "protect_service",
+      "latency_ms": 337.72830000089016
+    },
+    {
+      "model": "base",
+      "id": "heldout-2055-11",
+      "predicted": "do_nothing",
+      "confidence": 0.7941138744354248,
+      "expected": "restrict_process_count",
+      "latency_ms": 328.55560000098194
+    },
+    {
+      "model": "base",
+      "id": "heldout-2047-5",
+      "predicted": "do_nothing",
+      "confidence": 0.7291200757026672,
+      "expected": "restrict_process_count",
+      "latency_ms": 330.6508000023314
+    },
+    {
+      "model": "base",
+      "id": "heldout-3015-74",
+      "predicted": "do_nothing",
+      "confidence": 0.8395256400108337,
+      "expected": "throttle_io",
+      "latency_ms": 359.42260000229
+    },
+    {
+      "model": "base",
+      "id": "heldout-3007-58",
+      "predicted": "do_nothing",
+      "confidence": 0.8265120387077332,
+      "expected": "throttle_io",
+      "latency_ms": 555.0707000002149
+    },
+    {
+      "model": "base",
+      "id": "friend-2018-86",
+      "predicted": "increase_cpu",
+      "confidence": 0.5662731528282166,
+      "expected": "alert_operator",
+      "latency_ms": 458.349199998338
+    },
+    {
+      "model": "base",
+      "id": "friend-2010-33",
+      "predicted": "do_nothing",
+      "confidence": 0.8260024189949036,
+      "expected": "decrease_cpu",
+      "latency_ms": 521.4921000006143
+    },
+    {
+      "model": "base",
+      "id": "friend-2001-22",
+      "predicted": "do_nothing",
+      "confidence": 0.801048755645752,
+      "expected": "decrease_memory",
+      "latency_ms": 516.4173999983177
+    },
+    {
+      "model": "base",
+      "id": "friend-2019-50",
+      "predicted": "do_nothing",
+      "confidence": 0.803276777267456,
+      "expected": "do_nothing",
+      "latency_ms": 445.44110000060755
+    },
+    {
+      "model": "base",
+      "id": "friend-2012-95",
+      "predicted": "increase_cpu",
+      "confidence": 0.4387993812561035,
+      "expected": "increase_cpu",
+      "latency_ms": 445.6773999991128
+    },
+    {
+      "model": "base",
+      "id": "friend-2000-32",
+      "predicted": "do_nothing",
+      "confidence": 0.45278897881507874,
+      "expected": "increase_memory",
+      "latency_ms": 331.689999999071
+    },
+    {
+      "model": "base",
+      "id": "friend-2004-71",
+      "predicted": "do_nothing",
+      "confidence": 0.7282580137252808,
+      "expected": "protect_service",
+      "latency_ms": 327.9505999998946
+    },
+    {
+      "model": "base",
+      "id": "friend-2012-82",
+      "predicted": "do_nothing",
+      "confidence": 0.3484143614768982,
+      "expected": "restrict_process_count",
+      "latency_ms": 335.90430000185734
+    },
+    {
+      "model": "base",
+      "id": "friend-2016-92",
+      "predicted": "throttle_io",
+      "confidence": 0.6849825978279114,
+      "expected": "throttle_io",
+      "latency_ms": 327.58990000002086
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "seed": 2000,
+  "victim_type": "latency",
+  "victim": {
+    "cpu_quota_pct": 100,
+    "memory_max_mb": 256
+  },
+  "neighbor": {
+    "cpu_quota_pct": 150,
+    "memory_high_mb": 850,
+    "memory_max_mb": 998,
+    "io_cap_mbps": 5,
+    "pids_max": 78
+  },
+  "warmup_s": 14,
+  "cooldown_s": 19,
+  "phases": [
+    {
+      "type": "mem_grow",
+      "target_mb": 854,
+      "pattern": "spike",
+      "duration_s": 41,
+      "gap_s": 3
+    },
+    {
+      "type": "mixed",
+      "parts": [
+        "cpu_burn",
+        "io_write",
+        "mem_grow"
+      ],
+      "duration_s": 49,
+      "gap_s": 7
+    },
+    {
+      "type": "mixed",
+      "parts": [
+        "cpu_burn",
+        "io_write",
+        "mem_grow"
+      ],
+      "duration_s": 60,
+      "gap_s": 0
+    }
+  ],
+  "controller_mode": "rules"
+}

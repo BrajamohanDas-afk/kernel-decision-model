@@ -1,0 +1,3192 @@
+{
+  "heldout_tuned": {
+    "n": 2640,
+    "confusion_top": [
+      {
+        "true": "throttle_io",
+        "pred": "do_nothing",
+        "n": 41
+      },
+      {
+        "true": "restrict_process_count",
+        "pred": "do_nothing",
+        "n": 27
+      },
+      {
+        "true": "do_nothing",
+        "pred": "increase_memory",
+        "n": 27
+      },
+      {
+        "true": "do_nothing",
+        "pred": "alert_operator",
+        "n": 26
+      },
+      {
+        "true": "protect_service",
+        "pred": "do_nothing",
+        "n": 25
+      },
+      {
+        "true": "increase_memory",
+        "pred": "do_nothing",
+        "n": 23
+      },
+      {
+        "true": "decrease_memory",
+        "pred": "do_nothing",
+        "n": 22
+      },
+      {
+        "true": "decrease_cpu",
+        "pred": "do_nothing",
+        "n": 17
+      },
+      {
+        "true": "increase_cpu",
+        "pred": "do_nothing",
+        "n": 16
+      },
+      {
+        "true": "increase_memory",
+        "pred": "increase_cpu",
+        "n": 8
+      },
+      {
+        "true": "protect_service",
+        "pred": "increase_memory",
+        "n": 8
+      },
+      {
+        "true": "decrease_cpu",
+        "pred": "increase_memory",
+        "n": 7
+      }
+    ],
+    "calibration": {
+      "0.3-0.4": {
+        "n": 1,
+        "mean_conf": 0.37909334897994995,
+        "acc": 1.0
+      },
+      "0.4-0.5": {
+        "n": 9,
+        "mean_conf": 0.47163860003153485,
+        "acc": 0.4444444444444444
+      },
+      "0.5-0.6": {
+        "n": 57,
+        "mean_conf": 0.5612682292335912,
+        "acc": 0.43859649122807015
+      },
+      "0.6-0.7": {
+        "n": 64,
+        "mean_conf": 0.6502905143424869,
+        "acc": 0.640625
+      },
+      "0.7-0.8": {
+        "n": 122,
+        "mean_conf": 0.7534327775728508,
+        "acc": 0.5409836065573771
+      },
+      "0.8-0.9": {
+        "n": 333,
+        "mean_conf": 0.8765161146630754,
+        "acc": 0.8168168168168168
+      },
+      "0.9-1.0": {
+        "n": 2054,
+        "mean_conf": 0.9703622228504969,
+        "acc": 0.9371957156767283
+      }
+    },
+    "predicted": {
+      "do_nothing": 1694,
+      "increase_cpu": 237,
+      "decrease_cpu": 13,
+      "increase_memory": 396,
+      "decrease_memory": 30,
+      "throttle_io": 85,
+      "restrict_process_count": 4,
+      "protect_service": 132,
+      "isolate_workload": 0,
+      "restart_service": 0,
+      "kill_process": 0,
+      "alert_operator": 49
+    },
+    "confident_wrong": 129,
+    "confident_wrong_examples": [
+      {
+        "row": "2003-9",
+        "true": "protect_service",
+        "pred": "do_nothing",
+        "conf": 0.9847785830497742
+      },
+      {
+        "row": "2003-13",
+        "true": "restrict_process_count",
+        "pred": "do_nothing",
+        "conf": 0.9846764802932739
+      },
+      {
+        "row": "2003-19",
+        "true": "increase_memory",
+        "pred": "increase_cpu",
+        "conf": 0.9011065363883972
+      },
+      {
+        "row": "2003-23",
+        "true": "decrease_memory",
+        "pred": "increase_cpu",
+        "conf": 0.9016847610473633
+      },
+      {
+        "row": "2003-40",
+        "true": "protect_service",
+        "pred": "increase_memory",
+        "conf": 0.9155190587043762
+      },
+      {
+        "row": "2003-63",
+        "true": "decrease_memory",
+        "pred": "do_nothing",
+        "conf": 0.9008808135986328
+      },
+      {
+        "row": "2003-72",
+        "true": "protect_service",
+        "pred": "increase_memory",
+        "conf": 0.9486402273178101
+      },
+      {
+        "row": "2007-9",
+        "true": "protect_service",
+        "pred": "do_nothing",
+        "conf": 0.9902604818344116
+      },
+      {
+        "row": "2007-13",
+        "true": "restrict_process_count",
+        "pred": "do_nothing",
+        "conf": 0.9920922517776489
+      },
+      {
+        "row": "2007-19",
+        "true": "increase_memory",
+        "pred": "do_nothing",
+        "conf": 0.9525617957115173
+      }
+    ]
+  },
+  "heldout_base": {
+    "n": 2640,
+    "confusion_top": [
+      {
+        "true": "increase_memory",
+        "pred": "do_nothing",
+        "n": 357
+      },
+      {
+        "true": "protect_service",
+        "pred": "do_nothing",
+        "n": 144
+      },
+      {
+        "true": "decrease_memory",
+        "pred": "do_nothing",
+        "n": 55
+      },
+      {
+        "true": "increase_cpu",
+        "pred": "do_nothing",
+        "n": 47
+      },
+      {
+        "true": "throttle_io",
+        "pred": "do_nothing",
+        "n": 39
+      },
+      {
+        "true": "decrease_cpu",
+        "pred": "do_nothing",
+        "n": 34
+      },
+      {
+        "true": "restrict_process_count",
+        "pred": "do_nothing",
+        "n": 31
+      },
+      {
+        "true": "do_nothing",
+        "pred": "throttle_io",
+        "n": 29
+      },
+      {
+        "true": "alert_operator",
+        "pred": "do_nothing",
+        "n": 25
+      },
+      {
+        "true": "do_nothing",
+        "pred": "increase_cpu",
+        "n": 14
+      },
+      {
+        "true": "do_nothing",
+        "pred": "decrease_cpu",
+        "n": 10
+      },
+      {
+        "true": "increase_memory",
+        "pred": "increase_cpu",
+        "n": 9
+      }
+    ],
+    "calibration": {
+      "0.2-0.3": {
+        "n": 2,
+        "mean_conf": 0.2949253171682358,
+        "acc": 1.0
+      },
+      "0.3-0.4": {
+        "n": 194,
+        "mean_conf": 0.3660654685239202,
+        "acc": 0.5360824742268041
+      },
+      "0.4-0.5": {
+        "n": 358,
+        "mean_conf": 0.4442055341085242,
+        "acc": 0.5139664804469274
+      },
+      "0.5-0.6": {
+        "n": 368,
+        "mean_conf": 0.5421926886167215,
+        "acc": 0.08967391304347826
+      },
+      "0.6-0.7": {
+        "n": 153,
+        "mean_conf": 0.6406787181991378,
+        "acc": 0.6666666666666666
+      },
+      "0.7-0.8": {
+        "n": 446,
+        "mean_conf": 0.7785513830024565,
+        "acc": 0.8632286995515696
+      },
+      "0.8-0.9": {
+        "n": 1119,
+        "mean_conf": 0.8292834610679087,
+        "acc": 0.8739946380697051
+      }
+    },
+    "predicted": {
+      "do_nothing": 2256,
+      "increase_cpu": 216,
+      "decrease_cpu": 17,
+      "increase_memory": 2,
+      "decrease_memory": 6,
+      "throttle_io": 123,
+      "restrict_process_count": 3,
+      "protect_service": 8,
+      "isolate_workload": 0,
+      "restart_service": 0,
+      "kill_process": 0,
+      "alert_operator": 9
+    },
+    "confident_wrong": 0,
+    "confident_wrong_examples": []
+  },
+  "unseen_tuned": {
+    "n": 506,
+    "confusion_top": [
+      {
+        "true": "throttle_io",
+        "pred": "do_nothing",
+        "n": 8
+      },
+      {
+        "true": "do_nothing",
+        "pred": "alert_operator",
+        "n": 4
+      },
+      {
+        "true": "restrict_process_count",
+        "pred": "do_nothing",
+        "n": 3
+      },
+      {
+        "true": "do_nothing",
+        "pred": "throttle_io",
+        "n": 2
+      },
+      {
+        "true": "do_nothing",
+        "pred": "protect_service",
+        "n": 2
+      },
+      {
+        "true": "decrease_cpu",
+        "pred": "do_nothing",
+        "n": 2
+      },
+      {
+        "true": "do_nothing",
+        "pred": "increase_memory",
+        "n": 1
+      },
+      {
+        "true": "decrease_memory",
+        "pred": "do_nothing",
+        "n": 1
+      }
+    ],
+    "calibration": {
+      "0.5-0.6": {
+        "n": 5,
+        "mean_conf": 0.5385175347328186,
+        "acc": 0.4
+      },
+      "0.6-0.7": {
+        "n": 11,
+        "mean_conf": 0.6241901300170205,
+        "acc": 0.6363636363636364
+      },
+      "0.7-0.8": {
+        "n": 31,
+        "mean_conf": 0.7656730009663489,
+        "acc": 0.8387096774193549
+      },
+      "0.8-0.9": {
+        "n": 22,
+        "mean_conf": 0.8571701781316237,
+        "acc": 0.6363636363636364
+      },
+      "0.9-1.0": {
+        "n": 437,
+        "mean_conf": 0.9874290948055975,
+        "acc": 0.9931350114416476
+      }
+    },
+    "predicted": {
+      "do_nothing": 326,
+      "increase_cpu": 0,
+      "decrease_cpu": 2,
+      "increase_memory": 70,
+      "decrease_memory": 10,
+      "throttle_io": 45,
+      "restrict_process_count": 0,
+      "protect_service": 45,
+      "isolate_workload": 0,
+      "restart_service": 0,
+      "kill_process": 0,
+      "alert_operator": 8
+    },
+    "confident_wrong": 3,
+    "confident_wrong_examples": [
+      {
+        "row": "4000-31",
+        "true": "do_nothing",
+        "pred": "increase_memory",
+        "conf": 0.9315122961997986
+      },
+      {
+        "row": "4002-74",
+        "true": "throttle_io",
+        "pred": "do_nothing",
+        "conf": 0.9988216161727905
+      },
+      {
+        "row": "4003-60",
+        "true": "throttle_io",
+        "pred": "do_nothing",
+        "conf": 0.9018797874450684
+      }
+    ]
+  },
+  "friend_tuned": {
+    "n": 2491,
+    "confusion_top": [
+      {
+        "true": "throttle_io",
+        "pred": "do_nothing",
+        "n": 209
+      },
+      {
+        "true": "do_nothing",
+        "pred": "alert_operator",
+        "n": 24
+      },
+      {
+        "true": "restrict_process_count",
+        "pred": "do_nothing",
+        "n": 22
+      },
+      {
+        "true": "decrease_memory",
+        "pred": "do_nothing",
+        "n": 20
+      },
+      {
+        "true": "increase_memory",
+        "pred": "do_nothing",
+        "n": 20
+      },
+      {
+        "true": "protect_service",
+        "pred": "do_nothing",
+        "n": 18
+      },
+      {
+        "true": "do_nothing",
+        "pred": "increase_memory",
+        "n": 16
+      },
+      {
+        "true": "protect_service",
+        "pred": "increase_memory",
+        "n": 13
+      },
+      {
+        "true": "decrease_cpu",
+        "pred": "do_nothing",
+        "n": 13
+      },
+      {
+        "true": "increase_cpu",
+        "pred": "do_nothing",
+        "n": 13
+      },
+      {
+        "true": "throttle_io",
+        "pred": "increase_memory",
+        "n": 7
+      },
+      {
+        "true": "decrease_cpu",
+        "pred": "increase_cpu",
+        "n": 5
+      }
+    ],
+    "calibration": {
+      "0.4-0.5": {
+        "n": 12,
+        "mean_conf": 0.46654362976551056,
+        "acc": 0.3333333333333333
+      },
+      "0.5-0.6": {
+        "n": 73,
+        "mean_conf": 0.5580799465310083,
+        "acc": 0.4657534246575342
+      },
+      "0.6-0.7": {
+        "n": 88,
+        "mean_conf": 0.6597179303115065,
+        "acc": 0.5
+      },
+      "0.7-0.8": {
+        "n": 133,
+        "mean_conf": 0.7482670021236391,
+        "acc": 0.42105263157894735
+      },
+      "0.8-0.9": {
+        "n": 509,
+        "mean_conf": 0.8714365124234048,
+        "acc": 0.650294695481336
+      },
+      "0.9-1.0": {
+        "n": 1676,
+        "mean_conf": 0.973083336306358,
+        "acc": 0.9552505966587113
+      }
+    },
+    "predicted": {
+      "do_nothing": 1741,
+      "increase_cpu": 187,
+      "decrease_cpu": 7,
+      "increase_memory": 452,
+      "decrease_memory": 4,
+      "throttle_io": 47,
+      "restrict_process_count": 5,
+      "protect_service": 0,
+      "isolate_workload": 0,
+      "restart_service": 0,
+      "kill_process": 0,
+      "alert_operator": 48
+    },
+    "confident_wrong": 75,
+    "confident_wrong_examples": [
+      {
+        "row": "2000-84",
+        "true": "do_nothing",
+        "pred": "increase_memory",
+        "conf": 0.9434564709663391
+      },
+      {
+        "row": "2001-8",
+        "true": "protect_service",
+        "pred": "increase_memory",
+        "conf": 0.9646967053413391
+      },
+      {
+        "row": "2001-12",
+        "true": "restrict_process_count",
+        "pred": "do_nothing",
+        "conf": 0.9048207998275757
+      },
+      {
+        "row": "2001-25",
+        "true": "throttle_io",
+        "pred": "increase_memory",
+        "conf": 0.9422191381454468
+      },
+      {
+        "row": "2001-40",
+        "true": "throttle_io",
+        "pred": "do_nothing",
+        "conf": 0.9146131277084351
+      },
+      {
+        "row": "2001-84",
+        "true": "increase_memory",
+        "pred": "do_nothing",
+        "conf": 0.9109980463981628
+      },
+      {
+        "row": "2001-114",
+        "true": "throttle_io",
+        "pred": "do_nothing",
+        "conf": 0.9078032374382019
+      },
+      {
+        "row": "2002-85",
+        "true": "throttle_io",
+        "pred": "do_nothing",
+        "conf": 0.9218976497650146
+      },
+      {
+        "row": "2003-9",
+        "true": "protect_service",
+        "pred": "do_nothing",
+        "conf": 0.9859306216239929
+      },
+      {
+        "row": "2003-13",
+        "true": "restrict_process_count",
+        "pred": "do_nothing",
+        "conf": 0.9867982268333435
+      }
+    ]
+  },
+  "train_full_tuned": {
+    "n": 8230,
+    "confusion_top": [
+      {
+        "true": "throttle_io",
+        "pred": "do_nothing",
+        "n": 103
+      },
+      {
+        "true": "do_nothing",
+        "pred": "alert_operator",
+        "n": 76
+      },
+      {
+        "true": "restrict_process_count",
+        "pred": "do_nothing",
+        "n": 58
+      },
+      {
+        "true": "protect_service",
+        "pred": "do_nothing",
+        "n": 47
+      },
+      {
+        "true": "increase_memory",
+        "pred": "do_nothing",
+        "n": 46
+      },
+      {
+        "true": "decrease_cpu",
+        "pred": "do_nothing",
+        "n": 44
+      },
+      {
+        "true": "increase_cpu",
+        "pred": "do_nothing",
+        "n": 38
+      },
+      {
+        "true": "decrease_memory",
+        "pred": "do_nothing",
+        "n": 30
+      },
+      {
+        "true": "do_nothing",
+        "pred": "throttle_io",
+        "n": 21
+      },
+      {
+        "true": "protect_service",
+        "pred": "increase_memory",
+        "n": 17
+      },
+      {
+        "true": "do_nothing",
+        "pred": "protect_service",
+        "n": 16
+      },
+      {
+        "true": "do_nothing",
+        "pred": "increase_memory",
+        "n": 14
+      }
+    ],
+    "calibration": {
+      "0.3-0.4": {
+        "n": 1,
+        "mean_conf": 0.38178619742393494,
+        "acc": 1.0
+      },
+      "0.4-0.5": {
+        "n": 36,
+        "mean_conf": 0.47237322231133777,
+        "acc": 0.5555555555555556
+      },
+      "0.5-0.6": {
+        "n": 115,
+        "mean_conf": 0.5503478957259137,
+        "acc": 0.46956521739130436
+      },
+      "0.6-0.7": {
+        "n": 151,
+        "mean_conf": 0.6457354197438979,
+        "acc": 0.6622516556291391
+      },
+      "0.7-0.8": {
+        "n": 320,
+        "mean_conf": 0.7517862802371382,
+        "acc": 0.6
+      },
+      "0.8-0.9": {
+        "n": 1195,
+        "mean_conf": 0.8789894785342356,
+        "acc": 0.8343096234309624
+      },
+      "0.9-1.0": {
+        "n": 6412,
+        "mean_conf": 0.9786652476339138,
+        "acc": 0.9742669993761697
+      }
+    },
+    "predicted": {
+      "do_nothing": 5502,
+      "increase_cpu": 639,
+      "decrease_cpu": 41,
+      "increase_memory": 1015,
+      "decrease_memory": 107,
+      "throttle_io": 339,
+      "restrict_process_count": 13,
+      "protect_service": 426,
+      "isolate_workload": 0,
+      "restart_service": 0,
+      "kill_process": 0,
+      "alert_operator": 148
+    },
+    "confident_wrong": 165,
+    "confident_wrong_examples": [
+      {
+        "row": "2001-8",
+        "true": "protect_service",
+        "pred": "increase_memory",
+        "conf": 0.9782209992408752
+      },
+      {
+        "row": "2001-12",
+        "true": "restrict_process_count",
+        "pred": "increase_memory",
+        "conf": 0.9768630266189575
+      },
+      {
+        "row": "2001-22",
+        "true": "decrease_memory",
+        "pred": "increase_memory",
+        "conf": 0.9588903188705444
+      },
+      {
+        "row": "2001-25",
+        "true": "throttle_io",
+        "pred": "increase_memory",
+        "conf": 0.9002911448478699
+      },
+      {
+        "row": "2001-34",
+        "true": "decrease_cpu",
+        "pred": "do_nothing",
+        "conf": 0.959105908870697
+      },
+      {
+        "row": "2001-39",
+        "true": "protect_service",
+        "pred": "do_nothing",
+        "conf": 0.9046331644058228
+      },
+      {
+        "row": "2001-84",
+        "true": "increase_memory",
+        "pred": "do_nothing",
+        "conf": 0.9048084020614624
+      },
+      {
+        "row": "2001-95",
+        "true": "throttle_io",
+        "pred": "do_nothing",
+        "conf": 0.9078356027603149
+      },
+      {
+        "row": "2001-107",
+        "true": "restrict_process_count",
+        "pred": "do_nothing",
+        "conf": 0.9058865308761597
+      },
+      {
+        "row": "2001-110",
+        "true": "increase_memory",
+        "pred": "do_nothing",
+        "conf": 0.9144589304924011
+      }
+    ]
+  },
+  "heldout_summary": {
+    "tuned": {
+      "n": 2640,
+      "accuracy": 0.884090909090909,
+      "macro_f1": 0.6661861546811412,
+      "balanced_accuracy": 0.6416214827199329,
+      "nll": 0.4834485434034424,
+      "ece": 0.04636333591558722,
+      "per_class": {
+        "do_nothing": {
+          "tp": 1523,
+          "fp": 171,
+          "fn": 72,
+          "support": 1595,
+          "predicted": 1694,
+          "precision": 0.8990554899645808,
+          "recall": 0.954858934169279,
+          "f1": 0.9261173608999697
+        },
+        "increase_cpu": {
+          "tp": 209,
+          "fp": 28,
+          "fn": 17,
+          "support": 226,
+          "predicted": 237,
+          "precision": 0.8818565400843882,
+          "recall": 0.9247787610619469,
+          "f1": 0.9028077753779699
+        },
+        "decrease_cpu": {
+          "tp": 12,
+          "fp": 1,
+          "fn": 29,
+          "support": 41,
+          "predicted": 13,
+          "precision": 0.9230769230769231,
+          "recall": 0.2926829268292683,
+          "f1": 0.4444444444444444
+        },
+        "increase_memory": {
+          "tp": 339,
+          "fp": 57,
+          "fn": 32,
+          "support": 371,
+          "predicted": 396,
+          "precision": 0.8560606060606061,
+          "recall": 0.9137466307277629,
+          "f1": 0.8839634941329857
+        },
+        "decrease_memory": {
+          "tp": 28,
+          "fp": 2,
+          "fn": 31,
+          "support": 59,
+          "predicted": 30,
+          "precision": 0.9333333333333333,
+          "recall": 0.4745762711864407,
+          "f1": 0.6292134831460674
+        },
+        "throttle_io": {
+          "tp": 75,
+          "fp": 10,
+          "fn": 48,
+          "support": 123,
+          "predicted": 85,
+          "precision": 0.8823529411764706,
+          "recall": 0.6097560975609756,
+          "f1": 0.721153846153846
+        },
+        "restrict_process_count": {
+          "tp": 1,
+          "fp": 3,
+          "fn": 31,
+          "support": 32,
+          "predicted": 4,
+          "precision": 0.25,
+          "recall": 0.03125,
+          "f1": 0.05555555555555555
+        },
+        "protect_service": {
+          "tp": 124,
+          "fp": 8,
+          "fn": 41,
+          "support": 165,
+          "predicted": 132,
+          "precision": 0.9393939393939394,
+          "recall": 0.7515151515151515,
+          "f1": 0.8350168350168351
+        },
+        "isolate_workload": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "support": 0,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "restart_service": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "support": 0,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "kill_process": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "support": 0,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "alert_operator": {
+          "tp": 23,
+          "fp": 26,
+          "fn": 5,
+          "support": 28,
+          "predicted": 49,
+          "precision": 0.46938775510204084,
+          "recall": 0.8214285714285714,
+          "f1": 0.5974025974025974
+        }
+      },
+      "confusion": {
+        "do_nothing": {
+          "do_nothing": 1523,
+          "increase_cpu": 5,
+          "decrease_cpu": 1,
+          "increase_memory": 27,
+          "decrease_memory": 1,
+          "throttle_io": 7,
+          "restrict_process_count": 0,
+          "protect_service": 5,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 26
+        },
+        "increase_cpu": {
+          "do_nothing": 16,
+          "increase_cpu": 209,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 1,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "decrease_cpu": {
+          "do_nothing": 17,
+          "increase_cpu": 4,
+          "decrease_cpu": 12,
+          "increase_memory": 7,
+          "decrease_memory": 0,
+          "throttle_io": 1,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "increase_memory": {
+          "do_nothing": 23,
+          "increase_cpu": 8,
+          "decrease_cpu": 0,
+          "increase_memory": 339,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 1,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "decrease_memory": {
+          "do_nothing": 22,
+          "increase_cpu": 3,
+          "decrease_cpu": 0,
+          "increase_memory": 6,
+          "decrease_memory": 28,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "throttle_io": {
+          "do_nothing": 41,
+          "increase_cpu": 3,
+          "decrease_cpu": 0,
+          "increase_memory": 2,
+          "decrease_memory": 0,
+          "throttle_io": 75,
+          "restrict_process_count": 1,
+          "protect_service": 1,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "restrict_process_count": {
+          "do_nothing": 27,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 2,
+          "decrease_memory": 1,
+          "throttle_io": 0,
+          "restrict_process_count": 1,
+          "protect_service": 1,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "protect_service": {
+          "do_nothing": 25,
+          "increase_cpu": 5,
+          "decrease_cpu": 0,
+          "increase_memory": 8,
+          "decrease_memory": 0,
+          "throttle_io": 2,
+          "restrict_process_count": 1,
+          "protect_service": 124,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "isolate_workload": {
+          "do_nothing": 0,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "restart_service": {
+          "do_nothing": 0,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "kill_process": {
+          "do_nothing": 0,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "alert_operator": {
+          "do_nothing": 0,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 5,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 23
+        }
+      },
+      "mean_confidence": 0.9299838611799659
+    },
+    "base": {
+      "n": 2640,
+      "accuracy": 0.6772727272727272,
+      "macro_f1": 0.2656300687710483,
+      "balanced_accuracy": 0.2747854709107193,
+      "nll": 0.9931554834725146,
+      "ece": 0.12032909963392854,
+      "per_class": {
+        "do_nothing": {
+          "tp": 1524,
+          "fp": 732,
+          "fn": 71,
+          "support": 1595,
+          "predicted": 2256,
+          "precision": 0.675531914893617,
+          "recall": 0.9554858934169279,
+          "f1": 0.791482731757985
+        },
+        "increase_cpu": {
+          "tp": 174,
+          "fp": 42,
+          "fn": 52,
+          "support": 226,
+          "predicted": 216,
+          "precision": 0.8055555555555556,
+          "recall": 0.7699115044247787,
+          "f1": 0.7873303167420814
+        },
+        "decrease_cpu": {
+          "tp": 2,
+          "fp": 15,
+          "fn": 39,
+          "support": 41,
+          "predicted": 17,
+          "precision": 0.11764705882352941,
+          "recall": 0.04878048780487805,
+          "f1": 0.06896551724137931
+        },
+        "increase_memory": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 371,
+          "support": 371,
+          "predicted": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "decrease_memory": {
+          "tp": 0,
+          "fp": 6,
+          "fn": 59,
+          "support": 59,
+          "predicted": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "throttle_io": {
+          "tp": 80,
+          "fp": 43,
+          "fn": 43,
+          "support": 123,
+          "predicted": 123,
+          "precision": 0.6504065040650406,
+          "recall": 0.6504065040650406,
+          "f1": 0.6504065040650406
+        },
+        "restrict_process_count": {
+          "tp": 0,
+          "fp": 3,
+          "fn": 32,
+          "support": 32,
+          "predicted": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "protect_service": {
+          "tp": 8,
+          "fp": 0,
+          "fn": 157,
+          "support": 165,
+          "predicted": 8,
+          "precision": 1.0,
+          "recall": 0.048484848484848485,
+          "f1": 0.09248554913294797
+        },
+        "isolate_workload": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "support": 0,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "restart_service": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "support": 0,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "kill_process": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "support": 0,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "alert_operator": {
+          "tp": 0,
+          "fp": 9,
+          "fn": 28,
+          "support": 28,
+          "predicted": 9,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "confusion": {
+        "do_nothing": {
+          "do_nothing": 1524,
+          "increase_cpu": 14,
+          "decrease_cpu": 10,
+          "increase_memory": 0,
+          "decrease_memory": 6,
+          "throttle_io": 29,
+          "restrict_process_count": 3,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 9
+        },
+        "increase_cpu": {
+          "do_nothing": 47,
+          "increase_cpu": 174,
+          "decrease_cpu": 2,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 3,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "decrease_cpu": {
+          "do_nothing": 34,
+          "increase_cpu": 4,
+          "decrease_cpu": 2,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 1,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "increase_memory": {
+          "do_nothing": 357,
+          "increase_cpu": 9,
+          "decrease_cpu": 2,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 3,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "decrease_memory": {
+          "do_nothing": 55,
+          "increase_cpu": 4,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "throttle_io": {
+          "do_nothing": 39,
+          "increase_cpu": 4,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 80,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "restrict_process_count": {
+          "do_nothing": 31,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 1,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "protect_service": {
+          "do_nothing": 144,
+          "increase_cpu": 5,
+          "decrease_cpu": 1,
+          "increase_memory": 1,
+          "decrease_memory": 0,
+          "throttle_io": 6,
+          "restrict_process_count": 0,
+          "protect_service": 8,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "isolate_workload": {
+          "do_nothing": 0,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "restart_service": {
+          "do_nothing": 0,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "kill_process": {
+          "do_nothing": 0,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "alert_operator": {
+          "do_nothing": 25,
+          "increase_cpu": 2,
+          "decrease_cpu": 0,
+          "increase_memory": 1,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        }
+      },
+      "mean_confidence": 0.6831003771925515
+    },
+    "agreement": {
+      "agreement": 0.7215909090909091,
+      "n": 2640
+    }
+  },
+  "train_sample_summary": {
+    "tuned": {
+      "n": 1200,
+      "accuracy": 0.9391666666666667,
+      "macro_f1": 0.755130513918139,
+      "balanced_accuracy": 0.750297765465052,
+      "nll": 0.22423451863208177,
+      "ece": 0.01670075461268427,
+      "per_class": {
+        "do_nothing": {
+          "tp": 771,
+          "fp": 41,
+          "fn": 19,
+          "support": 790,
+          "predicted": 812,
+          "precision": 0.9495073891625616,
+          "recall": 0.9759493670886076,
+          "f1": 0.9625468164794008
+        },
+        "increase_cpu": {
+          "tp": 86,
+          "fp": 7,
+          "fn": 10,
+          "support": 96,
+          "predicted": 93,
+          "precision": 0.9247311827956989,
+          "recall": 0.8958333333333334,
+          "f1": 0.9100529100529101
+        },
+        "decrease_cpu": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 7,
+          "support": 8,
+          "predicted": 2,
+          "precision": 0.5,
+          "recall": 0.125,
+          "f1": 0.2
+        },
+        "increase_memory": {
+          "tp": 132,
+          "fp": 8,
+          "fn": 7,
+          "support": 139,
+          "predicted": 140,
+          "precision": 0.9428571428571428,
+          "recall": 0.9496402877697842,
+          "f1": 0.9462365591397849
+        },
+        "decrease_memory": {
+          "tp": 15,
+          "fp": 0,
+          "fn": 4,
+          "support": 19,
+          "predicted": 15,
+          "precision": 1.0,
+          "recall": 0.7894736842105263,
+          "f1": 0.8823529411764706
+        },
+        "throttle_io": {
+          "tp": 40,
+          "fp": 4,
+          "fn": 10,
+          "support": 50,
+          "predicted": 44,
+          "precision": 0.9090909090909091,
+          "recall": 0.8,
+          "f1": 0.8510638297872342
+        },
+        "restrict_process_count": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 9,
+          "support": 13,
+          "predicted": 4,
+          "precision": 1.0,
+          "recall": 0.3076923076923077,
+          "f1": 0.47058823529411764
+        },
+        "protect_service": {
+          "tp": 70,
+          "fp": 3,
+          "fn": 7,
+          "support": 77,
+          "predicted": 73,
+          "precision": 0.958904109589041,
+          "recall": 0.9090909090909091,
+          "f1": 0.9333333333333333
+        },
+        "isolate_workload": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "support": 0,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "restart_service": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "support": 0,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "kill_process": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "support": 0,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "alert_operator": {
+          "tp": 8,
+          "fp": 9,
+          "fn": 0,
+          "support": 8,
+          "predicted": 17,
+          "precision": 0.47058823529411764,
+          "recall": 1.0,
+          "f1": 0.6399999999999999
+        }
+      },
+      "confusion": {
+        "do_nothing": {
+          "do_nothing": 771,
+          "increase_cpu": 1,
+          "decrease_cpu": 0,
+          "increase_memory": 2,
+          "decrease_memory": 0,
+          "throttle_io": 4,
+          "restrict_process_count": 0,
+          "protect_service": 3,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 9
+        },
+        "increase_cpu": {
+          "do_nothing": 10,
+          "increase_cpu": 86,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "decrease_cpu": {
+          "do_nothing": 5,
+          "increase_cpu": 2,
+          "decrease_cpu": 1,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "increase_memory": {
+          "do_nothing": 3,
+          "increase_cpu": 3,
+          "decrease_cpu": 1,
+          "increase_memory": 132,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "decrease_memory": {
+          "do_nothing": 4,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 15,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "throttle_io": {
+          "do_nothing": 6,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 4,
+          "decrease_memory": 0,
+          "throttle_io": 40,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "restrict_process_count": {
+          "do_nothing": 8,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 1,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 4,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "protect_service": {
+          "do_nothing": 5,
+          "increase_cpu": 1,
+          "decrease_cpu": 0,
+          "increase_memory": 1,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 70,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "isolate_workload": {
+          "do_nothing": 0,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "restart_service": {
+          "do_nothing": 0,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "kill_process": {
+          "do_nothing": 0,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "alert_operator": {
+          "do_nothing": 0,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 8
+        }
+      },
+      "mean_confidence": 0.9411511189242204
+    },
+    "base": {
+      "n": 1200,
+      "accuracy": 0.7366666666666667,
+      "macro_f1": 0.2722401646929949,
+      "balanced_accuracy": 0.28898382559774966,
+      "nll": 0.79446106153031,
+      "ece": 0.1432810771962007,
+      "per_class": {
+        "do_nothing": {
+          "tp": 765,
+          "fp": 281,
+          "fn": 25,
+          "support": 790,
+          "predicted": 1046,
+          "precision": 0.731357552581262,
+          "recall": 0.9683544303797469,
+          "f1": 0.8333333333333335
+        },
+        "increase_cpu": {
+          "tp": 78,
+          "fp": 11,
+          "fn": 18,
+          "support": 96,
+          "predicted": 89,
+          "precision": 0.8764044943820225,
+          "recall": 0.8125,
+          "f1": 0.8432432432432433
+        },
+        "decrease_cpu": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 8,
+          "support": 8,
+          "predicted": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "increase_memory": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 139,
+          "support": 139,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "decrease_memory": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 19,
+          "support": 19,
+          "predicted": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "throttle_io": {
+          "tp": 41,
+          "fp": 15,
+          "fn": 9,
+          "support": 50,
+          "predicted": 56,
+          "precision": 0.7321428571428571,
+          "recall": 0.82,
+          "f1": 0.7735849056603773
+        },
+        "restrict_process_count": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 13,
+          "support": 13,
+          "predicted": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "protect_service": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 77,
+          "support": 77,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "isolate_workload": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "support": 0,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "restart_service": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "support": 0,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "kill_process": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "support": 0,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "alert_operator": {
+          "tp": 0,
+          "fp": 4,
+          "fn": 8,
+          "support": 8,
+          "predicted": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "confusion": {
+        "do_nothing": {
+          "do_nothing": 765,
+          "increase_cpu": 5,
+          "decrease_cpu": 1,
+          "increase_memory": 0,
+          "decrease_memory": 2,
+          "throttle_io": 12,
+          "restrict_process_count": 1,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 4
+        },
+        "increase_cpu": {
+          "do_nothing": 18,
+          "increase_cpu": 78,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "decrease_cpu": {
+          "do_nothing": 6,
+          "increase_cpu": 2,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "increase_memory": {
+          "do_nothing": 136,
+          "increase_cpu": 1,
+          "decrease_cpu": 1,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 1,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "decrease_memory": {
+          "do_nothing": 19,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "throttle_io": {
+          "do_nothing": 9,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 41,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "restrict_process_count": {
+          "do_nothing": 13,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "protect_service": {
+          "do_nothing": 74,
+          "increase_cpu": 1,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 2,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "isolate_workload": {
+          "do_nothing": 0,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "restart_service": {
+          "do_nothing": 0,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "kill_process": {
+          "do_nothing": 0,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "alert_operator": {
+          "do_nothing": 6,
+          "increase_cpu": 2,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        }
+      },
+      "mean_confidence": 0.7091928401092689
+    },
+    "agreement": {
+      "agreement": 0.76,
+      "n": 1200
+    }
+  },
+  "friend_summary": {
+    "tuned": {
+      "n": 2491,
+      "accuracy": 0.8309915696507427,
+      "macro_f1": 0.45099645136387195,
+      "balanced_accuracy": 0.4702526233864457,
+      "nll": 0.5272839007502174,
+      "ece": 0.08364588730500815,
+      "per_class": {
+        "do_nothing": {
+          "tp": 1426,
+          "fp": 315,
+          "fn": 44,
+          "support": 1470,
+          "predicted": 1741,
+          "precision": 0.8190695002871913,
+          "recall": 0.9700680272108844,
+          "f1": 0.8881968234194955
+        },
+        "increase_cpu": {
+          "tp": 163,
+          "fp": 24,
+          "fn": 16,
+          "support": 179,
+          "predicted": 187,
+          "precision": 0.8716577540106952,
+          "recall": 0.9106145251396648,
+          "f1": 0.8907103825136612
+        },
+        "decrease_cpu": {
+          "tp": 1,
+          "fp": 6,
+          "fn": 23,
+          "support": 24,
+          "predicted": 7,
+          "precision": 0.14285714285714285,
+          "recall": 0.041666666666666664,
+          "f1": 0.06451612903225806
+        },
+        "increase_memory": {
+          "tp": 404,
+          "fp": 48,
+          "fn": 24,
+          "support": 428,
+          "predicted": 452,
+          "precision": 0.8938053097345132,
+          "recall": 0.9439252336448598,
+          "f1": 0.9181818181818181
+        },
+        "decrease_memory": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 30,
+          "support": 33,
+          "predicted": 4,
+          "precision": 0.75,
+          "recall": 0.09090909090909091,
+          "f1": 0.16216216216216214
+        },
+        "throttle_io": {
+          "tp": 46,
+          "fp": 1,
+          "fn": 222,
+          "support": 268,
+          "predicted": 47,
+          "precision": 0.9787234042553191,
+          "recall": 0.17164179104477612,
+          "f1": 0.292063492063492
+        },
+        "restrict_process_count": {
+          "tp": 3,
+          "fp": 2,
+          "fn": 26,
+          "support": 29,
+          "predicted": 5,
+          "precision": 0.6,
+          "recall": 0.10344827586206896,
+          "f1": 0.17647058823529413
+        },
+        "protect_service": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 36,
+          "support": 36,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "isolate_workload": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "support": 0,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "restart_service": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "support": 0,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "kill_process": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "support": 0,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "alert_operator": {
+          "tp": 24,
+          "fp": 24,
+          "fn": 0,
+          "support": 24,
+          "predicted": 48,
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666
+        }
+      },
+      "confusion": {
+        "do_nothing": {
+          "do_nothing": 1426,
+          "increase_cpu": 3,
+          "decrease_cpu": 1,
+          "increase_memory": 16,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 24
+        },
+        "increase_cpu": {
+          "do_nothing": 13,
+          "increase_cpu": 163,
+          "decrease_cpu": 0,
+          "increase_memory": 1,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 2,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "decrease_cpu": {
+          "do_nothing": 13,
+          "increase_cpu": 5,
+          "decrease_cpu": 1,
+          "increase_memory": 5,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "increase_memory": {
+          "do_nothing": 20,
+          "increase_cpu": 4,
+          "decrease_cpu": 0,
+          "increase_memory": 404,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "decrease_memory": {
+          "do_nothing": 20,
+          "increase_cpu": 5,
+          "decrease_cpu": 0,
+          "increase_memory": 4,
+          "decrease_memory": 3,
+          "throttle_io": 1,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "throttle_io": {
+          "do_nothing": 209,
+          "increase_cpu": 1,
+          "decrease_cpu": 4,
+          "increase_memory": 7,
+          "decrease_memory": 1,
+          "throttle_io": 46,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "restrict_process_count": {
+          "do_nothing": 22,
+          "increase_cpu": 2,
+          "decrease_cpu": 0,
+          "increase_memory": 2,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 3,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "protect_service": {
+          "do_nothing": 18,
+          "increase_cpu": 4,
+          "decrease_cpu": 1,
+          "increase_memory": 13,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "isolate_workload": {
+          "do_nothing": 0,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "restart_service": {
+          "do_nothing": 0,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "kill_process": {
+          "do_nothing": 0,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "alert_operator": {
+          "do_nothing": 0,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 24
+        }
+      },
+      "mean_confidence": 0.9146374569557508
+    },
+    "base": {
+      "n": 2491,
+      "accuracy": 0.7089522280208751,
+      "macro_f1": 0.267784027513318,
+      "balanced_accuracy": 0.2822794620873262,
+      "nll": 0.9122896684275086,
+      "ece": 0.14541239201998624,
+      "per_class": {
+        "do_nothing": {
+          "tp": 1411,
+          "fp": 605,
+          "fn": 59,
+          "support": 1470,
+          "predicted": 2016,
+          "precision": 0.6999007936507936,
+          "recall": 0.9598639455782313,
+          "f1": 0.8095238095238094
+        },
+        "increase_cpu": {
+          "tp": 138,
+          "fp": 32,
+          "fn": 41,
+          "support": 179,
+          "predicted": 170,
+          "precision": 0.8117647058823529,
+          "recall": 0.770949720670391,
+          "f1": 0.7908309455587392
+        },
+        "decrease_cpu": {
+          "tp": 0,
+          "fp": 14,
+          "fn": 24,
+          "support": 24,
+          "predicted": 14,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "increase_memory": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 428,
+          "support": 428,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "decrease_memory": {
+          "tp": 0,
+          "fp": 5,
+          "fn": 33,
+          "support": 33,
+          "predicted": 5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "throttle_io": {
+          "tp": 217,
+          "fp": 51,
+          "fn": 51,
+          "support": 268,
+          "predicted": 268,
+          "precision": 0.8097014925373134,
+          "recall": 0.8097014925373134,
+          "f1": 0.8097014925373133
+        },
+        "restrict_process_count": {
+          "tp": 0,
+          "fp": 3,
+          "fn": 29,
+          "support": 29,
+          "predicted": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "protect_service": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 36,
+          "support": 36,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "isolate_workload": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "support": 0,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "restart_service": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "support": 0,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "kill_process": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "support": 0,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "alert_operator": {
+          "tp": 0,
+          "fp": 15,
+          "fn": 24,
+          "support": 24,
+          "predicted": 15,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "confusion": {
+        "do_nothing": {
+          "do_nothing": 1411,
+          "increase_cpu": 8,
+          "decrease_cpu": 7,
+          "increase_memory": 0,
+          "decrease_memory": 4,
+          "throttle_io": 22,
+          "restrict_process_count": 3,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 15
+        },
+        "increase_cpu": {
+          "do_nothing": 36,
+          "increase_cpu": 138,
+          "decrease_cpu": 3,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 2,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "decrease_cpu": {
+          "do_nothing": 16,
+          "increase_cpu": 6,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 2,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "increase_memory": {
+          "do_nothing": 412,
+          "increase_cpu": 3,
+          "decrease_cpu": 3,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 10,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "decrease_memory": {
+          "do_nothing": 29,
+          "increase_cpu": 4,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "throttle_io": {
+          "do_nothing": 48,
+          "increase_cpu": 2,
+          "decrease_cpu": 1,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 217,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "restrict_process_count": {
+          "do_nothing": 24,
+          "increase_cpu": 1,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 1,
+          "throttle_io": 3,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "protect_service": {
+          "do_nothing": 28,
+          "increase_cpu": 4,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 4,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "isolate_workload": {
+          "do_nothing": 0,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "restart_service": {
+          "do_nothing": 0,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "kill_process": {
+          "do_nothing": 0,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "alert_operator": {
+          "do_nothing": 12,
+          "increase_cpu": 4,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 8,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        }
+      },
+      "mean_confidence": 0.7015603995380608
+    },
+    "agreement": {
+      "agreement": 0.6780409474106784,
+      "n": 2491
+    }
+  },
+  "unseen_summary": {
+    "tuned": {
+      "n": 506,
+      "accuracy": 0.9545454545454546,
+      "macro_f1": 0.7645096769339782,
+      "balanced_accuracy": 0.7780238476019125,
+      "nll": 0.12334076765274507,
+      "ece": 0.02063609229717328,
+      "per_class": {
+        "do_nothing": {
+          "tp": 312,
+          "fp": 14,
+          "fn": 9,
+          "support": 321,
+          "predicted": 326,
+          "precision": 0.9570552147239264,
+          "recall": 0.9719626168224299,
+          "f1": 0.964451313755796
+        },
+        "increase_cpu": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "support": 0,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "decrease_cpu": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 2,
+          "support": 4,
+          "predicted": 2,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666
+        },
+        "increase_memory": {
+          "tp": 69,
+          "fp": 1,
+          "fn": 0,
+          "support": 69,
+          "predicted": 70,
+          "precision": 0.9857142857142858,
+          "recall": 1.0,
+          "f1": 0.9928057553956835
+        },
+        "decrease_memory": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 1,
+          "support": 11,
+          "predicted": 10,
+          "precision": 1.0,
+          "recall": 0.9090909090909091,
+          "f1": 0.9523809523809523
+        },
+        "throttle_io": {
+          "tp": 43,
+          "fp": 2,
+          "fn": 8,
+          "support": 51,
+          "predicted": 45,
+          "precision": 0.9555555555555556,
+          "recall": 0.8431372549019608,
+          "f1": 0.8958333333333333
+        },
+        "restrict_process_count": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "support": 3,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "protect_service": {
+          "tp": 43,
+          "fp": 2,
+          "fn": 0,
+          "support": 43,
+          "predicted": 45,
+          "precision": 0.9555555555555556,
+          "recall": 1.0,
+          "f1": 0.9772727272727273
+        },
+        "isolate_workload": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "support": 0,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "restart_service": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "support": 0,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "kill_process": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "support": 0,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "alert_operator": {
+          "tp": 4,
+          "fp": 4,
+          "fn": 0,
+          "support": 4,
+          "predicted": 8,
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666
+        }
+      },
+      "confusion": {
+        "do_nothing": {
+          "do_nothing": 312,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 1,
+          "decrease_memory": 0,
+          "throttle_io": 2,
+          "restrict_process_count": 0,
+          "protect_service": 2,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 4
+        },
+        "increase_cpu": {
+          "do_nothing": 0,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "decrease_cpu": {
+          "do_nothing": 2,
+          "increase_cpu": 0,
+          "decrease_cpu": 2,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "increase_memory": {
+          "do_nothing": 0,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 69,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "decrease_memory": {
+          "do_nothing": 1,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 10,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "throttle_io": {
+          "do_nothing": 8,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 43,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "restrict_process_count": {
+          "do_nothing": 3,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "protect_service": {
+          "do_nothing": 0,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 43,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "isolate_workload": {
+          "do_nothing": 0,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "restart_service": {
+          "do_nothing": 0,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "kill_process": {
+          "do_nothing": 0,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "alert_operator": {
+          "do_nothing": 0,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 4
+        }
+      },
+      "mean_confidence": 0.9558474317840908
+    },
+    "base": {
+      "n": 506,
+      "accuracy": 0.7134387351778656,
+      "macro_f1": 0.2673057211380577,
+      "balanced_accuracy": 0.26969880268995233,
+      "nll": 0.7274157468445523,
+      "ece": 0.16054509332764288,
+      "per_class": {
+        "do_nothing": {
+          "tp": 313,
+          "fp": 137,
+          "fn": 8,
+          "support": 321,
+          "predicted": 450,
+          "precision": 0.6955555555555556,
+          "recall": 0.9750778816199377,
+          "f1": 0.8119325551232166
+        },
+        "increase_cpu": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "support": 0,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "decrease_cpu": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 3,
+          "support": 4,
+          "predicted": 2,
+          "precision": 0.5,
+          "recall": 0.25,
+          "f1": 0.3333333333333333
+        },
+        "increase_memory": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 69,
+          "support": 69,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "decrease_memory": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 11,
+          "support": 11,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "throttle_io": {
+          "tp": 44,
+          "fp": 7,
+          "fn": 7,
+          "support": 51,
+          "predicted": 51,
+          "precision": 0.8627450980392157,
+          "recall": 0.8627450980392157,
+          "f1": 0.8627450980392157
+        },
+        "restrict_process_count": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "support": 3,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "protect_service": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 40,
+          "support": 43,
+          "predicted": 3,
+          "precision": 1.0,
+          "recall": 0.06976744186046512,
+          "f1": 0.13043478260869565
+        },
+        "isolate_workload": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "support": 0,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "restart_service": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "support": 0,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "kill_process": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "support": 0,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "alert_operator": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "support": 4,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "confusion": {
+        "do_nothing": {
+          "do_nothing": 313,
+          "increase_cpu": 0,
+          "decrease_cpu": 1,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 7,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "increase_cpu": {
+          "do_nothing": 0,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "decrease_cpu": {
+          "do_nothing": 3,
+          "increase_cpu": 0,
+          "decrease_cpu": 1,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "increase_memory": {
+          "do_nothing": 69,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "decrease_memory": {
+          "do_nothing": 11,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "throttle_io": {
+          "do_nothing": 7,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 44,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "restrict_process_count": {
+          "do_nothing": 3,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "protect_service": {
+          "do_nothing": 40,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 3,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "isolate_workload": {
+          "do_nothing": 0,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "restart_service": {
+          "do_nothing": 0,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "kill_process": {
+          "do_nothing": 0,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        },
+        "alert_operator": {
+          "do_nothing": 4,
+          "increase_cpu": 0,
+          "decrease_cpu": 0,
+          "increase_memory": 0,
+          "decrease_memory": 0,
+          "throttle_io": 0,
+          "restrict_process_count": 0,
+          "protect_service": 0,
+          "isolate_workload": 0,
+          "restart_service": 0,
+          "kill_process": 0,
+          "alert_operator": 0
+        }
+      },
+      "mean_confidence": 0.7417431054968137
+    },
+    "agreement": {
+      "agreement": 0.7233201581027668,
+      "n": 506
+    }
+  },
+  "overfit_gap": 0.05507575757575767
+}

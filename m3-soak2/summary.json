@@ -1,0 +1,3182 @@
+{
+ "run_dir": "/root/workloadpilot/m3/soak2/run",
+ "seed": 7317,
+ "victim_type": "latency",
+ "model": "workloadpilot/v3-2b",
+ "time_scale": 1.0,
+ "meta": {
+  "seed": 7317,
+  "mode": "none",
+  "duration_s": 3512.5,
+  "status": "ok"
+ },
+ "phases": [
+  {
+   "index": 0,
+   "type": "cpu_burn",
+   "regime": "idle",
+   "start_ts": "15:08:51",
+   "duration_s": 177.4
+  },
+  {
+   "index": 1,
+   "type": "cpu_burn",
+   "regime": "cpu-moderate",
+   "start_ts": "15:11:49",
+   "duration_s": 353.6
+  },
+  {
+   "index": 2,
+   "type": "cpu_burn",
+   "regime": "cpu-spike",
+   "start_ts": "15:17:42",
+   "duration_s": 175.8
+  },
+  {
+   "index": 3,
+   "type": "cpu_burn",
+   "regime": "cut-to-idle",
+   "start_ts": "15:20:38",
+   "duration_s": 235.0
+  },
+  {
+   "index": 4,
+   "type": "mem_grow",
+   "regime": "mem-hold",
+   "start_ts": "15:24:33",
+   "duration_s": 293.4
+  },
+  {
+   "index": 5,
+   "type": "cpu_burn",
+   "regime": "mem-release",
+   "start_ts": "15:29:27",
+   "duration_s": 175.5
+  },
+  {
+   "index": 6,
+   "type": "io_write",
+   "regime": "io",
+   "start_ts": "15:32:22",
+   "duration_s": 234.0
+  },
+  {
+   "index": 7,
+   "type": "io_write",
+   "regime": "io-burst",
+   "start_ts": "15:36:16",
+   "duration_s": 117.8
+  },
+  {
+   "index": 8,
+   "type": "fork_light",
+   "regime": "fork",
+   "start_ts": "15:38:14",
+   "duration_s": 175.5
+  },
+  {
+   "index": 9,
+   "type": "mixed",
+   "regime": "mixed",
+   "start_ts": "15:41:09",
+   "duration_s": 293.2
+  },
+  {
+   "index": 10,
+   "type": "cpu_burn",
+   "regime": "saturation",
+   "start_ts": "15:46:03",
+   "duration_s": 58.5
+  },
+  {
+   "index": 11,
+   "type": "mixed",
+   "regime": "saturation",
+   "start_ts": "15:47:01",
+   "duration_s": 117.0
+  },
+  {
+   "index": 12,
+   "type": "fork_light",
+   "regime": "saturation",
+   "start_ts": "15:48:58",
+   "duration_s": 59.2
+  },
+  {
+   "index": 13,
+   "type": "cpu_burn",
+   "regime": "decay",
+   "start_ts": "15:49:57",
+   "duration_s": 116.7
+  },
+  {
+   "index": 14,
+   "type": "cpu_burn",
+   "regime": "decay",
+   "start_ts": "15:51:54",
+   "duration_s": 117.0
+  },
+  {
+   "index": 15,
+   "type": "cpu_burn",
+   "regime": "decay-off",
+   "start_ts": "15:53:51",
+   "duration_s": 117.8
+  },
+  {
+   "index": 16,
+   "type": "cpu_burn",
+   "regime": "tail",
+   "start_ts": "15:55:49",
+   "duration_s": 351.8
+  },
+  {
+   "index": 17,
+   "type": "cpu_burn",
+   "regime": "rise-fall",
+   "start_ts": "16:01:41",
+   "duration_s": 146.3
+  },
+  {
+   "index": 18,
+   "type": "cpu_burn",
+   "regime": "rise-fall",
+   "start_ts": "16:04:07",
+   "duration_s": 90.0
+  }
+ ],
+ "decisions": {
+  "count": 1754,
+  "first_ts": "2026-10-18T15:08:41.651Z",
+  "last_ts": "2026-10-18T16:05:54.512Z",
+  "span_s": 3432.9,
+  "per_min": 30.7,
+  "tokens_total": 1145877,
+  "tokens_with_value": 1754,
+  "tokens_median": 646.0,
+  "cost_usd_est": 0.00802,
+  "model_errors": 0,
+  "controller_errors": 0,
+  "max_per_ts": 1
+ },
+ "actions_overall": {
+  "do_nothing": 1287,
+  "increase_cpu": 248,
+  "decrease_cpu": 4,
+  "increase_memory": 211,
+  "decrease_memory": 0,
+  "throttle_io": 0,
+  "restrict_process_count": 2,
+  "protect_service": 0,
+  "isolate_workload": 0,
+  "restart_service": 0,
+  "kill_process": 0,
+  "alert_operator": 2
+ },
+ "gate_overall": {
+  "pass-no-write": 1289,
+  "applied": 30,
+  "rejected-cooldown": 435
+ },
+ "rejection_reasons": {
+  "cooldown": 435
+ },
+ "regimes": [
+  {
+   "regime": "idle",
+   "windows": 1,
+   "start": 1792336131.816,
+   "end": 1792336309.187,
+   "duration_s": 177.4,
+   "decisions": 90,
+   "applied": 0,
+   "pass": 90,
+   "rejected": 0,
+   "errors": 0,
+   "action_mix": {
+    "do_nothing": 90,
+    "increase_cpu": 0,
+    "decrease_cpu": 0,
+    "increase_memory": 0,
+    "decrease_memory": 0,
+    "throttle_io": 0,
+    "restrict_process_count": 0,
+    "protect_service": 0,
+    "isolate_workload": 0,
+    "restart_service": 0,
+    "kill_process": 0,
+    "alert_operator": 0
+   },
+   "per_min": 30.4,
+   "action_mix_nonzero": {
+    "do_nothing": 90
+   },
+   "start_ts": "15:08:51"
+  },
+  {
+   "regime": "cpu-moderate",
+   "windows": 1,
+   "start": 1792336309.187,
+   "end": 1792336662.806,
+   "duration_s": 353.6,
+   "decisions": 179,
+   "applied": 0,
+   "pass": 179,
+   "rejected": 0,
+   "errors": 0,
+   "action_mix": {
+    "do_nothing": 179,
+    "increase_cpu": 0,
+    "decrease_cpu": 0,
+    "increase_memory": 0,
+    "decrease_memory": 0,
+    "throttle_io": 0,
+    "restrict_process_count": 0,
+    "protect_service": 0,
+    "isolate_workload": 0,
+    "restart_service": 0,
+    "kill_process": 0,
+    "alert_operator": 0
+   },
+   "per_min": 30.4,
+   "action_mix_nonzero": {
+    "do_nothing": 179
+   },
+   "start_ts": "15:11:49"
+  },
+  {
+   "regime": "cpu-spike",
+   "windows": 1,
+   "start": 1792336662.806,
+   "end": 1792336838.641,
+   "duration_s": 175.8,
+   "decisions": 90,
+   "applied": 5,
+   "pass": 0,
+   "rejected": 85,
+   "errors": 0,
+   "action_mix": {
+    "do_nothing": 0,
+    "increase_cpu": 89,
+    "decrease_cpu": 0,
+    "increase_memory": 0,
+    "decrease_memory": 0,
+    "throttle_io": 0,
+    "restrict_process_count": 1,
+    "protect_service": 0,
+    "isolate_workload": 0,
+    "restart_service": 0,
+    "kill_process": 0,
+    "alert_operator": 0
+   },
+   "per_min": 30.7,
+   "action_mix_nonzero": {
+    "increase_cpu": 89,
+    "restrict_process_count": 1
+   },
+   "start_ts": "15:17:42"
+  },
+  {
+   "regime": "cut-to-idle",
+   "windows": 1,
+   "start": 1792336838.641,
+   "end": 1792337073.643,
+   "duration_s": 235.0,
+   "decisions": 120,
+   "applied": 1,
+   "pass": 119,
+   "rejected": 0,
+   "errors": 0,
+   "action_mix": {
+    "do_nothing": 119,
+    "increase_cpu": 0,
+    "decrease_cpu": 1,
+    "increase_memory": 0,
+    "decrease_memory": 0,
+    "throttle_io": 0,
+    "restrict_process_count": 0,
+    "protect_service": 0,
+    "isolate_workload": 0,
+    "restart_service": 0,
+    "kill_process": 0,
+    "alert_operator": 0
+   },
+   "per_min": 30.6,
+   "action_mix_nonzero": {
+    "do_nothing": 119,
+    "decrease_cpu": 1
+   },
+   "start_ts": "15:20:38"
+  },
+  {
+   "regime": "mem-hold",
+   "windows": 1,
+   "start": 1792337073.643,
+   "end": 1792337367.027,
+   "duration_s": 293.4,
+   "decisions": 150,
+   "applied": 1,
+   "pass": 148,
+   "rejected": 1,
+   "errors": 0,
+   "action_mix": {
+    "do_nothing": 148,
+    "increase_cpu": 0,
+    "decrease_cpu": 0,
+    "increase_memory": 2,
+    "decrease_memory": 0,
+    "throttle_io": 0,
+    "restrict_process_count": 0,
+    "protect_service": 0,
+    "isolate_workload": 0,
+    "restart_service": 0,
+    "kill_process": 0,
+    "alert_operator": 0
+   },
+   "per_min": 30.7,
+   "action_mix_nonzero": {
+    "do_nothing": 148,
+    "increase_memory": 2
+   },
+   "start_ts": "15:24:33"
+  },
+  {
+   "regime": "mem-release",
+   "windows": 1,
+   "start": 1792337367.027,
+   "end": 1792337542.542,
+   "duration_s": 175.5,
+   "decisions": 90,
+   "applied": 0,
+   "pass": 90,
+   "rejected": 0,
+   "errors": 0,
+   "action_mix": {
+    "do_nothing": 90,
+    "increase_cpu": 0,
+    "decrease_cpu": 0,
+    "increase_memory": 0,
+    "decrease_memory": 0,
+    "throttle_io": 0,
+    "restrict_process_count": 0,
+    "protect_service": 0,
+    "isolate_workload": 0,
+    "restart_service": 0,
+    "kill_process": 0,
+    "alert_operator": 0
+   },
+   "per_min": 30.8,
+   "action_mix_nonzero": {
+    "do_nothing": 90
+   },
+   "start_ts": "15:29:27"
+  },
+  {
+   "regime": "io",
+   "windows": 1,
+   "start": 1792337542.542,
+   "end": 1792337776.576,
+   "duration_s": 234.0,
+   "decisions": 119,
+   "applied": 0,
+   "pass": 119,
+   "rejected": 0,
+   "errors": 0,
+   "action_mix": {
+    "do_nothing": 119,
+    "increase_cpu": 0,
+    "decrease_cpu": 0,
+    "increase_memory": 0,
+    "decrease_memory": 0,
+    "throttle_io": 0,
+    "restrict_process_count": 0,
+    "protect_service": 0,
+    "isolate_workload": 0,
+    "restart_service": 0,
+    "kill_process": 0,
+    "alert_operator": 0
+   },
+   "per_min": 30.5,
+   "action_mix_nonzero": {
+    "do_nothing": 119
+   },
+   "start_ts": "15:32:22"
+  },
+  {
+   "regime": "io-burst",
+   "windows": 1,
+   "start": 1792337776.576,
+   "end": 1792337894.329,
+   "duration_s": 117.8,
+   "decisions": 61,
+   "applied": 0,
+   "pass": 61,
+   "rejected": 0,
+   "errors": 0,
+   "action_mix": {
+    "do_nothing": 61,
+    "increase_cpu": 0,
+    "decrease_cpu": 0,
+    "increase_memory": 0,
+    "decrease_memory": 0,
+    "throttle_io": 0,
+    "restrict_process_count": 0,
+    "protect_service": 0,
+    "isolate_workload": 0,
+    "restart_service": 0,
+    "kill_process": 0,
+    "alert_operator": 0
+   },
+   "per_min": 31.1,
+   "action_mix_nonzero": {
+    "do_nothing": 61
+   },
+   "start_ts": "15:36:16"
+  },
+  {
+   "regime": "fork",
+   "windows": 1,
+   "start": 1792337894.329,
+   "end": 1792338069.815,
+   "duration_s": 175.5,
+   "decisions": 90,
+   "applied": 0,
+   "pass": 90,
+   "rejected": 0,
+   "errors": 0,
+   "action_mix": {
+    "do_nothing": 90,
+    "increase_cpu": 0,
+    "decrease_cpu": 0,
+    "increase_memory": 0,
+    "decrease_memory": 0,
+    "throttle_io": 0,
+    "restrict_process_count": 0,
+    "protect_service": 0,
+    "isolate_workload": 0,
+    "restart_service": 0,
+    "kill_process": 0,
+    "alert_operator": 0
+   },
+   "per_min": 30.8,
+   "action_mix_nonzero": {
+    "do_nothing": 90
+   },
+   "start_ts": "15:38:14"
+  },
+  {
+   "regime": "mixed",
+   "windows": 1,
+   "start": 1792338069.815,
+   "end": 1792338363.064,
+   "duration_s": 293.2,
+   "decisions": 149,
+   "applied": 7,
+   "pass": 1,
+   "rejected": 141,
+   "errors": 0,
+   "action_mix": {
+    "do_nothing": 1,
+    "increase_cpu": 0,
+    "decrease_cpu": 0,
+    "increase_memory": 148,
+    "decrease_memory": 0,
+    "throttle_io": 0,
+    "restrict_process_count": 0,
+    "protect_service": 0,
+    "isolate_workload": 0,
+    "restart_service": 0,
+    "kill_process": 0,
+    "alert_operator": 0
+   },
+   "per_min": 30.5,
+   "action_mix_nonzero": {
+    "do_nothing": 1,
+    "increase_memory": 148
+   },
+   "start_ts": "15:41:09"
+  },
+  {
+   "regime": "saturation",
+   "windows": 3,
+   "start": 1792338363.064,
+   "end": 1792338597.788,
+   "duration_s": 234.7,
+   "decisions": 120,
+   "applied": 6,
+   "pass": 28,
+   "rejected": 86,
+   "errors": 0,
+   "action_mix": {
+    "do_nothing": 28,
+    "increase_cpu": 30,
+    "decrease_cpu": 1,
+    "increase_memory": 61,
+    "decrease_memory": 0,
+    "throttle_io": 0,
+    "restrict_process_count": 0,
+    "protect_service": 0,
+    "isolate_workload": 0,
+    "restart_service": 0,
+    "kill_process": 0,
+    "alert_operator": 0
+   },
+   "per_min": 30.7,
+   "action_mix_nonzero": {
+    "do_nothing": 28,
+    "increase_cpu": 30,
+    "decrease_cpu": 1,
+    "increase_memory": 61
+   },
+   "start_ts": "15:46:03"
+  },
+  {
+   "regime": "decay",
+   "windows": 2,
+   "start": 1792338597.788,
+   "end": 1792338831.48,
+   "duration_s": 233.7,
+   "decisions": 120,
+   "applied": 3,
+   "pass": 64,
+   "rejected": 53,
+   "errors": 0,
+   "action_mix": {
+    "do_nothing": 64,
+    "increase_cpu": 56,
+    "decrease_cpu": 0,
+    "increase_memory": 0,
+    "decrease_memory": 0,
+    "throttle_io": 0,
+    "restrict_process_count": 0,
+    "protect_service": 0,
+    "isolate_workload": 0,
+    "restart_service": 0,
+    "kill_process": 0,
+    "alert_operator": 0
+   },
+   "per_min": 30.8,
+   "action_mix_nonzero": {
+    "do_nothing": 64,
+    "increase_cpu": 56
+   },
+   "start_ts": "15:49:57"
+  },
+  {
+   "regime": "decay-off",
+   "windows": 1,
+   "start": 1792338831.48,
+   "end": 1792338949.261,
+   "duration_s": 117.8,
+   "decisions": 60,
+   "applied": 1,
+   "pass": 59,
+   "rejected": 0,
+   "errors": 0,
+   "action_mix": {
+    "do_nothing": 59,
+    "increase_cpu": 0,
+    "decrease_cpu": 1,
+    "increase_memory": 0,
+    "decrease_memory": 0,
+    "throttle_io": 0,
+    "restrict_process_count": 0,
+    "protect_service": 0,
+    "isolate_workload": 0,
+    "restart_service": 0,
+    "kill_process": 0,
+    "alert_operator": 0
+   },
+   "per_min": 30.6,
+   "action_mix_nonzero": {
+    "do_nothing": 59,
+    "decrease_cpu": 1
+   },
+   "start_ts": "15:53:51"
+  },
+  {
+   "regime": "tail",
+   "windows": 1,
+   "start": 1792338949.261,
+   "end": 1792339301.087,
+   "duration_s": 351.8,
+   "decisions": 180,
+   "applied": 0,
+   "pass": 180,
+   "rejected": 0,
+   "errors": 0,
+   "action_mix": {
+    "do_nothing": 180,
+    "increase_cpu": 0,
+    "decrease_cpu": 0,
+    "increase_memory": 0,
+    "decrease_memory": 0,
+    "throttle_io": 0,
+    "restrict_process_count": 0,
+    "protect_service": 0,
+    "isolate_workload": 0,
+    "restart_service": 0,
+    "kill_process": 0,
+    "alert_operator": 0
+   },
+   "per_min": 30.7,
+   "action_mix_nonzero": {
+    "do_nothing": 180
+   },
+   "start_ts": "15:55:49"
+  },
+  {
+   "regime": "rise-fall",
+   "windows": 2,
+   "start": 1792339301.087,
+   "end": 1792339537.374,
+   "duration_s": 236.3,
+   "decisions": 121,
+   "applied": 6,
+   "pass": 46,
+   "rejected": 69,
+   "errors": 0,
+   "action_mix": {
+    "do_nothing": 45,
+    "increase_cpu": 73,
+    "decrease_cpu": 1,
+    "increase_memory": 0,
+    "decrease_memory": 0,
+    "throttle_io": 0,
+    "restrict_process_count": 1,
+    "protect_service": 0,
+    "isolate_workload": 0,
+    "restart_service": 0,
+    "kill_process": 0,
+    "alert_operator": 1
+   },
+   "per_min": 30.7,
+   "action_mix_nonzero": {
+    "do_nothing": 45,
+    "increase_cpu": 73,
+    "decrease_cpu": 1,
+    "restrict_process_count": 1,
+    "alert_operator": 1
+   },
+   "start_ts": "16:01:41"
+  },
+  {
+   "regime": "warmup",
+   "windows": 1,
+   "start": 0.0,
+   "end": 0.0,
+   "duration_s": 0.0,
+   "decisions": 6,
+   "applied": 0,
+   "pass": 6,
+   "rejected": 0,
+   "errors": 0,
+   "action_mix": {
+    "do_nothing": 6,
+    "increase_cpu": 0,
+    "decrease_cpu": 0,
+    "increase_memory": 0,
+    "decrease_memory": 0,
+    "throttle_io": 0,
+    "restrict_process_count": 0,
+    "protect_service": 0,
+    "isolate_workload": 0,
+    "restart_service": 0,
+    "kill_process": 0,
+    "alert_operator": 0
+   },
+   "per_min": null,
+   "action_mix_nonzero": {
+    "do_nothing": 6
+   },
+   "start_ts": "-"
+  },
+  {
+   "regime": "after-run",
+   "windows": 1,
+   "start": 0.0,
+   "end": 0.0,
+   "duration_s": 0.0,
+   "decisions": 9,
+   "applied": 0,
+   "pass": 9,
+   "rejected": 0,
+   "errors": 0,
+   "action_mix": {
+    "do_nothing": 8,
+    "increase_cpu": 0,
+    "decrease_cpu": 0,
+    "increase_memory": 0,
+    "decrease_memory": 0,
+    "throttle_io": 0,
+    "restrict_process_count": 0,
+    "protect_service": 0,
+    "isolate_workload": 0,
+    "restart_service": 0,
+    "kill_process": 0,
+    "alert_operator": 1
+   },
+   "per_min": null,
+   "action_mix_nonzero": {
+    "do_nothing": 8,
+    "alert_operator": 1
+   },
+   "start_ts": "-"
+  }
+ ],
+ "applied_writes": [
+  {
+   "ts": "2026-10-18T15:17:43.149Z",
+   "regime": "cpu-spike",
+   "phase_index": 2,
+   "action": "restrict_process_count",
+   "target": "wlp-neighbor",
+   "params": "wlp-neighbor/pids.max 54->27",
+   "detail": "wlp-neighbor: pids.max 54->27 (pids.current 11)",
+   "lowering_action": true,
+   "raising_action": false,
+   "give_back_regime": false
+  },
+  {
+   "ts": "2026-10-18T15:17:45.151Z",
+   "regime": "cpu-spike",
+   "phase_index": 2,
+   "action": "increase_cpu",
+   "target": "wlp-neighbor",
+   "params": "wlp-neighbor/cpu.max 50000->75000; wlp-neighbor/cpu.weight 100->200",
+   "detail": "wlp-neighbor: cpu.max 50000->75000 (period 100000); cpu.weight 100->200",
+   "lowering_action": false,
+   "raising_action": true,
+   "give_back_regime": false
+  },
+  {
+   "ts": "2026-10-18T15:18:29.939Z",
+   "regime": "cpu-spike",
+   "phase_index": 2,
+   "action": "increase_cpu",
+   "target": "wlp-neighbor",
+   "params": "wlp-neighbor/cpu.max 75000->100000; wlp-neighbor/cpu.weight 200->400",
+   "detail": "wlp-neighbor: cpu.max 75000->100000 (period 100000); cpu.weight 200->400; capped at 1 CPU (period 100000)",
+   "lowering_action": false,
+   "raising_action": true,
+   "give_back_regime": false
+  },
+  {
+   "ts": "2026-10-18T15:19:15.308Z",
+   "regime": "cpu-spike",
+   "phase_index": 2,
+   "action": "increase_cpu",
+   "target": "wlp-neighbor",
+   "params": "wlp-neighbor/cpu.max 100000->100000; wlp-neighbor/cpu.weight 400->800",
+   "detail": "wlp-neighbor: cpu.max 100000->100000 (period 100000); cpu.weight 400->800; capped at 1 CPU (period 100000)",
+   "lowering_action": false,
+   "raising_action": true,
+   "give_back_regime": false
+  },
+  {
+   "ts": "2026-10-18T15:19:59.826Z",
+   "regime": "cpu-spike",
+   "phase_index": 2,
+   "action": "increase_cpu",
+   "target": "wlp-neighbor",
+   "params": "wlp-neighbor/cpu.max 100000->100000; wlp-neighbor/cpu.weight 800->1600",
+   "detail": "wlp-neighbor: cpu.max 100000->100000 (period 100000); cpu.weight 800->1600; capped at 1 CPU (period 100000)",
+   "lowering_action": false,
+   "raising_action": true,
+   "give_back_regime": false
+  },
+  {
+   "ts": "2026-10-18T15:21:18.513Z",
+   "regime": "cut-to-idle",
+   "phase_index": 3,
+   "action": "decrease_cpu",
+   "target": "wlp-neighbor",
+   "params": "wlp-neighbor/cpu.max 100000->60000; wlp-neighbor/cpu.weight 1600->800",
+   "detail": "wlp-neighbor: cpu.max 100000->60000 (period 100000); cpu.weight 1600->800",
+   "lowering_action": true,
+   "raising_action": false,
+   "give_back_regime": true
+  },
+  {
+   "ts": "2026-10-18T15:24:36.414Z",
+   "regime": "mem-hold",
+   "phase_index": 4,
+   "action": "increase_memory",
+   "target": "wlp-neighbor",
+   "params": "wlp-neighbor/memory.high 750780416->803209216",
+   "detail": "wlp-neighbor: memory.high 716M->766M (was 750780416 bytes)",
+   "lowering_action": false,
+   "raising_action": true,
+   "give_back_regime": false
+  },
+  {
+   "ts": "2026-10-18T15:41:13.624Z",
+   "regime": "mixed",
+   "phase_index": 9,
+   "action": "increase_memory",
+   "target": "wlp-neighbor",
+   "params": "wlp-neighbor/memory.high 803209216->829423616",
+   "detail": "wlp-neighbor: memory.high 766M->791M (was 803209216 bytes); capped at memory.max 791M",
+   "lowering_action": false,
+   "raising_action": true,
+   "give_back_regime": false
+  },
+  {
+   "ts": "2026-10-18T15:41:58.889Z",
+   "regime": "mixed",
+   "phase_index": 9,
+   "action": "increase_memory",
+   "target": "wlp-neighbor",
+   "params": "wlp-neighbor/memory.high 829423616->829423616",
+   "detail": "wlp-neighbor: memory.high 791M->791M (was 829423616 bytes); capped at memory.max 791M",
+   "lowering_action": false,
+   "raising_action": true,
+   "give_back_regime": false
+  },
+  {
+   "ts": "2026-10-18T15:42:43.441Z",
+   "regime": "mixed",
+   "phase_index": 9,
+   "action": "increase_memory",
+   "target": "wlp-neighbor",
+   "params": "wlp-neighbor/memory.high 829423616->829423616",
+   "detail": "wlp-neighbor: memory.high 791M->791M (was 829423616 bytes); capped at memory.max 791M",
+   "lowering_action": false,
+   "raising_action": true,
+   "give_back_regime": false
+  },
+  {
+   "ts": "2026-10-18T15:43:30.743Z",
+   "regime": "mixed",
+   "phase_index": 9,
+   "action": "increase_memory",
+   "target": "wlp-neighbor",
+   "params": "wlp-neighbor/memory.high 829423616->829423616",
+   "detail": "wlp-neighbor: memory.high 791M->791M (was 829423616 bytes); capped at memory.max 791M",
+   "lowering_action": false,
+   "raising_action": true,
+   "give_back_regime": false
+  },
+  {
+   "ts": "2026-10-18T15:44:15.296Z",
+   "regime": "mixed",
+   "phase_index": 9,
+   "action": "increase_memory",
+   "target": "wlp-neighbor",
+   "params": "wlp-neighbor/memory.high 829423616->829423616",
+   "detail": "wlp-neighbor: memory.high 791M->791M (was 829423616 bytes); capped at memory.max 791M",
+   "lowering_action": false,
+   "raising_action": true,
+   "give_back_regime": false
+  },
+  {
+   "ts": "2026-10-18T15:45:00.582Z",
+   "regime": "mixed",
+   "phase_index": 9,
+   "action": "increase_memory",
+   "target": "wlp-neighbor",
+   "params": "wlp-neighbor/memory.high 829423616->829423616",
+   "detail": "wlp-neighbor: memory.high 791M->791M (was 829423616 bytes); capped at memory.max 791M",
+   "lowering_action": false,
+   "raising_action": true,
+   "give_back_regime": false
+  },
+  {
+   "ts": "2026-10-18T15:45:45.119Z",
+   "regime": "mixed",
+   "phase_index": 9,
+   "action": "increase_memory",
+   "target": "wlp-neighbor",
+   "params": "wlp-neighbor/memory.high 829423616->829423616",
+   "detail": "wlp-neighbor: memory.high 791M->791M (was 829423616 bytes); capped at memory.max 791M",
+   "lowering_action": false,
+   "raising_action": true,
+   "give_back_regime": false
+  },
+  {
+   "ts": "2026-10-18T15:46:05.130Z",
+   "regime": "saturation",
+   "phase_index": 10,
+   "action": "increase_cpu",
+   "target": "wlp-neighbor",
+   "params": "wlp-neighbor/cpu.max 60000->90000; wlp-neighbor/cpu.weight 800->1600",
+   "detail": "wlp-neighbor: cpu.max 60000->90000 (period 100000); cpu.weight 800->1600",
+   "lowering_action": false,
+   "raising_action": true,
+   "give_back_regime": false
+  },
+  {
+   "ts": "2026-10-18T15:46:51.667Z",
+   "regime": "saturation",
+   "phase_index": 10,
+   "action": "increase_cpu",
+   "target": "wlp-neighbor",
+   "params": "wlp-neighbor/cpu.max 90000->100000; wlp-neighbor/cpu.weight 1600->3200",
+   "detail": "wlp-neighbor: cpu.max 90000->100000 (period 100000); cpu.weight 1600->3200; capped at 1 CPU (period 100000)",
+   "lowering_action": false,
+   "raising_action": true,
+   "give_back_regime": false
+  },
+  {
+   "ts": "2026-10-18T15:47:03.678Z",
+   "regime": "saturation",
+   "phase_index": 11,
+   "action": "increase_memory",
+   "target": "wlp-neighbor",
+   "params": "wlp-neighbor/memory.high 829423616->829423616",
+   "detail": "wlp-neighbor: memory.high 791M->791M (was 829423616 bytes); capped at memory.max 791M",
+   "lowering_action": false,
+   "raising_action": true,
+   "give_back_regime": false
+  },
+  {
+   "ts": "2026-10-18T15:47:48.934Z",
+   "regime": "saturation",
+   "phase_index": 11,
+   "action": "increase_memory",
+   "target": "wlp-neighbor",
+   "params": "wlp-neighbor/memory.high 829423616->829423616",
+   "detail": "wlp-neighbor: memory.high 791M->791M (was 829423616 bytes); capped at memory.max 791M",
+   "lowering_action": false,
+   "raising_action": true,
+   "give_back_regime": false
+  },
+  {
+   "ts": "2026-10-18T15:48:33.501Z",
+   "regime": "saturation",
+   "phase_index": 11,
+   "action": "increase_memory",
+   "target": "wlp-neighbor",
+   "params": "wlp-neighbor/memory.high 829423616->829423616",
+   "detail": "wlp-neighbor: memory.high 791M->791M (was 829423616 bytes); capped at memory.max 791M",
+   "lowering_action": false,
+   "raising_action": true,
+   "give_back_regime": false
+  },
+  {
+   "ts": "2026-10-18T15:49:34.044Z",
+   "regime": "saturation",
+   "phase_index": 12,
+   "action": "decrease_cpu",
+   "target": "wlp-neighbor",
+   "params": "wlp-neighbor/cpu.max 100000->60000; wlp-neighbor/cpu.weight 3200->1600",
+   "detail": "wlp-neighbor: cpu.max 100000->60000 (period 100000); cpu.weight 3200->1600",
+   "lowering_action": true,
+   "raising_action": false,
+   "give_back_regime": false
+  },
+  {
+   "ts": "2026-10-18T15:50:08.066Z",
+   "regime": "decay",
+   "phase_index": 13,
+   "action": "increase_cpu",
+   "target": "wlp-neighbor",
+   "params": "wlp-neighbor/cpu.max 60000->90000; wlp-neighbor/cpu.weight 1600->3200",
+   "detail": "wlp-neighbor: cpu.max 60000->90000 (period 100000); cpu.weight 1600->3200",
+   "lowering_action": false,
+   "raising_action": true,
+   "give_back_regime": true
+  },
+  {
+   "ts": "2026-10-18T15:50:54.298Z",
+   "regime": "decay",
+   "phase_index": 13,
+   "action": "increase_cpu",
+   "target": "wlp-neighbor",
+   "params": "wlp-neighbor/cpu.max 90000->100000; wlp-neighbor/cpu.weight 3200->6400",
+   "detail": "wlp-neighbor: cpu.max 90000->100000 (period 100000); cpu.weight 3200->6400; capped at 1 CPU (period 100000)",
+   "lowering_action": false,
+   "raising_action": true,
+   "give_back_regime": true
+  },
+  {
+   "ts": "2026-10-18T15:51:39.611Z",
+   "regime": "decay",
+   "phase_index": 13,
+   "action": "increase_cpu",
+   "target": "wlp-neighbor",
+   "params": "wlp-neighbor/cpu.max 100000->100000; wlp-neighbor/cpu.weight 6400->10000",
+   "detail": "wlp-neighbor: cpu.max 100000->100000 (period 100000); cpu.weight 6400->10000; capped at 1 CPU (period 100000)",
+   "lowering_action": false,
+   "raising_action": true,
+   "give_back_regime": true
+  },
+  {
+   "ts": "2026-10-18T15:54:25.308Z",
+   "regime": "decay-off",
+   "phase_index": 15,
+   "action": "decrease_cpu",
+   "target": "wlp-neighbor",
+   "params": "wlp-neighbor/cpu.max 100000->60000; wlp-neighbor/cpu.weight 10000->5000",
+   "detail": "wlp-neighbor: cpu.max 100000->60000 (period 100000); cpu.weight 10000->5000",
+   "lowering_action": true,
+   "raising_action": false,
+   "give_back_regime": true
+  },
+  {
+   "ts": "2026-10-18T16:01:43.404Z",
+   "regime": "rise-fall",
+   "phase_index": 17,
+   "action": "restrict_process_count",
+   "target": "wlp-neighbor",
+   "params": "wlp-neighbor/pids.max 27->16",
+   "detail": "wlp-neighbor: pids.max 27->16 (pids.current 8); clamped to 16..100000",
+   "lowering_action": true,
+   "raising_action": false,
+   "give_back_regime": false
+  },
+  {
+   "ts": "2026-10-18T16:01:45.406Z",
+   "regime": "rise-fall",
+   "phase_index": 17,
+   "action": "increase_cpu",
+   "target": "wlp-neighbor",
+   "params": "wlp-neighbor/cpu.max 60000->90000; wlp-neighbor/cpu.weight 5000->10000",
+   "detail": "wlp-neighbor: cpu.max 60000->90000 (period 100000); cpu.weight 5000->10000",
+   "lowering_action": false,
+   "raising_action": true,
+   "give_back_regime": false
+  },
+  {
+   "ts": "2026-10-18T16:02:30.731Z",
+   "regime": "rise-fall",
+   "phase_index": 17,
+   "action": "increase_cpu",
+   "target": "wlp-neighbor",
+   "params": "wlp-neighbor/cpu.max 90000->100000; wlp-neighbor/cpu.weight 10000->10000",
+   "detail": "wlp-neighbor: cpu.max 90000->100000 (period 100000); cpu.weight 10000->10000; capped at 1 CPU (period 100000)",
+   "lowering_action": false,
+   "raising_action": true,
+   "give_back_regime": false
+  },
+  {
+   "ts": "2026-10-18T16:03:18.053Z",
+   "regime": "rise-fall",
+   "phase_index": 17,
+   "action": "increase_cpu",
+   "target": "wlp-neighbor",
+   "params": "wlp-neighbor/cpu.max 100000->100000; wlp-neighbor/cpu.weight 10000->10000",
+   "detail": "wlp-neighbor: cpu.max 100000->100000 (period 100000); cpu.weight 10000->10000; capped at 1 CPU (period 100000)",
+   "lowering_action": false,
+   "raising_action": true,
+   "give_back_regime": false
+  },
+  {
+   "ts": "2026-10-18T16:04:02.606Z",
+   "regime": "rise-fall",
+   "phase_index": 17,
+   "action": "increase_cpu",
+   "target": "wlp-neighbor",
+   "params": "wlp-neighbor/cpu.max 100000->100000; wlp-neighbor/cpu.weight 10000->10000",
+   "detail": "wlp-neighbor: cpu.max 100000->100000 (period 100000); cpu.weight 10000->10000; capped at 1 CPU (period 100000)",
+   "lowering_action": false,
+   "raising_action": true,
+   "give_back_regime": false
+  },
+  {
+   "ts": "2026-10-18T16:04:47.927Z",
+   "regime": "rise-fall",
+   "phase_index": 18,
+   "action": "decrease_cpu",
+   "target": "wlp-neighbor",
+   "params": "wlp-neighbor/cpu.max 100000->60000; wlp-neighbor/cpu.weight 10000->5000",
+   "detail": "wlp-neighbor: cpu.max 100000->60000 (period 100000); cpu.weight 10000->5000",
+   "lowering_action": true,
+   "raising_action": false,
+   "give_back_regime": false
+  }
+ ],
+ "give_back_writes": [
+  {
+   "ts": "2026-10-18T15:21:18.513Z",
+   "regime": "cut-to-idle",
+   "phase_index": 3,
+   "action": "decrease_cpu",
+   "target": "wlp-neighbor",
+   "params": "wlp-neighbor/cpu.max 100000->60000; wlp-neighbor/cpu.weight 1600->800",
+   "detail": "wlp-neighbor: cpu.max 100000->60000 (period 100000); cpu.weight 1600->800",
+   "lowering_action": true,
+   "raising_action": false,
+   "give_back_regime": true
+  },
+  {
+   "ts": "2026-10-18T15:50:08.066Z",
+   "regime": "decay",
+   "phase_index": 13,
+   "action": "increase_cpu",
+   "target": "wlp-neighbor",
+   "params": "wlp-neighbor/cpu.max 60000->90000; wlp-neighbor/cpu.weight 1600->3200",
+   "detail": "wlp-neighbor: cpu.max 60000->90000 (period 100000); cpu.weight 1600->3200",
+   "lowering_action": false,
+   "raising_action": true,
+   "give_back_regime": true
+  },
+  {
+   "ts": "2026-10-18T15:50:54.298Z",
+   "regime": "decay",
+   "phase_index": 13,
+   "action": "increase_cpu",
+   "target": "wlp-neighbor",
+   "params": "wlp-neighbor/cpu.max 90000->100000; wlp-neighbor/cpu.weight 3200->6400",
+   "detail": "wlp-neighbor: cpu.max 90000->100000 (period 100000); cpu.weight 3200->6400; capped at 1 CPU (period 100000)",
+   "lowering_action": false,
+   "raising_action": true,
+   "give_back_regime": true
+  },
+  {
+   "ts": "2026-10-18T15:51:39.611Z",
+   "regime": "decay",
+   "phase_index": 13,
+   "action": "increase_cpu",
+   "target": "wlp-neighbor",
+   "params": "wlp-neighbor/cpu.max 100000->100000; wlp-neighbor/cpu.weight 6400->10000",
+   "detail": "wlp-neighbor: cpu.max 100000->100000 (period 100000); cpu.weight 6400->10000; capped at 1 CPU (period 100000)",
+   "lowering_action": false,
+   "raising_action": true,
+   "give_back_regime": true
+  },
+  {
+   "ts": "2026-10-18T15:54:25.308Z",
+   "regime": "decay-off",
+   "phase_index": 15,
+   "action": "decrease_cpu",
+   "target": "wlp-neighbor",
+   "params": "wlp-neighbor/cpu.max 100000->60000; wlp-neighbor/cpu.weight 10000->5000",
+   "detail": "wlp-neighbor: cpu.max 100000->60000 (period 100000); cpu.weight 10000->5000",
+   "lowering_action": true,
+   "raising_action": false,
+   "give_back_regime": true
+  }
+ ],
+ "outcome_deltas": [
+  {
+   "ts": "2026-10-18T15:17:43.149Z",
+   "action": "restrict_process_count",
+   "regime": "cpu-spike",
+   "deltas": {
+    "n_cpu_psi_avg10": {
+     "before": 72.833,
+     "after": 73.862,
+     "delta": 1.03
+    },
+    "n_mem_current_mb": {
+     "before": 20.322,
+     "after": 40.922,
+     "delta": 20.6
+    },
+    "n_mem_high_mb": {
+     "before": 716.0,
+     "after": 716.0,
+     "delta": 0.0
+    },
+    "n_pids": {
+     "before": 5.75,
+     "after": 11.0,
+     "delta": 5.25
+    },
+    "n_throttle_us_per_s": {
+     "before": 1627134.755,
+     "after": 8237325.526,
+     "delta": 6610190.772
+    },
+    "n_mem_events_high_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_cpu_psi_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_throttle_us_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_psi_cpu_avg10": {
+     "before": 65.463,
+     "after": 67.735,
+     "delta": 2.272
+    },
+    "sys_psi_io_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_load1": {
+     "before": 0.84,
+     "after": 0.83,
+     "delta": -0.01
+    },
+    "victim_p95_ms": {
+     "before": 0.8025,
+     "after": 0.5339,
+     "delta": -0.26859999999999995
+    }
+   }
+  },
+  {
+   "ts": "2026-10-18T15:17:45.151Z",
+   "action": "increase_cpu",
+   "regime": "cpu-spike",
+   "deltas": {
+    "n_cpu_psi_avg10": {
+     "before": 72.953,
+     "after": 75.977,
+     "delta": 3.025
+    },
+    "n_mem_current_mb": {
+     "before": 27.222,
+     "after": 42.22,
+     "delta": 14.998
+    },
+    "n_mem_high_mb": {
+     "before": 716.0,
+     "after": 716.0,
+     "delta": 0.0
+    },
+    "n_pids": {
+     "before": 7.5,
+     "after": 11.0,
+     "delta": 3.5
+    },
+    "n_throttle_us_per_s": {
+     "before": 3932859.96,
+     "after": 8164563.356,
+     "delta": 4231703.396
+    },
+    "n_mem_events_high_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_cpu_psi_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_throttle_us_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_psi_cpu_avg10": {
+     "before": 65.153,
+     "after": 70.093,
+     "delta": 4.94
+    },
+    "sys_psi_io_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_load1": {
+     "before": 0.845,
+     "after": 0.795,
+     "delta": -0.05
+    },
+    "victim_p95_ms": {
+     "before": 0.7722499999999999,
+     "after": 0.5957999999999994,
+     "delta": -0.17645000000000044
+    }
+   }
+  },
+  {
+   "ts": "2026-10-18T15:18:29.939Z",
+   "action": "increase_cpu",
+   "regime": "cpu-spike",
+   "deltas": {
+    "n_cpu_psi_avg10": {
+     "before": 90.498,
+     "after": 90.388,
+     "delta": -0.11
+    },
+    "n_mem_current_mb": {
+     "before": 41.74,
+     "after": 41.74,
+     "delta": 0.0
+    },
+    "n_mem_high_mb": {
+     "before": 716.0,
+     "after": 716.0,
+     "delta": 0.0
+    },
+    "n_pids": {
+     "before": 11.0,
+     "after": 11.0,
+     "delta": 0.0
+    },
+    "n_throttle_us_per_s": {
+     "before": 8946070.739,
+     "after": 7813753.026,
+     "delta": -1132317.714
+    },
+    "n_mem_events_high_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_cpu_psi_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_throttle_us_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_psi_cpu_avg10": {
+     "before": 88.037,
+     "after": 87.748,
+     "delta": -0.29
+    },
+    "sys_psi_io_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_load1": {
+     "before": 0.47,
+     "after": 0.425,
+     "delta": -0.045
+    },
+    "victim_p95_ms": {
+     "before": 0.6269999999999997,
+     "after": 0.86655,
+     "delta": 0.23955000000000037
+    }
+   }
+  },
+  {
+   "ts": "2026-10-18T15:19:15.308Z",
+   "action": "increase_cpu",
+   "regime": "cpu-spike",
+   "deltas": {
+    "n_cpu_psi_avg10": {
+     "before": 88.047,
+     "after": 87.983,
+     "delta": -0.065
+    },
+    "n_mem_current_mb": {
+     "before": 41.74,
+     "after": 41.74,
+     "delta": 0.0
+    },
+    "n_mem_high_mb": {
+     "before": 716.0,
+     "after": 716.0,
+     "delta": 0.0
+    },
+    "n_pids": {
+     "before": 11.0,
+     "after": 11.0,
+     "delta": 0.0
+    },
+    "n_throttle_us_per_s": {
+     "before": 7747576.041,
+     "after": 7815765.557,
+     "delta": 68189.515
+    },
+    "n_mem_events_high_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_cpu_psi_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_throttle_us_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_psi_cpu_avg10": {
+     "before": 85.537,
+     "after": 85.453,
+     "delta": -0.085
+    },
+    "sys_psi_io_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_load1": {
+     "before": 0.385,
+     "after": 0.355,
+     "delta": -0.03
+    },
+    "victim_p95_ms": {
+     "before": 1.2006,
+     "after": 0.9611999999999998,
+     "delta": -0.23940000000000006
+    }
+   }
+  },
+  {
+   "ts": "2026-10-18T15:19:59.826Z",
+   "action": "increase_cpu",
+   "regime": "cpu-spike",
+   "deltas": {
+    "n_cpu_psi_avg10": {
+     "before": 87.953,
+     "after": 87.97,
+     "delta": 0.017
+    },
+    "n_mem_current_mb": {
+     "before": 41.55,
+     "after": 41.55,
+     "delta": 0.0
+    },
+    "n_mem_high_mb": {
+     "before": 716.0,
+     "after": 716.0,
+     "delta": 0.0
+    },
+    "n_pids": {
+     "before": 11.0,
+     "after": 11.0,
+     "delta": 0.0
+    },
+    "n_throttle_us_per_s": {
+     "before": 8990217.19,
+     "after": 7925205.869,
+     "delta": -1065011.32
+    },
+    "n_mem_events_high_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_cpu_psi_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_throttle_us_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_psi_cpu_avg10": {
+     "before": 85.657,
+     "after": 85.657,
+     "delta": 0.0
+    },
+    "sys_psi_io_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_load1": {
+     "before": 2.055,
+     "after": 1.89,
+     "delta": -0.165
+    },
+    "victim_p95_ms": {
+     "before": 0.9217,
+     "after": 0.7436499999999998,
+     "delta": -0.17805000000000015
+    }
+   }
+  },
+  {
+   "ts": "2026-10-18T15:21:18.513Z",
+   "action": "decrease_cpu",
+   "regime": "cut-to-idle",
+   "deltas": {
+    "n_cpu_psi_avg10": {
+     "before": 2.655,
+     "after": 1.455,
+     "delta": -1.2
+    },
+    "n_mem_current_mb": {
+     "before": 7.2,
+     "after": 7.18,
+     "delta": -0.02
+    },
+    "n_mem_high_mb": {
+     "before": 716.0,
+     "after": 716.0,
+     "delta": 0.0
+    },
+    "n_pids": {
+     "before": 2.0,
+     "after": 2.0,
+     "delta": 0.0
+    },
+    "n_throttle_us_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "n_mem_events_high_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_cpu_psi_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_throttle_us_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_psi_cpu_avg10": {
+     "before": 2.41,
+     "after": 1.317,
+     "delta": -1.093
+    },
+    "sys_psi_io_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_load1": {
+     "before": 0.64,
+     "after": 0.573,
+     "delta": -0.068
+    },
+    "victim_p95_ms": {
+     "before": 1.0166499999999998,
+     "after": 1.00965,
+     "delta": -0.006999999999999895
+    }
+   }
+  },
+  {
+   "ts": "2026-10-18T15:24:36.414Z",
+   "action": "increase_memory",
+   "regime": "mem-hold",
+   "deltas": {
+    "n_cpu_psi_avg10": {
+     "before": 0.497,
+     "after": 1.51,
+     "delta": 1.012
+    },
+    "n_mem_current_mb": {
+     "before": 282.155,
+     "after": 652.52,
+     "delta": 370.365
+    },
+    "n_mem_high_mb": {
+     "before": 716.0,
+     "after": 753.5,
+     "delta": 37.5
+    },
+    "n_pids": {
+     "before": 2.0,
+     "after": 2.0,
+     "delta": 0.0
+    },
+    "n_throttle_us_per_s": {
+     "before": 38831.002,
+     "after": 0.0,
+     "delta": -38831.002
+    },
+    "n_mem_events_high_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_cpu_psi_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_throttle_us_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_psi_cpu_avg10": {
+     "before": 0.315,
+     "after": 0.955,
+     "delta": 0.64
+    },
+    "sys_psi_io_avg10": {
+     "before": 0.02,
+     "after": 0.007,
+     "delta": -0.013
+    },
+    "sys_load1": {
+     "before": 0.338,
+     "after": 0.323,
+     "delta": -0.015
+    },
+    "victim_p95_ms": {
+     "before": 0.51925,
+     "after": 0.5498000000000001,
+     "delta": 0.030550000000000077
+    }
+   }
+  },
+  {
+   "ts": "2026-10-18T15:41:13.624Z",
+   "action": "increase_memory",
+   "regime": "mixed",
+   "deltas": {
+    "n_cpu_psi_avg10": {
+     "before": 1.765,
+     "after": 21.192,
+     "delta": 19.427
+    },
+    "n_mem_current_mb": {
+     "before": 305.147,
+     "after": 755.895,
+     "delta": 450.748
+    },
+    "n_mem_high_mb": {
+     "before": 766.0,
+     "after": 784.75,
+     "delta": 18.75
+    },
+    "n_pids": {
+     "before": 16.75,
+     "after": 7.0,
+     "delta": -9.75
+    },
+    "n_throttle_us_per_s": {
+     "before": 1146502.892,
+     "after": 1427542.39,
+     "delta": 281039.498
+    },
+    "n_mem_events_high_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_cpu_psi_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_throttle_us_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_psi_cpu_avg10": {
+     "before": 3.143,
+     "after": 23.165,
+     "delta": 20.023
+    },
+    "sys_psi_io_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_load1": {
+     "before": 0.41,
+     "after": 0.39,
+     "delta": -0.02
+    },
+    "victim_p95_ms": {
+     "before": 1.2525,
+     "after": 1.1332499999999999,
+     "delta": -0.11925000000000008
+    }
+   }
+  },
+  {
+   "ts": "2026-10-18T15:41:58.889Z",
+   "action": "increase_memory",
+   "regime": "mixed",
+   "deltas": {
+    "n_cpu_psi_avg10": {
+     "before": 65.618,
+     "after": 65.9,
+     "delta": 0.282
+    },
+    "n_mem_current_mb": {
+     "before": 754.95,
+     "after": 754.957,
+     "delta": 0.007
+    },
+    "n_mem_high_mb": {
+     "before": 791.0,
+     "after": 791.0,
+     "delta": 0.0
+    },
+    "n_pids": {
+     "before": 7.0,
+     "after": 7.0,
+     "delta": 0.0
+    },
+    "n_throttle_us_per_s": {
+     "before": 1417313.137,
+     "after": 1640180.825,
+     "delta": 222867.688
+    },
+    "n_mem_events_high_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_cpu_psi_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_throttle_us_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_psi_cpu_avg10": {
+     "before": 58.5,
+     "after": 58.398,
+     "delta": -0.102
+    },
+    "sys_psi_io_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_load1": {
+     "before": 0.365,
+     "after": 0.76,
+     "delta": 0.395
+    },
+    "victim_p95_ms": {
+     "before": 1.0653,
+     "after": 1.02085,
+     "delta": -0.04444999999999988
+    }
+   }
+  },
+  {
+   "ts": "2026-10-18T15:42:43.441Z",
+   "action": "increase_memory",
+   "regime": "mixed",
+   "deltas": {
+    "n_cpu_psi_avg10": {
+     "before": 65.195,
+     "after": 65.625,
+     "delta": 0.43
+    },
+    "n_mem_current_mb": {
+     "before": 754.55,
+     "after": 754.605,
+     "delta": 0.055
+    },
+    "n_mem_high_mb": {
+     "before": 791.0,
+     "after": 791.0,
+     "delta": 0.0
+    },
+    "n_pids": {
+     "before": 7.0,
+     "after": 7.0,
+     "delta": 0.0
+    },
+    "n_throttle_us_per_s": {
+     "before": 1445464.536,
+     "after": 1449926.201,
+     "delta": 4461.664
+    },
+    "n_mem_events_high_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_cpu_psi_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_throttle_us_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_psi_cpu_avg10": {
+     "before": 57.797,
+     "after": 58.225,
+     "delta": 0.428
+    },
+    "sys_psi_io_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_load1": {
+     "before": 1.25,
+     "after": 1.19,
+     "delta": -0.06
+    },
+    "victim_p95_ms": {
+     "before": 0.9689999999999996,
+     "after": 0.9630000000000003,
+     "delta": -0.005999999999999339
+    }
+   }
+  },
+  {
+   "ts": "2026-10-18T15:43:30.743Z",
+   "action": "increase_memory",
+   "regime": "mixed",
+   "deltas": {
+    "n_cpu_psi_avg10": {
+     "before": 66.368,
+     "after": 65.632,
+     "delta": -0.735
+    },
+    "n_mem_current_mb": {
+     "before": 754.71,
+     "after": 754.71,
+     "delta": 0.0
+    },
+    "n_mem_high_mb": {
+     "before": 791.0,
+     "after": 791.0,
+     "delta": 0.0
+    },
+    "n_pids": {
+     "before": 7.0,
+     "after": 7.0,
+     "delta": 0.0
+    },
+    "n_throttle_us_per_s": {
+     "before": 1450078.249,
+     "after": 1432666.396,
+     "delta": -17411.853
+    },
+    "n_mem_events_high_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_cpu_psi_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_throttle_us_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_psi_cpu_avg10": {
+     "before": 58.455,
+     "after": 58.258,
+     "delta": -0.197
+    },
+    "sys_psi_io_avg10": {
+     "before": 0.02,
+     "after": 0.007,
+     "delta": -0.013
+    },
+    "sys_load1": {
+     "before": 0.652,
+     "after": 0.667,
+     "delta": 0.015
+    },
+    "victim_p95_ms": {
+     "before": 1.0363999999999998,
+     "after": 0.9831999999999999,
+     "delta": -0.053199999999999914
+    }
+   }
+  },
+  {
+   "ts": "2026-10-18T15:44:15.296Z",
+   "action": "increase_memory",
+   "regime": "mixed",
+   "deltas": {
+    "n_cpu_psi_avg10": {
+     "before": 66.085,
+     "after": 66.022,
+     "delta": -0.063
+    },
+    "n_mem_current_mb": {
+     "before": 754.885,
+     "after": 754.882,
+     "delta": -0.003
+    },
+    "n_mem_high_mb": {
+     "before": 791.0,
+     "after": 791.0,
+     "delta": 0.0
+    },
+    "n_pids": {
+     "before": 7.0,
+     "after": 7.0,
+     "delta": 0.0
+    },
+    "n_throttle_us_per_s": {
+     "before": 1443460.089,
+     "after": 1429210.205,
+     "delta": -14249.884
+    },
+    "n_mem_events_high_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_cpu_psi_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_throttle_us_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_psi_cpu_avg10": {
+     "before": 58.282,
+     "after": 58.367,
+     "delta": 0.085
+    },
+    "sys_psi_io_avg10": {
+     "before": 0.115,
+     "after": 0.09,
+     "delta": -0.025
+    },
+    "sys_load1": {
+     "before": 1.01,
+     "after": 1.165,
+     "delta": 0.155
+    },
+    "victim_p95_ms": {
+     "before": 0.9645999999999999,
+     "after": 0.9995499999999999,
+     "delta": 0.03495000000000004
+    }
+   }
+  },
+  {
+   "ts": "2026-10-18T15:45:00.582Z",
+   "action": "increase_memory",
+   "regime": "mixed",
+   "deltas": {
+    "n_cpu_psi_avg10": {
+     "before": 64.338,
+     "after": 64.86,
+     "delta": 0.522
+    },
+    "n_mem_current_mb": {
+     "before": 754.765,
+     "after": 754.688,
+     "delta": -0.077
+    },
+    "n_mem_high_mb": {
+     "before": 791.0,
+     "after": 791.0,
+     "delta": 0.0
+    },
+    "n_pids": {
+     "before": 7.0,
+     "after": 7.0,
+     "delta": 0.0
+    },
+    "n_throttle_us_per_s": {
+     "before": 1418859.172,
+     "after": 1429560.929,
+     "delta": 10701.758
+    },
+    "n_mem_events_high_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_cpu_psi_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_throttle_us_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_psi_cpu_avg10": {
+     "before": 51.562,
+     "after": 54.567,
+     "delta": 3.005
+    },
+    "sys_psi_io_avg10": {
+     "before": 0.195,
+     "after": 0.103,
+     "delta": -0.092
+    },
+    "sys_load1": {
+     "before": 1.21,
+     "after": 1.155,
+     "delta": -0.055
+    },
+    "victim_p95_ms": {
+     "before": 0.9782000000000003,
+     "after": 1.0143999999999995,
+     "delta": 0.03619999999999923
+    }
+   }
+  },
+  {
+   "ts": "2026-10-18T15:45:45.119Z",
+   "action": "increase_memory",
+   "regime": "mixed",
+   "deltas": {
+    "n_cpu_psi_avg10": {
+     "before": 66.157,
+     "after": 66.15,
+     "delta": -0.007
+    },
+    "n_mem_current_mb": {
+     "before": 754.75,
+     "after": 754.872,
+     "delta": 0.122
+    },
+    "n_mem_high_mb": {
+     "before": 791.0,
+     "after": 791.0,
+     "delta": 0.0
+    },
+    "n_pids": {
+     "before": 7.0,
+     "after": 7.0,
+     "delta": 0.0
+    },
+    "n_throttle_us_per_s": {
+     "before": 1652578.814,
+     "after": 1445321.168,
+     "delta": -207257.646
+    },
+    "n_mem_events_high_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_cpu_psi_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_throttle_us_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_psi_cpu_avg10": {
+     "before": 58.657,
+     "after": 58.66,
+     "delta": 0.002
+    },
+    "sys_psi_io_avg10": {
+     "before": 0.025,
+     "after": 0.013,
+     "delta": -0.013
+    },
+    "sys_load1": {
+     "before": 0.75,
+     "after": 0.675,
+     "delta": -0.075
+    },
+    "victim_p95_ms": {
+     "before": 1.04675,
+     "after": 1.0305999999999997,
+     "delta": -0.01615000000000033
+    }
+   }
+  },
+  {
+   "ts": "2026-10-18T15:46:05.130Z",
+   "action": "increase_cpu",
+   "regime": "saturation",
+   "deltas": {
+    "n_cpu_psi_avg10": {
+     "before": 64.987,
+     "after": 70.407,
+     "delta": 5.42
+    },
+    "n_mem_current_mb": {
+     "before": 577.985,
+     "after": 46.347,
+     "delta": -531.638
+    },
+    "n_mem_high_mb": {
+     "before": 791.0,
+     "after": 791.0,
+     "delta": 0.0
+    },
+    "n_pids": {
+     "before": 8.25,
+     "after": 12.0,
+     "delta": 3.75
+    },
+    "n_throttle_us_per_s": {
+     "before": 3204168.954,
+     "after": 8976637.49,
+     "delta": 5772468.536
+    },
+    "n_mem_events_high_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_cpu_psi_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_throttle_us_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_psi_cpu_avg10": {
+     "before": 57.79,
+     "after": 62.855,
+     "delta": 5.065
+    },
+    "sys_psi_io_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_load1": {
+     "before": 0.735,
+     "after": 1.257,
+     "delta": 0.522
+    },
+    "victim_p95_ms": {
+     "before": 1.0066000000000002,
+     "after": 1.0246,
+     "delta": 0.017999999999999794
+    }
+   }
+  },
+  {
+   "ts": "2026-10-18T15:46:51.667Z",
+   "action": "increase_cpu",
+   "regime": "saturation",
+   "deltas": {
+    "n_cpu_psi_avg10": {
+     "before": 89.192,
+     "after": 89.537,
+     "delta": 0.345
+    },
+    "n_mem_current_mb": {
+     "before": 45.61,
+     "after": 45.61,
+     "delta": 0.0
+    },
+    "n_mem_high_mb": {
+     "before": 791.0,
+     "after": 791.0,
+     "delta": 0.0
+    },
+    "n_pids": {
+     "before": 12.0,
+     "after": 12.0,
+     "delta": 0.0
+    },
+    "n_throttle_us_per_s": {
+     "before": 10177323.751,
+     "after": 8755809.796,
+     "delta": -1421513.956
+    },
+    "n_mem_events_high_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_cpu_psi_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_throttle_us_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_psi_cpu_avg10": {
+     "before": 87.295,
+     "after": 87.257,
+     "delta": -0.037
+    },
+    "sys_psi_io_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_load1": {
+     "before": 1.363,
+     "after": 1.285,
+     "delta": -0.077
+    },
+    "victim_p95_ms": {
+     "before": 1.0424,
+     "after": 1.0727999999999998,
+     "delta": 0.03039999999999976
+    }
+   }
+  },
+  {
+   "ts": "2026-10-18T15:47:03.678Z",
+   "action": "increase_memory",
+   "regime": "saturation",
+   "deltas": {
+    "n_cpu_psi_avg10": {
+     "before": 88.797,
+     "after": 78.243,
+     "delta": -10.555
+    },
+    "n_mem_current_mb": {
+     "before": 219.593,
+     "after": 751.638,
+     "delta": 532.045
+    },
+    "n_mem_high_mb": {
+     "before": 791.0,
+     "after": 791.0,
+     "delta": 0.0
+    },
+    "n_pids": {
+     "before": 10.75,
+     "after": 7.0,
+     "delta": -3.75
+    },
+    "n_throttle_us_per_s": {
+     "before": 7314564.181,
+     "after": 1026815.879,
+     "delta": -6287748.302
+    },
+    "n_mem_events_high_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_cpu_psi_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_throttle_us_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_psi_cpu_avg10": {
+     "before": 85.75,
+     "after": 72.477,
+     "delta": -13.273
+    },
+    "sys_psi_io_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_load1": {
+     "before": 1.22,
+     "after": 1.202,
+     "delta": -0.018
+    },
+    "victim_p95_ms": {
+     "before": 1.0794999999999997,
+     "after": 1.0026,
+     "delta": -0.07689999999999975
+    }
+   }
+  },
+  {
+   "ts": "2026-10-18T15:47:48.934Z",
+   "action": "increase_memory",
+   "regime": "saturation",
+   "deltas": {
+    "n_cpu_psi_avg10": {
+     "before": 46.612,
+     "after": 46.498,
+     "delta": -0.115
+    },
+    "n_mem_current_mb": {
+     "before": 754.925,
+     "after": 754.717,
+     "delta": -0.207
+    },
+    "n_mem_high_mb": {
+     "before": 791.0,
+     "after": 791.0,
+     "delta": 0.0
+    },
+    "n_pids": {
+     "before": 7.0,
+     "after": 7.0,
+     "delta": 0.0
+    },
+    "n_throttle_us_per_s": {
+     "before": 1015594.945,
+     "after": 1181919.183,
+     "delta": 166324.237
+    },
+    "n_mem_events_high_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_cpu_psi_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_throttle_us_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_psi_cpu_avg10": {
+     "before": 41.582,
+     "after": 41.35,
+     "delta": -0.232
+    },
+    "sys_psi_io_avg10": {
+     "before": 0.058,
+     "after": 0.028,
+     "delta": -0.03
+    },
+    "sys_load1": {
+     "before": 0.675,
+     "after": 0.61,
+     "delta": -0.065
+    },
+    "victim_p95_ms": {
+     "before": 1.0131000000000001,
+     "after": 0.9712,
+     "delta": -0.04190000000000016
+    }
+   }
+  },
+  {
+   "ts": "2026-10-18T15:48:33.501Z",
+   "action": "increase_memory",
+   "regime": "saturation",
+   "deltas": {
+    "n_cpu_psi_avg10": {
+     "before": 46.7,
+     "after": 47.057,
+     "delta": 0.357
+    },
+    "n_mem_current_mb": {
+     "before": 754.77,
+     "after": 754.77,
+     "delta": 0.0
+    },
+    "n_mem_high_mb": {
+     "before": 791.0,
+     "after": 791.0,
+     "delta": 0.0
+    },
+    "n_pids": {
+     "before": 7.0,
+     "after": 7.0,
+     "delta": 0.0
+    },
+    "n_throttle_us_per_s": {
+     "before": 1016012.158,
+     "after": 1016202.436,
+     "delta": 190.278
+    },
+    "n_mem_events_high_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_cpu_psi_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_throttle_us_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_psi_cpu_avg10": {
+     "before": 41.727,
+     "after": 41.845,
+     "delta": 0.117
+    },
+    "sys_psi_io_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_load1": {
+     "before": 1.208,
+     "after": 1.285,
+     "delta": 0.078
+    },
+    "victim_p95_ms": {
+     "before": 1.0148000000000001,
+     "after": 0.9541,
+     "delta": -0.0607000000000002
+    }
+   }
+  },
+  {
+   "ts": "2026-10-18T15:49:34.044Z",
+   "action": "decrease_cpu",
+   "regime": "saturation",
+   "deltas": {
+    "n_cpu_psi_avg10": {
+     "before": 2.3,
+     "after": 1.26,
+     "delta": -1.04
+    },
+    "n_mem_current_mb": {
+     "before": 13.713,
+     "after": 13.822,
+     "delta": 0.11
+    },
+    "n_mem_high_mb": {
+     "before": 791.0,
+     "after": 791.0,
+     "delta": 0.0
+    },
+    "n_pids": {
+     "before": 26.5,
+     "after": 26.5,
+     "delta": 0.0
+    },
+    "n_throttle_us_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "n_mem_events_high_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_cpu_psi_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_throttle_us_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_psi_cpu_avg10": {
+     "before": 1.867,
+     "after": 1.022,
+     "delta": -0.845
+    },
+    "sys_psi_io_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_load1": {
+     "before": 0.93,
+     "after": 0.975,
+     "delta": 0.045
+    },
+    "victim_p95_ms": {
+     "before": 0.9576499999999999,
+     "after": 1.0087500000000003,
+     "delta": 0.05110000000000037
+    }
+   }
+  },
+  {
+   "ts": "2026-10-18T15:50:08.066Z",
+   "action": "increase_cpu",
+   "regime": "decay",
+   "deltas": {
+    "n_cpu_psi_avg10": {
+     "before": 35.693,
+     "after": 58.08,
+     "delta": 22.387
+    },
+    "n_mem_current_mb": {
+     "before": 27.223,
+     "after": 26.898,
+     "delta": -0.325
+    },
+    "n_mem_high_mb": {
+     "before": 791.0,
+     "after": 791.0,
+     "delta": 0.0
+    },
+    "n_pids": {
+     "before": 7.0,
+     "after": 7.0,
+     "delta": 0.0
+    },
+    "n_throttle_us_per_s": {
+     "before": 4292352.943,
+     "after": 5057636.775,
+     "delta": 765283.832
+    },
+    "n_mem_events_high_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_cpu_psi_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_throttle_us_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_psi_cpu_avg10": {
+     "before": 27.275,
+     "after": 51.115,
+     "delta": 23.84
+    },
+    "sys_psi_io_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_load1": {
+     "before": 0.805,
+     "after": 1.315,
+     "delta": 0.51
+    },
+    "victim_p95_ms": {
+     "before": 1.0293499999999995,
+     "after": 1.0357499999999995,
+     "delta": 0.006399999999999961
+    }
+   }
+  },
+  {
+   "ts": "2026-10-18T15:50:54.298Z",
+   "action": "increase_cpu",
+   "regime": "decay",
+   "deltas": {
+    "n_cpu_psi_avg10": {
+     "before": 80.058,
+     "after": 80.0,
+     "delta": -0.058
+    },
+    "n_mem_current_mb": {
+     "before": 26.52,
+     "after": 26.52,
+     "delta": 0.0
+    },
+    "n_mem_high_mb": {
+     "before": 791.0,
+     "after": 791.0,
+     "delta": 0.0
+    },
+    "n_pids": {
+     "before": 7.0,
+     "after": 7.0,
+     "delta": 0.0
+    },
+    "n_throttle_us_per_s": {
+     "before": 3997951.531,
+     "after": 3891942.587,
+     "delta": -106008.944
+    },
+    "n_mem_events_high_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_cpu_psi_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_throttle_us_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_psi_cpu_avg10": {
+     "before": 75.662,
+     "after": 75.995,
+     "delta": 0.333
+    },
+    "sys_psi_io_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_load1": {
+     "before": 1.603,
+     "after": 1.502,
+     "delta": -0.1
+    },
+    "victim_p95_ms": {
+     "before": 1.0321999999999996,
+     "after": 1.1877999999999997,
+     "delta": 0.15560000000000018
+    }
+   }
+  },
+  {
+   "ts": "2026-10-18T15:51:39.611Z",
+   "action": "increase_cpu",
+   "regime": "decay",
+   "deltas": {
+    "n_cpu_psi_avg10": {
+     "before": 78.603,
+     "after": 78.472,
+     "delta": -0.13
+    },
+    "n_mem_current_mb": {
+     "before": 26.52,
+     "after": 26.52,
+     "delta": 0.0
+    },
+    "n_mem_high_mb": {
+     "before": 791.0,
+     "after": 791.0,
+     "delta": 0.0
+    },
+    "n_pids": {
+     "before": 7.0,
+     "after": 7.0,
+     "delta": 0.0
+    },
+    "n_throttle_us_per_s": {
+     "before": 3889866.509,
+     "after": 4429269.581,
+     "delta": 539403.072
+    },
+    "n_mem_events_high_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_cpu_psi_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_throttle_us_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_psi_cpu_avg10": {
+     "before": 75.34,
+     "after": 75.13,
+     "delta": -0.21
+    },
+    "sys_psi_io_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_load1": {
+     "before": 0.802,
+     "after": 0.782,
+     "delta": -0.02
+    },
+    "victim_p95_ms": {
+     "before": 1.0601999999999998,
+     "after": 1.0226,
+     "delta": -0.037599999999999856
+    }
+   }
+  },
+  {
+   "ts": "2026-10-18T15:54:25.308Z",
+   "action": "decrease_cpu",
+   "regime": "decay-off",
+   "deltas": {
+    "n_cpu_psi_avg10": {
+     "before": 2.59,
+     "after": 1.417,
+     "delta": -1.172
+    },
+    "n_mem_current_mb": {
+     "before": 7.24,
+     "after": 7.14,
+     "delta": -0.1
+    },
+    "n_mem_high_mb": {
+     "before": 791.0,
+     "after": 791.0,
+     "delta": 0.0
+    },
+    "n_pids": {
+     "before": 2.0,
+     "after": 2.0,
+     "delta": 0.0
+    },
+    "n_throttle_us_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "n_mem_events_high_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_cpu_psi_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_throttle_us_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_psi_cpu_avg10": {
+     "before": 2.575,
+     "after": 1.413,
+     "delta": -1.163
+    },
+    "sys_psi_io_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_load1": {
+     "before": 0.55,
+     "after": 0.51,
+     "delta": -0.04
+    },
+    "victim_p95_ms": {
+     "before": 1.0237,
+     "after": 1.0288999999999997,
+     "delta": 0.005199999999999649
+    }
+   }
+  },
+  {
+   "ts": "2026-10-18T16:01:43.404Z",
+   "action": "restrict_process_count",
+   "regime": "rise-fall",
+   "deltas": {
+    "n_cpu_psi_avg10": {
+     "before": 0.677,
+     "after": 22.482,
+     "delta": 21.805
+    },
+    "n_mem_current_mb": {
+     "before": 12.865,
+     "after": 30.07,
+     "delta": 17.205
+    },
+    "n_mem_high_mb": {
+     "before": 791.0,
+     "after": 791.0,
+     "delta": 0.0
+    },
+    "n_pids": {
+     "before": 3.5,
+     "after": 8.0,
+     "delta": 4.5
+    },
+    "n_throttle_us_per_s": {
+     "before": 1799305.36,
+     "after": 5164766.864,
+     "delta": 3365461.504
+    },
+    "n_mem_events_high_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_cpu_psi_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_throttle_us_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_psi_cpu_avg10": {
+     "before": 1.765,
+     "after": 25.683,
+     "delta": 23.918
+    },
+    "sys_psi_io_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_load1": {
+     "before": 0.4,
+     "after": 0.357,
+     "delta": -0.043
+    },
+    "victim_p95_ms": {
+     "before": 1.0533000000000001,
+     "after": 1.0525499999999999,
+     "delta": -0.0007500000000002505
+    }
+   }
+  },
+  {
+   "ts": "2026-10-18T16:01:45.406Z",
+   "action": "increase_cpu",
+   "regime": "rise-fall",
+   "deltas": {
+    "n_cpu_psi_avg10": {
+     "before": 4.945,
+     "after": 33.807,
+     "delta": 28.862
+    },
+    "n_mem_current_mb": {
+     "before": 18.6,
+     "after": 30.07,
+     "delta": 11.47
+    },
+    "n_mem_high_mb": {
+     "before": 791.0,
+     "after": 791.0,
+     "delta": 0.0
+    },
+    "n_pids": {
+     "before": 5.0,
+     "after": 8.0,
+     "delta": 3.0
+    },
+    "n_throttle_us_per_s": {
+     "before": 3809451.767,
+     "after": 5063622.765,
+     "delta": 1254170.997
+    },
+    "n_mem_events_high_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_cpu_psi_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_throttle_us_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_psi_cpu_avg10": {
+     "before": 7.105,
+     "after": 36.02,
+     "delta": 28.915
+    },
+    "sys_psi_io_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_load1": {
+     "before": 0.383,
+     "after": 0.345,
+     "delta": -0.038
+    },
+    "victim_p95_ms": {
+     "before": 1.0294,
+     "after": 1.068,
+     "delta": 0.03859999999999997
+    }
+   }
+  },
+  {
+   "ts": "2026-10-18T16:02:30.731Z",
+   "action": "increase_cpu",
+   "regime": "rise-fall",
+   "deltas": {
+    "n_cpu_psi_avg10": {
+     "before": 81.995,
+     "after": 81.998,
+     "delta": 0.002
+    },
+    "n_mem_current_mb": {
+     "before": 30.07,
+     "after": 30.07,
+     "delta": 0.0
+    },
+    "n_mem_high_mb": {
+     "before": 791.0,
+     "after": 791.0,
+     "delta": 0.0
+    },
+    "n_pids": {
+     "before": 8.0,
+     "after": 8.0,
+     "delta": 0.0
+    },
+    "n_throttle_us_per_s": {
+     "before": 5056437.503,
+     "after": 4916661.254,
+     "delta": -139776.25
+    },
+    "n_mem_events_high_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_cpu_psi_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_throttle_us_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_psi_cpu_avg10": {
+     "before": 78.77,
+     "after": 78.787,
+     "delta": 0.017
+    },
+    "sys_psi_io_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_load1": {
+     "before": 1.308,
+     "after": 1.775,
+     "delta": 0.467
+    },
+    "victim_p95_ms": {
+     "before": 1.0533000000000001,
+     "after": 1.023,
+     "delta": -0.030300000000000216
+    }
+   }
+  },
+  {
+   "ts": "2026-10-18T16:03:18.053Z",
+   "action": "increase_cpu",
+   "regime": "rise-fall",
+   "deltas": {
+    "n_cpu_psi_avg10": {
+     "before": 82.0,
+     "after": 81.917,
+     "delta": -0.083
+    },
+    "n_mem_current_mb": {
+     "before": 30.07,
+     "after": 30.07,
+     "delta": 0.0
+    },
+    "n_mem_high_mb": {
+     "before": 791.0,
+     "after": 791.0,
+     "delta": 0.0
+    },
+    "n_pids": {
+     "before": 8.0,
+     "after": 8.0,
+     "delta": 0.0
+    },
+    "n_throttle_us_per_s": {
+     "before": 4873476.635,
+     "after": 5545987.414,
+     "delta": 672510.778
+    },
+    "n_mem_events_high_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_cpu_psi_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_throttle_us_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_psi_cpu_avg10": {
+     "before": 78.61,
+     "after": 78.52,
+     "delta": -0.09
+    },
+    "sys_psi_io_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_load1": {
+     "before": 1.38,
+     "after": 1.242,
+     "delta": -0.138
+    },
+    "victim_p95_ms": {
+     "before": 1.0413999999999999,
+     "after": 1.0271,
+     "delta": -0.01429999999999998
+    }
+   }
+  },
+  {
+   "ts": "2026-10-18T16:04:02.606Z",
+   "action": "increase_cpu",
+   "regime": "rise-fall",
+   "deltas": {
+    "n_cpu_psi_avg10": {
+     "before": 82.46,
+     "after": 82.345,
+     "delta": -0.115
+    },
+    "n_mem_current_mb": {
+     "before": 30.07,
+     "after": 23.977,
+     "delta": -6.093
+    },
+    "n_mem_high_mb": {
+     "before": 791.0,
+     "after": 791.0,
+     "delta": 0.0
+    },
+    "n_pids": {
+     "before": 8.0,
+     "after": 6.25,
+     "delta": -1.75
+    },
+    "n_throttle_us_per_s": {
+     "before": 4871671.189,
+     "after": 4878501.606,
+     "delta": 6830.418
+    },
+    "n_mem_events_high_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_cpu_psi_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_throttle_us_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_psi_cpu_avg10": {
+     "before": 78.782,
+     "after": 78.795,
+     "delta": 0.013
+    },
+    "sys_psi_io_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_load1": {
+     "before": 0.75,
+     "after": 0.675,
+     "delta": -0.075
+    },
+    "victim_p95_ms": {
+     "before": 1.04095,
+     "after": 1.0375999999999999,
+     "delta": -0.003350000000000186
+    }
+   }
+  },
+  {
+   "ts": "2026-10-18T16:04:47.927Z",
+   "action": "decrease_cpu",
+   "regime": "rise-fall",
+   "deltas": {
+    "n_cpu_psi_avg10": {
+     "before": 2.535,
+     "after": 6.54,
+     "delta": 4.005
+    },
+    "n_mem_current_mb": {
+     "before": 10.65,
+     "after": 10.643,
+     "delta": -0.008
+    },
+    "n_mem_high_mb": {
+     "before": 791.0,
+     "after": 791.0,
+     "delta": 0.0
+    },
+    "n_pids": {
+     "before": 2.0,
+     "after": 2.0,
+     "delta": 0.0
+    },
+    "n_throttle_us_per_s": {
+     "before": 0.0,
+     "after": 373430.172,
+     "delta": 373430.172
+    },
+    "n_mem_events_high_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_cpu_psi_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "c_throttle_us_per_s": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_psi_cpu_avg10": {
+     "before": 2.26,
+     "after": 6.617,
+     "delta": 4.357
+    },
+    "sys_psi_io_avg10": {
+     "before": 0.0,
+     "after": 0.0,
+     "delta": 0.0
+    },
+    "sys_load1": {
+     "before": 0.853,
+     "after": 0.865,
+     "delta": 0.012
+    },
+    "victim_p95_ms": {
+     "before": 0.6635,
+     "after": 0.95075,
+     "delta": 0.28725
+    }
+   }
+  }
+ ],
+ "anomalies": [
+  "action do_nothing repeated 275 times in a row from 2026-10-18T15:08:41.651Z",
+  "action increase_cpu repeated 89 times in a row from 2026-10-18T15:17:45.151Z",
+  "action do_nothing repeated 20 times in a row from 2026-10-18T15:20:39.147Z",
+  "action do_nothing repeated 100 times in a row from 2026-10-18T15:21:20.516Z",
+  "action do_nothing repeated 508 times in a row from 2026-10-18T15:24:40.419Z",
+  "action increase_memory repeated 149 times in a row from 2026-10-18T15:41:13.624Z",
+  "action increase_cpu repeated 30 times in a row from 2026-10-18T15:46:05.130Z",
+  "action increase_memory repeated 60 times in a row from 2026-10-18T15:47:03.678Z",
+  "action do_nothing repeated 17 times in a row from 2026-10-18T15:49:00.784Z",
+  "action do_nothing repeated 16 times in a row from 2026-10-18T15:49:36.045Z",
+  "action increase_cpu repeated 56 times in a row from 2026-10-18T15:50:08.066Z",
+  "action do_nothing repeated 76 times in a row from 2026-10-18T15:51:56.879Z",
+  "action do_nothing repeated 223 times in a row from 2026-10-18T15:54:27.310Z",
+  "action increase_cpu repeated 73 times in a row from 2026-10-18T16:01:45.406Z",
+  "action do_nothing repeated 20 times in a row from 2026-10-18T16:04:08.613Z",
+  "action do_nothing repeated 24 times in a row from 2026-10-18T16:04:49.930Z",
+  "applied actions without an outcome row: 2"
+ ]
+}

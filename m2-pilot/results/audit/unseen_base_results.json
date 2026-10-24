@@ -1,0 +1,92 @@
+{
+  "model": "mapika/decider-2b",
+  "tag": "unseen_base",
+  "id": "evl_SLa2tFdGvmMubHMb",
+  "status": "completed",
+  "results": {
+    "n": 506,
+    "by_type": {
+      "choice": {
+        "n": 506,
+        "ece": 0.16054509332764288,
+        "nll": 0.7274157468445523,
+        "brier": 0.34358705377057297,
+        "accuracy": 0.7134387351778656,
+        "selective": {
+          "0.5": {
+            "accuracy": 0.7600896860986547,
+            "coverage": 0.8814229249011858
+          },
+          "0.7": {
+            "accuracy": 0.909375,
+            "coverage": 0.6324110671936759
+          },
+          "0.9": {
+            "accuracy": 0.5384615384615384,
+            "coverage": 0.025691699604743084
+          },
+          "0.95": {
+            "accuracy": null,
+            "coverage": 0.0
+          }
+        },
+        "mean_confidence": 0.7417431054968137
+      }
+    },
+    "overall": {
+      "n": 506,
+      "ece": 0.16054509332764288,
+      "nll": 0.7274157468445523,
+      "brier": 0.34358705377057297,
+      "accuracy": 0.7134387351778656,
+      "selective": {
+        "0.5": {
+          "accuracy": 0.7600896860986547,
+          "coverage": 0.8814229249011858
+        },
+        "0.7": {
+          "accuracy": 0.909375,
+          "coverage": 0.6324110671936759
+        },
+        "0.9": {
+          "accuracy": 0.5384615384615384,
+          "coverage": 0.025691699604743084
+        },
+        "0.95": {
+          "accuracy": null,
+          "coverage": 0.0
+        }
+      },
+      "mean_confidence": 0.7417431054968137
+    },
+    "by_question": {
+      "action": {
+        "n": 506,
+        "ece": 0.16054509332764288,
+        "nll": 0.7274157468445523,
+        "brier": 0.34358705377057297,
+        "accuracy": 0.7134387351778656,
+        "selective": {
+          "0.5": {
+            "accuracy": 0.7600896860986547,
+            "coverage": 0.8814229249011858
+          },
+          "0.7": {
+            "accuracy": 0.909375,
+            "coverage": 0.6324110671936759
+          },
+          "0.9": {
+            "accuracy": 0.5384615384615384,
+            "coverage": 0.025691699604743084
+          },
+          "0.95": {
+            "accuracy": null,
+            "coverage": 0.0
+          }
+        },
+        "mean_confidence": 0.7417431054968137
+      }
+    },
+    "rows_url": "(link removed)"
+  }
+}

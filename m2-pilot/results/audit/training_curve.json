@@ -1,0 +1,125 @@
+{
+  "run_id": "run_Mc0yan8t4YXuLHsC",
+  "steps": 3087,
+  "final_train_loss": 0.054883186565954624,
+  "first500_mean": 0.5471159601482088,
+  "last500_mean": 0.3069450388128088,
+  "probe": [
+    {
+      "step": 1029,
+      "key": "probe/acc",
+      "value": 0.8515
+    },
+    {
+      "step": 2058,
+      "key": "probe/acc",
+      "value": 0.8606
+    },
+    {
+      "step": 3087,
+      "key": "probe/acc",
+      "value": 0.8576
+    },
+    {
+      "step": 1029,
+      "key": "probe/macro_recall",
+      "value": 0.4539
+    },
+    {
+      "step": 2058,
+      "key": "probe/macro_recall",
+      "value": 0.6016
+    },
+    {
+      "step": 3087,
+      "key": "probe/macro_recall",
+      "value": 0.5936
+    }
+  ],
+  "bins": [
+    {
+      "from": 0,
+      "to": 299,
+      "mean_train_loss": 0.5873775922169713,
+      "n": 300
+    },
+    {
+      "from": 300,
+      "to": 599,
+      "mean_train_loss": 0.4678028510587161,
+      "n": 300
+    },
+    {
+      "from": 600,
+      "to": 899,
+      "mean_train_loss": 0.4335311025600606,
+      "n": 300
+    },
+    {
+      "from": 900,
+      "to": 1199,
+      "mean_train_loss": 0.39888178546976566,
+      "n": 300
+    },
+    {
+      "from": 1200,
+      "to": 1499,
+      "mean_train_loss": 0.3720593191470747,
+      "n": 300
+    },
+    {
+      "from": 1500,
+      "to": 1799,
+      "mean_train_loss": 0.3682143790649685,
+      "n": 300
+    },
+    {
+      "from": 1800,
+      "to": 2099,
+      "mean_train_loss": 0.33927797080649996,
+      "n": 300
+    },
+    {
+      "from": 2100,
+      "to": 2399,
+      "mean_train_loss": 0.34859376220737354,
+      "n": 300
+    },
+    {
+      "from": 2400,
+      "to": 2699,
+      "mean_train_loss": 0.31449253558433216,
+      "n": 300
+    },
+    {
+      "from": 2700,
+      "to": 2999,
+      "mean_train_loss": 0.2987103984669651,
+      "n": 300
+    },
+    {
+      "from": 3000,
+      "to": 3299,
+      "mean_train_loss": 0.34063499292126515,
+      "n": 87
+    }
+  ],
+  "validation_loss_available": false,
+  "metric_keys": [
+    "probe/acc",
+    "probe/macro_recall",
+    "probe/recall/alert_operator",
+    "probe/recall/decrease_cpu",
+    "probe/recall/decrease_memory",
+    "probe/recall/do_nothing",
+    "probe/recall/increase_cpu",
+    "probe/recall/increase_memory",
+    "probe/recall/protect_service",
+    "probe/recall/restrict_process_count",
+    "probe/recall/throttle_io",
+    "train/accuracy",
+    "train/grad_norm",
+    "train/loss",
+    "train/lr"
+  ]
+}
